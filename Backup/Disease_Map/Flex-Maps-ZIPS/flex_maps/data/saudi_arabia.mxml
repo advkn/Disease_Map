@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/saudi_arabia.swf" leftLongitude="34.494760" topLatitude="32.270012" rightLongitude="55.667236" bottomLatitude="16.388773">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SA_BA" title="Al Bāhah"/>
+					<ammap:MapArea instanceName="SA_HS" title="Al Hudūd ash Shamāliyah"/>
+					<ammap:MapArea instanceName="SA_JF" title="Al Jawf"/>
+					<ammap:MapArea instanceName="SA_MD" title="Al Madīnah"/>
+					<ammap:MapArea instanceName="SA_QS" title="Al Qasīm"/>
+					<ammap:MapArea instanceName="SA_RI" title="Ar Riyād"/>
+					<ammap:MapArea instanceName="SA_SH" title="Ash Sharqīyah"/>
+					<ammap:MapArea instanceName="SA_AS" title="`Asīr"/>
+					<ammap:MapArea instanceName="SA_HA" title="Hā'il"/>
+					<ammap:MapArea instanceName="SA_JZ" title="Jīzan"/>
+					<ammap:MapArea instanceName="SA_MK" title="Makkah"/>
+					<ammap:MapArea instanceName="SA_NJ" title="Najrān"/>
+					<ammap:MapArea instanceName="SA_TB" title="Tabūk"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Riyadh" lat="24.647325" long="46.714585" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

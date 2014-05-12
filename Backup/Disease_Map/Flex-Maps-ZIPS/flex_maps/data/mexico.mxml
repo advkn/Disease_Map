@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/mexico.swf" leftLongitude="-118.390549" topLatitude="32.77794" rightLongitude="-86.735161" bottomLatitude="14.59382">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="aguascalientes" title="Aguascalientes"/>
+					<ammap:MapArea instanceName="baja_california" title="Baja California"/>
+					<ammap:MapArea instanceName="baja_california_sur" title="Baja California Sur"/>
+					<ammap:MapArea instanceName="campeche" title="Campeche"/>
+					<ammap:MapArea instanceName="chiapas" title="Chiapas"/>
+					<ammap:MapArea instanceName="chihuahua" title="Chihuahua"/>
+					<ammap:MapArea instanceName="coahuila" title="Coahuila"/>
+					<ammap:MapArea instanceName="colima" title="Colima"/>
+					<ammap:MapArea instanceName="distrito_federal" title="Distrito Federal (Mexico)"/>
+					<ammap:MapArea instanceName="durango" title="Durango"/>
+					<ammap:MapArea instanceName="federally_administered_territory" title="Federally Administered Territory"/>
+					<ammap:MapArea instanceName="guanajuato" title="Guanajuato"/>
+					<ammap:MapArea instanceName="guerrero" title="Guerrero"/>
+					<ammap:MapArea instanceName="hidalgo" title="Hidalgo"/>
+					<ammap:MapArea instanceName="jalisco" title="Jalisco"/>
+					<ammap:MapArea instanceName="mexico" title="Mexico"/>
+					<ammap:MapArea instanceName="michoacan" title="Michoacan"/>
+					<ammap:MapArea instanceName="morelos" title="Morelos"/>
+					<ammap:MapArea instanceName="nayarit" title="Nayarit"/>
+					<ammap:MapArea instanceName="nuevo_leon" title="Nuevo Leon"/>
+					<ammap:MapArea instanceName="oaxaca" title="Oaxaca"/>
+					<ammap:MapArea instanceName="puebla" title="Puebla"/>
+					<ammap:MapArea instanceName="queretaro" title="Queretaro"/>
+					<ammap:MapArea instanceName="quintana_roo" title="Quintana Roo"/>
+					<ammap:MapArea instanceName="san_luis_potosi" title="San Luis Potosi"/>
+					<ammap:MapArea instanceName="sinaloa" title="Sinaloa"/>
+					<ammap:MapArea instanceName="sonora" title="Sonora"/>
+					<ammap:MapArea instanceName="tabasco" title="Tabasco"/>
+					<ammap:MapArea instanceName="tamaulipas" title="Tamaulipas"/>
+					<ammap:MapArea instanceName="tlaxcala" title="Tlaxcala"/>
+					<ammap:MapArea instanceName="veracruz" title="Veracruz"/>
+					<ammap:MapArea instanceName="yucatan" title="Yucatan"/>
+					<ammap:MapArea instanceName="zacatecas" title="Zacatecas"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Mexico City. Click to zoom in" lat="19.43187" long="-99.132889" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

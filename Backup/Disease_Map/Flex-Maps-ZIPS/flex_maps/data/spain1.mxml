@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/spain1.swf" leftLongitude="" topLatitude="" rightLongitude="" bottomLatitude="">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="galicia" title="Galicia"/>
+					<ammap:MapArea instanceName="asturias" title="Asturias"/>
+					<ammap:MapArea instanceName="cantabria" title="Cantabria"/>
+					<ammap:MapArea instanceName="basque_country" title="Basque Country"/>
+					<ammap:MapArea instanceName="navarre" title="Navarre"/>
+					<ammap:MapArea instanceName="aragon" title="Aragon"/>
+					<ammap:MapArea instanceName="catalonia" title="Catalonia"/>
+					<ammap:MapArea instanceName="la_rioja" title="La Rioja"/>
+					<ammap:MapArea instanceName="madrid" title="Madrid"/>
+					<ammap:MapArea instanceName="castile_leon" title="Castile-Leon"/>
+					<ammap:MapArea instanceName="castile_la_mancha" title="Castile-La Mancha"/>
+					<ammap:MapArea instanceName="extremadura" title="Extremadura"/>
+					<ammap:MapArea instanceName="valencia" title="Valencia"/>
+					<ammap:MapArea instanceName="murcia" title="Murcia"/>
+					<ammap:MapArea instanceName="andalusia" title="Andalusia"/>
+					<ammap:MapArea instanceName="canary_islands" title="Canary Islands"/>
+					<ammap:MapArea instanceName="balearic_islands" title="Balearic Islands"/>
+					<ammap:MapArea instanceName="FR" title="France"/>
+					<ammap:MapArea instanceName="AD" title="Andorra"/>
+					<ammap:MapArea instanceName="PT" title="Portugal"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Madrid. Click to zoom" lat="15.3229" long="-11.1883" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

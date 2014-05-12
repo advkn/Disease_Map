@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/vietnam.swf" leftLongitude="102.144399" topLatitude="23.393286" rightLongitude="109.462745" bottomLatitude="8.562435">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="VN_AG" title="An Giang"/>
+					<ammap:MapArea instanceName="VN_BK" title="Bac Can"/>
+					<ammap:MapArea instanceName="VN_BG" title="Bac Giang"/>
+					<ammap:MapArea instanceName="VN_BL" title="Bac Lieu"/>
+					<ammap:MapArea instanceName="VN_BN" title="Bac Ninh"/>
+					<ammap:MapArea instanceName="VN_BV" title="Ba Ria-Vung Tau"/>
+					<ammap:MapArea instanceName="VN_BR" title="Ben Tre"/>
+					<ammap:MapArea instanceName="VN_BD" title="Binh Dinh"/>
+					<ammap:MapArea instanceName="VN_BI" title="Binh Duong"/>
+					<ammap:MapArea instanceName="VN_BP" title="Binh Phuoc"/>
+					<ammap:MapArea instanceName="VN_BU" title="Binh Thuan"/>
+					<ammap:MapArea instanceName="VN_CM" title="Ca Mau"/>
+					<ammap:MapArea instanceName="VN_CN" title="Can Tho"/>
+					<ammap:MapArea instanceName="VN_CB" title="Cao Bang"/>
+					<ammap:MapArea instanceName="VN_DC" title="Dac Lac"/>
+					<ammap:MapArea instanceName="VN_DO" title="Dac Nong"/>
+					<ammap:MapArea instanceName="VN_DA" title="Da Nang"/>
+					<ammap:MapArea instanceName="VN_DB" title="Dien Bien"/>
+					<ammap:MapArea instanceName="VN_DN" title="Dong Nai"/>
+					<ammap:MapArea instanceName="VN_DT" title="Dong Thap"/>
+					<ammap:MapArea instanceName="VN_GL" title="Gia Lai"/>
+					<ammap:MapArea instanceName="VN_HG" title="Ha Giang"/>
+					<ammap:MapArea instanceName="VN_HD" title="Hai Duong"/>
+					<ammap:MapArea instanceName="VN_HP" title="Haiphong"/>
+					<ammap:MapArea instanceName="VN_HM" title="Ha Nam"/>
+					<ammap:MapArea instanceName="VN_HN" title="Hanoi"/>
+					<ammap:MapArea instanceName="VN_HA" title="Ha Tay"/>
+					<ammap:MapArea instanceName="VN_HT" title="Ha Tinh"/>
+					<ammap:MapArea instanceName="VN_HU" title="Hau Giang"/>
+					<ammap:MapArea instanceName="VN_HO" title="Hoa Binh"/>
+					<ammap:MapArea instanceName="VN_HC" title="Ho Chi Minh"/>
+					<ammap:MapArea instanceName="VN_HY" title="Hung Yen"/>
+					<ammap:MapArea instanceName="VN_KH" title="Khanh Hoa"/>
+					<ammap:MapArea instanceName="VN_KG" title="Kien Giang"/>
+					<ammap:MapArea instanceName="VN_KT" title="Kon Tum"/>
+					<ammap:MapArea instanceName="VN_LI" title="Lai Chau"/>
+					<ammap:MapArea instanceName="VN_LD" title="Lam Dong"/>
+					<ammap:MapArea instanceName="VN_LS" title="Lang Son"/>
+					<ammap:MapArea instanceName="VN_LO" title="Lao Cai"/>
+					<ammap:MapArea instanceName="VN_LA" title="Long An"/>
+					<ammap:MapArea instanceName="VN_ND" title="Nam Dinh"/>
+					<ammap:MapArea instanceName="VN_NA" title="Nghe An"/>
+					<ammap:MapArea instanceName="VN_NB" title="Ninh Binh"/>
+					<ammap:MapArea instanceName="VN_NT" title="Ninh Thuan"/>
+					<ammap:MapArea instanceName="VN_PT" title="Phu Tho"/>
+					<ammap:MapArea instanceName="VN_PY" title="Phu Yen"/>
+					<ammap:MapArea instanceName="VN_QB" title="Quang Binh"/>
+					<ammap:MapArea instanceName="VN_QM" title="Quang Nam"/>
+					<ammap:MapArea instanceName="VN_QG" title="Quang Ngai"/>
+					<ammap:MapArea instanceName="VN_QN" title="Quang Ninh"/>
+					<ammap:MapArea instanceName="VN_QT" title="Quang Tri"/>
+					<ammap:MapArea instanceName="VN_ST" title="Soc Trang"/>
+					<ammap:MapArea instanceName="VN_SL" title="Son La"/>
+					<ammap:MapArea instanceName="VN_TN" title="Tay Ninh"/>
+					<ammap:MapArea instanceName="VN_TB" title="Thai Binh"/>
+					<ammap:MapArea instanceName="VN_TY" title="Thai Nguyen"/>
+					<ammap:MapArea instanceName="VN_TH" title="Thanh Hoa"/>
+					<ammap:MapArea instanceName="VN_TT" title="Thua Thien-Hue"/>
+					<ammap:MapArea instanceName="VN_TG" title="Tien Giang"/>
+					<ammap:MapArea instanceName="VN_TV" title="Tra Vinh"/>
+					<ammap:MapArea instanceName="VN_TQ" title="Tuyen Quang"/>
+					<ammap:MapArea instanceName="VN_VL" title="Vinh Long"/>
+					<ammap:MapArea instanceName="VN_VC" title="Vinh Phuc"/>
+					<ammap:MapArea instanceName="VN_YB" title="Yen Bai"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Hanoi" lat="0" long="0" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

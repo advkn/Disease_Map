@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/germany.swf" leftLongitude="5.8655" topLatitude="55.05723" rightLongitude="15.043089" bottomLatitude="47.269633">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="DE_BW" title="Baden-Wurttemberg"/>
+					<ammap:MapArea instanceName="DE_BY" title="Bavaria (Bayern)"/>
+					<ammap:MapArea instanceName="DE_BE" title="Berlin"/>
+					<ammap:MapArea instanceName="DE_BB" title="Brandenburg"/>
+					<ammap:MapArea instanceName="DE_HB" title="Bremen"/>
+					<ammap:MapArea instanceName="DE_HH" title="Hamburg"/>
+					<ammap:MapArea instanceName="DE_HE" title="Hesse (Hessen)"/>
+					<ammap:MapArea instanceName="DE_MV" title="Mecklenburg-Vorpommern"/>
+					<ammap:MapArea instanceName="DE_NI" title="Lower Saxony (Niedersachsen)"/>
+					<ammap:MapArea instanceName="DE_NW" title="North Rhine-Westphalia (Nordrhein-Westfalen)"/>
+					<ammap:MapArea instanceName="DE_RP" title="Rhineland-Palatinate (Rheinland-Pfalz)"/>
+					<ammap:MapArea instanceName="DE_SL" title="Saarland"/>
+					<ammap:MapArea instanceName="DE_SN" title="Saxony (Sachsen)"/>
+					<ammap:MapArea instanceName="DE_ST" title="Saxony-Anhalt (Sachsen-Anhalt)"/>
+					<ammap:MapArea instanceName="DE_SH" title="Schleswig-Holstein"/>
+					<ammap:MapArea instanceName="DE_TH" title="Thuringia (Thuringen)"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Berlin" lat="52.516074" long="13.376987" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

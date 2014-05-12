@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This example is made using amMap Flex component. Visit http://flex.ammap.com to see more examples -->
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   xmlns:ammap="http://www.ammap.com/com_internal"
+			   backgroundColor="#FFFFFF"
+			   width="100%" height="100%"
+			   viewSourceURL="srcview/index.html">
+	
+	<fx:Script>
+		<![CDATA[
+			[Bindable][Embed("../assets/maps/usa.swf")]
+			private var _usa:Class
+		]]>
+	</fx:Script>
+	
+	<!-- map chart is a map which colors areas with color corresponding to it's value.
+	all you need to do is to set color and colorSolid - the other colors will be selected by the amMap -->
+	<ammap:AmMap id="ammap" width="100%" height="100%" useObjectColorForBalloon="false">
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings color="#FFFFFF" colorSolid="#000000" balloonText="[[value]] people live in [[title]]"/>
+		</ammap:areasSettings>
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl visible="false"/>
+		</ammap:zoomControl>
+		
+		<ammap:moviesSettings>
+			<ammap:MoviesSettings bringForwardOnHover="true" color="#FFFFFF" rollOverColor="#CC0000" selectedColor="#000000"/>
+		</ammap:moviesSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet mapClass="{_usa}">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AL" title="Alabama" value="4447100"></ammap:MapArea> 
+					<ammap:MapArea instanceName="AK" title="Alaska" value="626932"></ammap:MapArea> 
+					<ammap:MapArea instanceName="AZ" title="Arizona" value="5130632"></ammap:MapArea> 
+					<ammap:MapArea instanceName="AR" title="Arkansas" value="2673400"></ammap:MapArea> 
+					<ammap:MapArea instanceName="CA" title="California" value="33871648"></ammap:MapArea> 
+					<ammap:MapArea instanceName="CO" title="Colorado" value="4301261"></ammap:MapArea> 
+					<ammap:MapArea instanceName="CT" title="Connecticut" value="3405565"></ammap:MapArea> 
+					<ammap:MapArea instanceName="DE" title="Delaware" value="783600"></ammap:MapArea> 
+					<ammap:MapArea instanceName="DC" title="District of Columbia"></ammap:MapArea> 
+					<ammap:MapArea instanceName="FL" title="Florida" value="15982378"></ammap:MapArea> 
+					<ammap:MapArea instanceName="GA" title="Georgia" value="8186453"></ammap:MapArea> 
+					<ammap:MapArea instanceName="HI" title="Hawaii" value="1211537"></ammap:MapArea> 
+					<ammap:MapArea instanceName="ID" title="Idaho" value="1293953"></ammap:MapArea> 
+					<ammap:MapArea instanceName="IL" title="Illinois" value="12419293"></ammap:MapArea> 
+					<ammap:MapArea instanceName="IN" title="Indiana" value="6080485"></ammap:MapArea> 
+					<ammap:MapArea instanceName="IA" title="Iowa" value="2926324"></ammap:MapArea> 
+					<ammap:MapArea instanceName="KS" title="Kansas" value="2688418"></ammap:MapArea> 
+					<ammap:MapArea instanceName="KY" title="Kentucky" value="4041769"></ammap:MapArea> 
+					<ammap:MapArea instanceName="LA" title="Louisiana" value="4468976"></ammap:MapArea> 
+					<ammap:MapArea instanceName="ME" title="Maine" value="1274923"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MD" title="Maryland" value="5296486"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MA" title="Massachusetts" value="6349097"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MI" title="Michigan" value="9938444"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MN" title="Minnesota" value="4919479"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MS" title="Mississippi" value="2844658"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MO" title="Missouri" value="5595211"></ammap:MapArea> 
+					<ammap:MapArea instanceName="MT" title="Montana" value="902195"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NE" title="Nebraska" value="1711263"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NV" title="Nevada" value="1998257"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NH" title="New Hampshire" value="1235786"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NJ" title="New Jersey" value="8414350"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NM" title="New Mexico" value="1819046"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NY" title="New York" value="18976457"></ammap:MapArea> 
+					<ammap:MapArea instanceName="NC" title="North Carolina" value="8049313"></ammap:MapArea> 
+					<ammap:MapArea instanceName="ND" title="North Dakota" value="642200"></ammap:MapArea> 
+					<ammap:MapArea instanceName="OH" title="Ohio" value="11353140"></ammap:MapArea> 
+					<ammap:MapArea instanceName="OK" title="Oklahoma" value="3450654"></ammap:MapArea> 
+					<ammap:MapArea instanceName="OR" title="Oregon" value="3421399"></ammap:MapArea> 
+					<ammap:MapArea instanceName="PA" title="Pennsylvania" value="12281054"></ammap:MapArea> 
+					<ammap:MapArea instanceName="RI" title="Rhode Island" value="1048319"></ammap:MapArea> 
+					<ammap:MapArea instanceName="SC" title="South Carolina" value="4012012"></ammap:MapArea> 
+					<ammap:MapArea instanceName="SD" title="South Dakota" value="754844"></ammap:MapArea> 
+					<ammap:MapArea instanceName="TN" title="Tennessee" value="5689283"></ammap:MapArea> 
+					<ammap:MapArea instanceName="TX" title="Texas" value="20851820"></ammap:MapArea> 
+					<ammap:MapArea instanceName="UT" title="Utah" value="2233169"></ammap:MapArea> 
+					<ammap:MapArea instanceName="VT" title="Vermont" value="608827"></ammap:MapArea> 
+					<ammap:MapArea instanceName="VA" title="Virginia" value="7078515"></ammap:MapArea> 
+					<ammap:MapArea instanceName="WA" title="Washington" value="5894121"></ammap:MapArea> 
+					<ammap:MapArea instanceName="WV" title="West Virginia" value="1808344"></ammap:MapArea> 
+					<ammap:MapArea instanceName="WI" title="Wisconsin" value="5363675"></ammap:MapArea> 
+					<ammap:MapArea instanceName="WY" title="Wyoming" value="493782"></ammap:MapArea>                     
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+	
+</s:Application>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/guyana.swf" leftLongitude="-61.389108" topLatitude="8.53476" rightLongitude="-56.470425" bottomLatitude="1.1861">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="GY_BA" title="Barima-Waini"/>
+					<ammap:MapArea instanceName="GY_CU" title="Cuyuni-Mazaruni"/>
+					<ammap:MapArea instanceName="GY_DE" title="Demerara-Mahaica"/>
+					<ammap:MapArea instanceName="GY_EB" title="East Berbice-Corentyne"/>
+					<ammap:MapArea instanceName="GY_ES" title="Essequibo Islands-West Demerara"/>
+					<ammap:MapArea instanceName="GY_MA" title="Mahaica-Berbice"/>
+					<ammap:MapArea instanceName="GY_PM" title="Pomeroon-Supenaam"/>
+					<ammap:MapArea instanceName="GY_PT" title="Potaro-Siparuni"/>
+					<ammap:MapArea instanceName="GY_UD" title="Upper Demerara-Berbice"/>
+					<ammap:MapArea instanceName="GY_UT" title="Upper Takutu-Upper Essequibo"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Georgetown" lat="6.80461" long="-58.154831" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

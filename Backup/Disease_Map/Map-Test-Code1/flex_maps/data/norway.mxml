@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/norway.swf" leftLongitude="4.64329" topLatitude="71.181128" rightLongitude="31.14007" bottomLatitude="57.980542">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="NO_AK" title="Akershus"/>
+					<ammap:MapArea instanceName="NO_AA" title="Aust-Agder"/>
+					<ammap:MapArea instanceName="NO_BU" title="Buskerud"/>
+					<ammap:MapArea instanceName="NO_FI" title="Finnmark"/>
+					<ammap:MapArea instanceName="NO_HE" title="Hedmark"/>
+					<ammap:MapArea instanceName="NO_HO" title="Hordaland"/>
+					<ammap:MapArea instanceName="NO_MR" title="Møre og Romsdal"/>
+					<ammap:MapArea instanceName="NO_NO" title="Nordland"/>
+					<ammap:MapArea instanceName="NO_NT" title="Nord-Trøndelag"/>
+					<ammap:MapArea instanceName="NO_OP" title="Oppland"/>
+					<ammap:MapArea instanceName="NO_OS" title="Oslo"/>
+					<ammap:MapArea instanceName="NO_OF" title="Østfold"/>
+					<ammap:MapArea instanceName="NO_RO" title="Rogaland"/>
+					<ammap:MapArea instanceName="NO_SF" title="Sogn og Fjordane"/>
+					<ammap:MapArea instanceName="NO_ST" title="Sør-Trøndelag"/>
+					<ammap:MapArea instanceName="NO_TE" title="Telemark"/>
+					<ammap:MapArea instanceName="NO_TR" title="Troms"/>
+					<ammap:MapArea instanceName="NO_VA" title="Vest-Agder"/>
+					<ammap:MapArea instanceName="NO_VF" title="Vestfold"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Oslo" lat="59.91228" long="10.74998" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

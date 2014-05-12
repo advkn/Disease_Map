@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/macedonia.swf" leftLongitude="20.455561" topLatitude="42.338669" rightLongitude="23.006302" bottomLatitude="40.855134">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_lakes" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="MK_AD" title="Aerodrom"/>
+					<ammap:MapArea instanceName="MK_AR" title="Aračinovo"/>
+					<ammap:MapArea instanceName="MK_BR" title="Berovo"/>
+					<ammap:MapArea instanceName="MK_TL" title="Bitola"/>
+					<ammap:MapArea instanceName="MK_BG" title="Bogdanci"/>
+					<ammap:MapArea instanceName="MK_VJ" title="Bogovinje"/>
+					<ammap:MapArea instanceName="MK_BS" title="Bosilovo"/>
+					<ammap:MapArea instanceName="MK_BN" title="Brvenica"/>
+					<ammap:MapArea instanceName="MK_BU" title="Butel"/>
+					<ammap:MapArea instanceName="MK_CE" title="Centar"/>
+					<ammap:MapArea instanceName="MK_CZ" title="Centar Župa"/>
+					<ammap:MapArea instanceName="MK_CI" title="Čair"/>
+					<ammap:MapArea instanceName="MK_CA" title="Čaška"/>
+					<ammap:MapArea instanceName="MK_CH" title="Češinovo-Obleševo"/>
+					<ammap:MapArea instanceName="MK_CS" title="Čučer Sandevo"/>
+					<ammap:MapArea instanceName="MK_DB" title="Debar"/>
+					<ammap:MapArea instanceName="MK_DA" title="Debartsa"/>
+					<ammap:MapArea instanceName="MK_DL" title="Delčevo"/>
+					<ammap:MapArea instanceName="MK_DM" title="Demir Hisar"/>
+					<ammap:MapArea instanceName="MK_DK" title="Demir Kapija"/>
+					<ammap:MapArea instanceName="MK_SD" title="Dojran"/>
+					<ammap:MapArea instanceName="MK_DE" title="Dolneni"/>
+					<ammap:MapArea instanceName="MK_DR" title="Drugovo"/>
+					<ammap:MapArea instanceName="MK_GB" title="Gazi Baba"/>
+					<ammap:MapArea instanceName="MK_GV" title="Gevgelija"/>
+					<ammap:MapArea instanceName="MK_GP" title="Gjorče Petrov"/>
+					<ammap:MapArea instanceName="MK_GT" title="Gostivar"/>
+					<ammap:MapArea instanceName="MK_GR" title="Gradsko"/>
+					<ammap:MapArea instanceName="MK_IL" title="Ilinden"/>
+					<ammap:MapArea instanceName="MK_JG" title="Jegunovtse"/>
+					<ammap:MapArea instanceName="MK_KB" title="Karbinci"/>
+					<ammap:MapArea instanceName="MK_KX" title="Karpoš"/>
+					<ammap:MapArea instanceName="MK_AV" title="Kavadartsi"/>
+					<ammap:MapArea instanceName="MK_KH" title="Kičevo"/>
+					<ammap:MapArea instanceName="MK_VD" title="Kisela Voda"/>
+					<ammap:MapArea instanceName="MK_OC" title="Kočani"/>
+					<ammap:MapArea instanceName="MK_KN" title="Konče"/>
+					<ammap:MapArea instanceName="MK_KY" title="Kratovo"/>
+					<ammap:MapArea instanceName="MK_KZ" title="Kriva Palanka"/>
+					<ammap:MapArea instanceName="MK_KG" title="Krivogaštani"/>
+					<ammap:MapArea instanceName="MK_KS" title="Kruševo"/>
+					<ammap:MapArea instanceName="MK_UM" title="Kumanovo"/>
+					<ammap:MapArea instanceName="MK_LI" title="Lipkovo"/>
+					<ammap:MapArea instanceName="MK_LO" title="Lozovo"/>
+					<ammap:MapArea instanceName="MK_MK" title="Makedonska Kamenica"/>
+					<ammap:MapArea instanceName="MK_MD" title="Makedonski Brod"/>
+					<ammap:MapArea instanceName="MK_MR" title="Mavrovo and Rostuša"/>
+					<ammap:MapArea instanceName="MK_MG" title="Mogila"/>
+					<ammap:MapArea instanceName="MK_NG" title="Negotino"/>
+					<ammap:MapArea instanceName="MK_NV" title="Novatsi"/>
+					<ammap:MapArea instanceName="MK_NS" title="Novo Selo"/>
+					<ammap:MapArea instanceName="MK_OD" title="Ohrid"/>
+					<ammap:MapArea instanceName="MK_OS" title="Oslomej"/>
+					<ammap:MapArea instanceName="MK_PH" title="Pehčevo"/>
+					<ammap:MapArea instanceName="MK_PE" title="Petrovec"/>
+					<ammap:MapArea instanceName="MK_PN" title="Plasnica"/>
+					<ammap:MapArea instanceName="MK_PP" title="Prilep"/>
+					<ammap:MapArea instanceName="MK_PT" title="Probištip"/>
+					<ammap:MapArea instanceName="MK_RV" title="Radoviš"/>
+					<ammap:MapArea instanceName="MK_RN" title="Rankovce"/>
+					<ammap:MapArea instanceName="MK_RE" title="Resen"/>
+					<ammap:MapArea instanceName="MK_RM" title="Rosoman"/>
+					<ammap:MapArea instanceName="MK_AJ" title="Saraj"/>
+					<ammap:MapArea instanceName="MK_ST" title="Štip"/>
+					<ammap:MapArea instanceName="MK_SO" title="Šuto Orizari"/>
+					<ammap:MapArea instanceName="MK_SS" title="Sopište"/>
+					<ammap:MapArea instanceName="MK_NA" title="Staro Nagoričane"/>
+					<ammap:MapArea instanceName="MK_UG" title="Struga"/>
+					<ammap:MapArea instanceName="MK_RU" title="Strumitsa"/>
+					<ammap:MapArea instanceName="MK_SU" title="Studeničani"/>
+					<ammap:MapArea instanceName="MK_SL" title="Sveti Nikole"/>
+					<ammap:MapArea instanceName="MK_TR" title="Tearce"/>
+					<ammap:MapArea instanceName="MK_ET" title="Tetovo"/>
+					<ammap:MapArea instanceName="MK_VA" title="Valandovo"/>
+					<ammap:MapArea instanceName="MK_VL" title="Vasilevo"/>
+					<ammap:MapArea instanceName="MK_VE" title="Veles"/>
+					<ammap:MapArea instanceName="MK_VV" title="Vevčani"/>
+					<ammap:MapArea instanceName="MK_NI" title="Vinitsa"/>
+					<ammap:MapArea instanceName="MK_VC" title="Vraneštica"/>
+					<ammap:MapArea instanceName="MK_VH" title="Vrapčište"/>
+					<ammap:MapArea instanceName="MK_ZA" title="Zajas"/>
+					<ammap:MapArea instanceName="MK_ZK" title="Zelenikovo"/>
+					<ammap:MapArea instanceName="MK_ZE" title="Želino"/>
+					<ammap:MapArea instanceName="MK_ZR" title="Zrnovci"/>
+					<ammap:MapArea instanceName="MK_LOD" title="Lake Ohrid" color="#0098FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="MK_LSD" title="Lake Dojran" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Skopje" lat="41.995998" long="21.431299" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

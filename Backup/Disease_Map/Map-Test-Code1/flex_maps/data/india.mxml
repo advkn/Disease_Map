@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/india.swf" leftLongitude="68.144417" topLatitude="35.500710" rightLongitude="97.380536" bottomLatitude="6.745066">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="IN_AN" title="Andaman and Nicobar Islands"/>
+					<ammap:MapArea instanceName="IN_AP" title="Andhra Pradesh"/>
+					<ammap:MapArea instanceName="IN_AR" title="Arunachal Pradesh"/>
+					<ammap:MapArea instanceName="IN_AS" title="Assam"/>
+					<ammap:MapArea instanceName="IN_BR" title="Bihar"/>
+					<ammap:MapArea instanceName="IN_CH" title="Chandigarh"/>
+					<ammap:MapArea instanceName="IN_CT" title="Chhattisgarh"/>
+					<ammap:MapArea instanceName="IN_DN" title="Dadra and Nagar Haveli"/>
+					<ammap:MapArea instanceName="IN_DD" title="Daman and Diu"/>
+					<ammap:MapArea instanceName="IN_DL" title="Delhi"/>
+					<ammap:MapArea instanceName="IN_GA" title="Goa"/>
+					<ammap:MapArea instanceName="IN_GJ" title="Gujarat"/>
+					<ammap:MapArea instanceName="IN_HR" title="Haryana"/>
+					<ammap:MapArea instanceName="IN_HP" title="Himachal Pradesh"/>
+					<ammap:MapArea instanceName="IN_JK" title="Jammu and Kashmir"/>
+					<ammap:MapArea instanceName="IN_JH" title="Jharkhand"/>
+					<ammap:MapArea instanceName="IN_KA" title="Karnataka"/>
+					<ammap:MapArea instanceName="IN_KL" title="Kerala"/>
+					<ammap:MapArea instanceName="IN_LD" title="Lakshadweep"/>
+					<ammap:MapArea instanceName="IN_MP" title="Madhya Pradesh"/>
+					<ammap:MapArea instanceName="IN_MH" title="Maharashtra"/>
+					<ammap:MapArea instanceName="IN_MN" title="Manipur"/>
+					<ammap:MapArea instanceName="IN_ML" title="Meghalaya"/>
+					<ammap:MapArea instanceName="IN_MZ" title="Mizoram"/>
+					<ammap:MapArea instanceName="IN_NL" title="Nagaland"/>
+					<ammap:MapArea instanceName="IN_OR" title="Orissa"/>
+					<ammap:MapArea instanceName="IN_PY" title="Puducherry"/>
+					<ammap:MapArea instanceName="IN_PB" title="Punjab"/>
+					<ammap:MapArea instanceName="IN_RJ" title="Rajasthan"/>
+					<ammap:MapArea instanceName="IN_SK" title="Sikkim"/>
+					<ammap:MapArea instanceName="IN_TN" title="Tamil Nadu"/>
+					<ammap:MapArea instanceName="IN_TR" title="Tripura"/>
+					<ammap:MapArea instanceName="IN_UT" title="Uttarakhand"/>
+					<ammap:MapArea instanceName="IN_UP" title="Uttar Pradesh"/>
+					<ammap:MapArea instanceName="IN_WB" title="West Bengal"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="New Delhi" lat="28.643895" long="77.116204" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

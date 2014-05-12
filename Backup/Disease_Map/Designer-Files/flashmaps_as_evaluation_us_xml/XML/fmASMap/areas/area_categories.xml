@@ -1,0 +1,23 @@
+<areaCategories>
+	<category id='noarea' zoom='false' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0xF2F2F2' over='0xF2F2F2' down='0xF2F2F2' />
+	</category>
+	<category id='1' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0xCEDBFC' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+	<category id='2' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0x95B2FB' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+	<category id='3' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0x5081FC' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+	<category id='4' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0xF07474' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+	<category id='5' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0xF63434' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+	<category id='6' zoom='true' enabled='true' tooltip='popups/area.swf' poitextField='state' poitextCategory='state' >
+		<color up='0xBE0808' over='0xFEDF74' down='0xFEDF74' />
+	</category>
+</areaCategories>

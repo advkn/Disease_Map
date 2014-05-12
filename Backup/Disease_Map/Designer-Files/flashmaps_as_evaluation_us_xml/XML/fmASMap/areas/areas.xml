@@ -1,0 +1,54 @@
+<areas>
+	<area id='us_az' category='5' label='Arizona' state='AZ' />
+	<area id='us_ca' category='5' label='California' state='CA' />
+	<area id='us_co' category='4' label='Colorado' state='CO' />
+	<area id='us_dc' category='3' label='D. Columbia' state='DC' />
+	<area id='us_fl' category='3' label='Florida' state='FL' />
+	<area id='us_ga' category='3' label='Georgia' state='GA' />
+	<area id='us_il' category='2' label='Illinois' state='IL' />
+	<area id='us_in' category='2' label='Indiana' state='IN' />
+	<area id='us_ma' category='1' label='Massachusetts' state='MA' />
+	<area id='us_mi' category='2' label='Michigan' state='MI' />
+	<area id='us_mn' category='4' label='Minnesota' state='MN' />
+	<area id='us_nc' category='3' label='North Carolina' state='NC' />
+	<area id='us_nj' category='1' label='New Jersey' state='NJ' />
+	<area id='us_ny' category='1' label='New York' state='NY' />
+	<area id='us_oh' category='2' label='Ohio' state='OH' />
+	<area id='us_ok' category='6' label='Oklahoma' state='OK' />
+	<area id='us_or' category='4' label='Oregon' state='OR' />
+	<area id='us_pa' category='1' label='Pennsylvania' state='PA' />
+	<area id='us_tn' category='6' label='Tennessee' state='TN' />
+	<area id='us_tx' category='6' label='Texas' state='TX' />
+	<area id='us_ut' category='4' label='Utah' state='UT' />
+	<area id='us_wa' category='4' label='Washington' state='WA' />
+	<area id='us_wi' category='2' label='Wisconsin' state='WI' />
+	<area id='us_ak' category='noarea' label='Alaska' state='AK' />
+	<area id='us_al' category='noarea' label='Alabama' state='AL' />
+	<area id='us_ar' category='noarea' label='Arkansas' state='AR' />
+	<area id='us_ct' category='noarea' label='Connecticut' state='CT' />
+	<area id='us_de' category='noarea' label='Delaware' state='DE' />
+	<area id='us_hi' category='noarea' label='Hawaii' state='HI' />
+	<area id='us_ia' category='noarea' label='Iowa' state='IA' />
+	<area id='us_id' category='noarea' label='Idaho' state='ID' />
+	<area id='us_ks' category='noarea' label='Kansas' state='KS' />
+	<area id='us_ky' category='noarea' label='Kentucky' state='KY' />
+	<area id='us_la' category='noarea' label='Louisiana' state='LA' />
+	<area id='us_md' category='noarea' label='Maryland' state='MD' />
+	<area id='us_me' category='noarea' label='Maine' state='ME' />
+	<area id='us_mo' category='noarea' label='Missouri' state='MO' />
+	<area id='us_ms' category='noarea' label='Mississippi' state='MS' />
+	<area id='us_mt' category='noarea' label='Montana' state='MT' />
+	<area id='us_nd' category='noarea' label='North Dakota' state='ND' />
+	<area id='us_ne' category='noarea' label='Nebraska' state='NE' />
+	<area id='us_nh' category='noarea' label='New Hampshire' state='NH' />
+	<area id='us_nm' category='noarea' label='New Mexico' state='NM' />
+	<area id='us_nv' category='noarea' label='Nevada' state='NV' />
+	<area id='us_pr' category='noarea' label='Puerto Rico' state='PR' />
+	<area id='us_ri' category='noarea' label='Rhode Island' state='RI' />
+	<area id='us_sc' category='noarea' label='South Carolina' state='SC' />
+	<area id='us_sd' category='noarea' label='South Dakota' state='SD' />
+	<area id='us_va' category='noarea' label='Virginia' state='VA' />
+	<area id='us_vt' category='noarea' label='Vermont' state='VT' />
+	<area id='us_wv' category='noarea' label='West Virginia' state='WV' />
+	<area id='us_wy' category='noarea' label='Wyoming' state='WY' />
+</areas>

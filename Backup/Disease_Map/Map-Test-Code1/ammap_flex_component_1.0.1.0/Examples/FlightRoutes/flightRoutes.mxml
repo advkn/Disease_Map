@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				layout="absolute" 
+				xmlns:ammap="http://www.ammap.com/com_internal"
+				width="100%"
+				height="100%"
+				backgroundColor="#FFFFFF">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.effects.easing.Sine;
+			import mx.effects.easing.Linear;
+			[Bindable]
+			[Embed(source="../assets/maps/world.swf")]
+			private var _world:Class
+			
+			[Bindable]
+			[Embed(source="../assets/icons/target.swf")]
+			private var _target:Class	
+			
+			[Bindable]
+			[Embed(source="../assets/icons/plane.swf")]
+			private var _plane:Class							
+		]]>
+	</mx:Script>
+	
+	
+	<!-- flight routes map -->
+	<ammap:AmMap developerMode="false" id="ammap" width="100%" height="100%" backgroundColor="#FFFFFF" fontSize="15" easingFunction="{Sine.easeOut}">
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl buttonBorderColor="#000000" buttonIconColor="#FFFFFF" homeIconColor="#000000"/>
+		</ammap:zoomControl>
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings unlistedAreasColor="#FFCC00"/>
+		</ammap:areasSettings>
+		
+		<ammap:moviesSettings>
+			<!-- centered should be set to false if default amMap icons are used, as their center is already at x=0, y=0 position -->
+			<ammap:MoviesSettings centered="false" color="#FFFFFF" rollOverColor="#CC0000" selectedColor="#000000"/>
+		</ammap:moviesSettings>
+		
+		<ammap:linesSettings>
+			<ammap:LinesSettings color="#CC0000" alpha="0.4"/>
+		</ammap:linesSettings>
+		
+		<ammap:dataSets>
+			<!-- one data set is used for this map. The map is calibrated, so real longitudes and latitudes can be used for cities.
+			url is set for this data set - this means it movie "london" will be selected right after the map is initialized. -->
+			<ammap:DataSet				 
+				mapClass="{_world}" 
+				leftLongitude="-168.49" 
+				topLatitude="83.63" 
+				rightLongitude="190.3" 
+				bottomLatitude="-55.58"
+				url="{london}">
+				
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+				</ammap:areas>
+				
+				<ammap:movies>
+					
+					<!-- cities -->
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Brussels" lat="50.8371" long="4.3676"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Prague" lat="50.0878" long="14.4205"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Athens" lat="37.9792" long="23.7166"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Reykjavik" lat="64.1353" long="-21.8952"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Dublin" lat="53.3441" long="-6.2675"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Oslo" lat="59.9138" long="10.7387"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Lisbon" lat="38.7072" long="-9.1355"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Moscow" lat="55.7558" long="37.6176"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Belgrade" lat="44.8048" long="20.4781"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Bratislava" lat="48.2116" long="17.1547"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Ljubljana" lat="46.0514" long="14.5060"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Madrid" lat="40.4167" long="-3.7033"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Stockholm" lat="59.3328" long="18.0645"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Bern" lat="46.9480" long="7.4481"/>    
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Kiev" lat="50.4422" long="30.5367"/>
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="Paris" lat="48.8567" long="2.3510"/> 
+					<ammap:MapMovie  color="#CC0000" movieClass="{_target}" title="New York" lat="40.43" long="-74"/> 
+					
+					<!-- london is a different movie - it has child lines and other movies which are displayed only when user clicks on it -->
+					<ammap:MapMovie 
+						id="london" 
+						
+						color="#000000"
+						movieClass="{_target}" 
+						title="London" 
+						lat="51.5002" 
+						long="-0.1262" 
+						width="16" 
+						height="16" 
+						fixedSize="true" 
+						zoomLevel="274" zoomLong="-20.1341" zoomLat="49.1712"> 
+						
+						<!-- array of lines -->	
+						<ammap:lines>					    
+							<ammap:MapLine latArray="{[51.5002,50.4422]}" longArray="{[-0.1262,30.5367]}"/> 
+							<ammap:MapLine latArray="{[51.5002,46.9480]}" longArray="{[-0.1262,7.4481]}"/>   
+							<ammap:MapLine latArray="{[51.5002,59.3328]}" longArray="{[-0.1262,18.0645]}"/>    
+							<ammap:MapLine latArray="{[51.5002,40.4167]}" longArray="{[-0.1262,-3.7033]}"/>    
+							<ammap:MapLine latArray="{[51.5002,46.0514]}" longArray="{[-0.1262,14.5060]}"/>    
+							<ammap:MapLine latArray="{[51.5002,48.2116]}" longArray="{[-0.1262,17.1547]}"/>    
+							<ammap:MapLine latArray="{[51.5002,44.8048]}" longArray="{[-0.1262,20.4781]}"/>    
+							<ammap:MapLine latArray="{[51.5002,55.7558]}" longArray="{[-0.1262,37.6176]}"/>    
+							<ammap:MapLine latArray="{[51.5002,38.7072]}" longArray="{[-0.1262,-9.1355]}"/>    
+							<ammap:MapLine latArray="{[51.5002,54.6896]}" longArray="{[-0.1262,25.2799]}"/>
+							<!-- curved lines must have at least 3 points -->
+							<ammap:MapLine latArray="{[51.5002,59.4749,64.1353]}" longArray="{[-0.1262,-6.4367,-21.8952]}" curved="true"/>         
+							<ammap:MapLine latArray="{[51.5002,43.4357,40.43]}" longArray="{[-0.1262,-36.9038,-74]}" curved="true"/> 
+						</ammap:lines>    
+						
+						<ammap:movies>
+							<!-- this movie displays plane icon and "Flights from London" text -->
+							<ammap:MapMovie movieClass="{_plane}"
+											
+											marginLeft="100" marginTop="45"
+											color="#CC0000" 
+											labelColor="#CC0000">
+								<ammap:label><![CDATA[<b>Flights from London</b>]]></ammap:label>
+							</ammap:MapMovie>
+							
+							<!-- this movie displays "show flights from Vilnius" text and is linked to "vilnius" movie -->
+							<ammap:MapMovie
+								marginLeft="113" marginTop="55" 
+								labelColor="#000000"
+								labelRollOverColor="#CC0000"
+								labelFontSize="11" 
+								rollOverColor="#CC0000"
+								url="{vilnius}"
+								label="show flights from Vilnius"/>
+						</ammap:movies>					  
+					</ammap:MapMovie> 
+					
+					<!-- all the same as with "london" movie, but different lines and different labels -->
+					<ammap:MapMovie
+						movieClass="{_target}"
+						
+						id="vilnius" 
+						color="#000000"
+						title="Vilnius" 
+						lat="54.6896" 
+						long="25.2799" 
+						width="16" 
+						height="16" 						
+						fixedSize="true" 
+						zoomLevel="492.24" zoomLong="15.4492" zoomLat="50.2631"> 
+						
+						<ammap:lines> 
+							<ammap:MapLine latArray="{[54.6896,50.8371]}" longArray="{[25.2799,4.3676]}"/> 
+							<ammap:MapLine latArray="{[54.6896,59.9138]}" longArray="{[25.2799,10.7387]}"/>    
+							<ammap:MapLine latArray="{[54.6896,40.4167]}" longArray="{[25.2799,-3.7033]}"/>          
+							<ammap:MapLine latArray="{[54.6896,50.0878]}" longArray="{[25.2799,14.4205]}"/>    
+							<ammap:MapLine latArray="{[54.6896,48.2116]}" longArray="{[25.2799,17.1547]}"/>    
+							<ammap:MapLine latArray="{[54.6896,44.8048]}" longArray="{[25.2799,20.4781]}"/>    
+							<ammap:MapLine latArray="{[54.6896,55.7558]}" longArray="{[25.2799,37.6176]}"/>    
+							<ammap:MapLine latArray="{[54.6896,37.9792]}" longArray="{[25.2799,23.7166]}"/>    
+							<ammap:MapLine latArray="{[54.6896,54.6896]}" longArray="{[25.2799,25.2799]}"/> 
+							<ammap:MapLine latArray="{[54.6896,51.5002]}" longArray="{[25.2799,-0.1262]}"/> 
+							<ammap:MapLine latArray="{[54.6896,53.3441]}" longArray="{[25.2799,-6.2675]}"/>             
+						</ammap:lines> 
+						
+						<ammap:movies>
+							<ammap:MapMovie movieClass="{_plane}"					  	 	 
+											marginLeft="100" marginTop="45"
+											color="#CC0000" 
+											labelColor="#CC0000">
+								<ammap:label><![CDATA[<b>Flights from Vilnius</b>]]></ammap:label>
+							</ammap:MapMovie>
+							<ammap:MapMovie
+								marginLeft="113" marginTop="55" 
+								labelColor="#000000"
+								labelRollOverColor="#CC0000"
+								labelFontSize="11" 
+								rollOverColor="#CC0000"
+								url="{london}"
+								label="show flights from London"/>
+						</ammap:movies>					 
+					</ammap:MapMovie> 				
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

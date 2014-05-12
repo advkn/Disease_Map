@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/lithuania.swf" leftLongitude="20.9543" topLatitude="56.447406" rightLongitude="26.835618" bottomLatitude="53.898758">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="LT_AL" title="Alytus"/>
+					<ammap:MapArea instanceName="LT_KU" title="Kaunas"/>
+					<ammap:MapArea instanceName="LT_KL" title="Klaipėda"/>
+					<ammap:MapArea instanceName="LT_MR" title="Marijampolė"/>
+					<ammap:MapArea instanceName="LT_PN" title="Panevėžys"/>
+					<ammap:MapArea instanceName="LT_SA" title="Šiauliai"/>
+					<ammap:MapArea instanceName="LT_TA" title="Tauragė"/>
+					<ammap:MapArea instanceName="LT_TE" title="Telšiai"/>
+					<ammap:MapArea instanceName="LT_UT" title="Utena"/>
+					<ammap:MapArea instanceName="LT_VL" title="Vilnius"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Vilnius" lat="54.689855" long="25.269265" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

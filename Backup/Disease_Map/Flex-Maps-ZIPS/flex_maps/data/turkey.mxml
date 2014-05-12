@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/turkey.swf" leftLongitude="25.6665542" topLatitude="42.094016" rightLongitude="44.818478" bottomLatitude="35.807049">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="TR_AA" title="Adana"/>
+					<ammap:MapArea instanceName="TR_AD" title="Adıyaman"/>
+					<ammap:MapArea instanceName="TR_AF" title="Afyonkarahisar (Afyon)"/>
+					<ammap:MapArea instanceName="TR_AG" title="Ağri"/>
+					<ammap:MapArea instanceName="TR_AK" title="Aksaray"/>
+					<ammap:MapArea instanceName="TR_AM" title="Amasya"/>
+					<ammap:MapArea instanceName="TR_AN" title="Ankara"/>
+					<ammap:MapArea instanceName="TR_AL" title="Antalya"/>
+					<ammap:MapArea instanceName="TR_AR" title="Ardahan"/>
+					<ammap:MapArea instanceName="TR_AV" title="Artvin"/>
+					<ammap:MapArea instanceName="TR_AY" title="Aydın"/>
+					<ammap:MapArea instanceName="TR_BK" title="Balıkesir"/>
+					<ammap:MapArea instanceName="TR_BR" title="Bartın"/>
+					<ammap:MapArea instanceName="TR_BM" title="Batman"/>
+					<ammap:MapArea instanceName="TR_BB" title="Bayburt"/>
+					<ammap:MapArea instanceName="TR_BC" title="Bilecik"/>
+					<ammap:MapArea instanceName="TR_BG" title="Bingöl"/>
+					<ammap:MapArea instanceName="TR_BT" title="Bitlis"/>
+					<ammap:MapArea instanceName="TR_BL" title="Bolu"/>
+					<ammap:MapArea instanceName="TR_BD" title="Burdur"/>
+					<ammap:MapArea instanceName="TR_BU" title="Bursa"/>
+					<ammap:MapArea instanceName="TR_CK" title="Çanakkale"/>
+					<ammap:MapArea instanceName="TR_CI" title="Çankırı"/>
+					<ammap:MapArea instanceName="TR_CM" title="Çorum"/>
+					<ammap:MapArea instanceName="TR_DN" title="Denizli"/>
+					<ammap:MapArea instanceName="TR_DY" title="Diyarbakır"/>
+					<ammap:MapArea instanceName="TR_DU" title="Düzce"/>
+					<ammap:MapArea instanceName="TR_ED" title="Edirne"/>
+					<ammap:MapArea instanceName="TR_EG" title="Elazığ"/>
+					<ammap:MapArea instanceName="TR_EN" title="Erzincan"/>
+					<ammap:MapArea instanceName="TR_EM" title="Erzurum"/>
+					<ammap:MapArea instanceName="TR_ES" title="Eskişehir"/>
+					<ammap:MapArea instanceName="TR_GA" title="Gaziantep"/>
+					<ammap:MapArea instanceName="TR_GI" title="Giresun"/>
+					<ammap:MapArea instanceName="TR_GU" title="Gümüşhane"/>
+					<ammap:MapArea instanceName="TR_HK" title="Hakkari"/>
+					<ammap:MapArea instanceName="TR_HT" title="Hatay"/>
+					<ammap:MapArea instanceName="TR_IG" title="Iğdir"/>
+					<ammap:MapArea instanceName="TR_IP" title="Isparta"/>
+					<ammap:MapArea instanceName="TR_IB" title="İstanbul"/>
+					<ammap:MapArea instanceName="TR_IZ" title="İzmir"/>
+					<ammap:MapArea instanceName="TR_KM" title="Kahramanmaraş"/>
+					<ammap:MapArea instanceName="TR_KB" title="Karabük"/>
+					<ammap:MapArea instanceName="TR_KR" title="Karaman"/>
+					<ammap:MapArea instanceName="TR_KA" title="Kars"/>
+					<ammap:MapArea instanceName="TR_KS" title="Kastamonu"/>
+					<ammap:MapArea instanceName="TR_KY" title="Kayseri"/>
+					<ammap:MapArea instanceName="TR_KI" title="Kilis"/>
+					<ammap:MapArea instanceName="TR_KK" title="Kırıkkale"/>
+					<ammap:MapArea instanceName="TR_KL" title="Kırklareli"/>
+					<ammap:MapArea instanceName="TR_KH" title="Kırşehir"/>
+					<ammap:MapArea instanceName="TR_KC" title="Kocaeli"/>
+					<ammap:MapArea instanceName="TR_KO" title="Konya"/>
+					<ammap:MapArea instanceName="TR_KU" title="Kütahya"/>
+					<ammap:MapArea instanceName="TR_ML" title="Malatya"/>
+					<ammap:MapArea instanceName="TR_MN" title="Manisa"/>
+					<ammap:MapArea instanceName="TR_MR" title="Mardin"/>
+					<ammap:MapArea instanceName="TR_IC" title="Mersin"/>
+					<ammap:MapArea instanceName="TR_MG" title="Muğla"/>
+					<ammap:MapArea instanceName="TR_MS" title="Muş"/>
+					<ammap:MapArea instanceName="TR_NV" title="Nevşehir"/>
+					<ammap:MapArea instanceName="TR_NG" title="Niğde"/>
+					<ammap:MapArea instanceName="TR_OR" title="Ordu"/>
+					<ammap:MapArea instanceName="TR_OS" title="Osmaniye"/>
+					<ammap:MapArea instanceName="TR_RI" title="Rize"/>
+					<ammap:MapArea instanceName="TR_SK" title="Sakarya"/>
+					<ammap:MapArea instanceName="TR_SS" title="Samsun"/>
+					<ammap:MapArea instanceName="TR_SU" title="Şanlıurfa"/>
+					<ammap:MapArea instanceName="TR_SI" title="Siirt"/>
+					<ammap:MapArea instanceName="TR_SP" title="Sinop"/>
+					<ammap:MapArea instanceName="TR_SR" title="Şırnak"/>
+					<ammap:MapArea instanceName="TR_SV" title="Sivas"/>
+					<ammap:MapArea instanceName="TR_TG" title="Tekirdağ"/>
+					<ammap:MapArea instanceName="TR_TT" title="Tokat"/>
+					<ammap:MapArea instanceName="TR_TB" title="Trabzon"/>
+					<ammap:MapArea instanceName="TR_TC" title="Tunceli"/>
+					<ammap:MapArea instanceName="TR_US" title="Uşak"/>
+					<ammap:MapArea instanceName="TR_VA" title="Van"/>
+					<ammap:MapArea instanceName="TR_YL" title="Yalova"/>
+					<ammap:MapArea instanceName="TR_YZ" title="Yozgat"/>
+					<ammap:MapArea instanceName="TR_ZO" title="Zonguldak"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Ankara" lat="39.94293" long="32.86048" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

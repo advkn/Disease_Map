@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				layout="absolute" 
+				xmlns:ammap="http://www.ammap.com/com_internal"
+				width="100%"
+				height="100%"
+				backgroundColor="#FFFFFF">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.effects.easing.Sine;
+			import mx.effects.easing.Linear;
+			[Bindable]
+			[Embed(source="../assets/maps/world.swf")]
+			private var _world:Class
+		]]>
+	</mx:Script>
+	
+	
+	<!-- Developer mode provides information which can be used when building a map. Set developerMode="true" and you will see
+	zoom information, longitude and latitude of a mouse position, also right, top, left and bottom margins in pixels and in percents.
+	Use this information for positioning your objects and setting zoom properties for the objects. 
+	
+	If a movie has lat and long defined, it will be bounded to the map. In case margins of are set - it will be placed on the stage and won't move
+	with the map. The same is with lines - if you set latArray and longArray, the line will move with the map. Set xArray and yArray if the line
+	has to be in a fixed position.
+	-->
+	
+	<ammap:AmMap id="ammap" width="100%" height="100%" backgroundColor="#FFFFFF" developerMode="true">
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl homeIconColor="#000000"/>
+		</ammap:zoomControl>
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings unlistedAreasColor="#DDDDDD"/>
+		</ammap:areasSettings>
+		<ammap:dataSets>
+			<ammap:DataSet mapClass="{_world}"	leftLongitude="-168.49"	topLatitude="83.63"	rightLongitude="190.3"	bottomLatitude="-55.58">				
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+				</ammap:areas>		
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

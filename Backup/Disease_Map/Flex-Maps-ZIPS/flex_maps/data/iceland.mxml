@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/iceland.swf" leftLongitude="-24.5297" topLatitude="66.574373" rightLongitude="-13.490918" bottomLatitude="63.28328">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_glacier" color="#666666" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="IS_AL" title="Austurland (Eastland)"/>
+					<ammap:MapArea instanceName="IS_HO" title="Höfuðborgarsvæði (Capital Region)"/>
+					<ammap:MapArea instanceName="IS_NE" title="Norðurland eystra (Northland East)"/>
+					<ammap:MapArea instanceName="IS_NV" title="Norðurland vestra (Northland West)"/>
+					<ammap:MapArea instanceName="IS_SL" title="Suðurland (Southland)"/>
+					<ammap:MapArea instanceName="IS_SU" title="Suðurnes (Southern Peninsula)"/>
+					<ammap:MapArea instanceName="IS_VF" title="Vestfirðir (Western Fjords)"/>
+					<ammap:MapArea instanceName="IS_VL" title="Vesturland (Westland)"/>
+					<ammap:MapArea instanceName="IS_GL_DR" title="Drangajökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_EI" title="Eiríksjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_EY" title="Eyjafjallajökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_HO" title="Hofsjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_LA" title="Langjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_MY" title="Mýrdalsjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_PR" title="Þrándarjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_SN" title="Snæfellsjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_TU" title="Tungnafellsjökull" color="#CCCCCC"/>
+					<ammap:MapArea instanceName="IS_GL_VA" title="Vatnajökull" color="#CCCCCC"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Reykjavík" lat="64.137383" long="-21.902479" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

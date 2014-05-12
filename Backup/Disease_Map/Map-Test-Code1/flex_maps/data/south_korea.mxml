@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/south_korea.swf" leftLongitude="125.385140" topLatitude="38.612049" rightLongitude="129.584609" bottomLatitude="33.194451">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_in" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_out" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="KR_PU" title="Busan"/>
+					<ammap:MapArea instanceName="KR_GB" title="Chungcheongbuk-do"/>
+					<ammap:MapArea instanceName="KR_GN" title="Chungcheongnam-do"/>
+					<ammap:MapArea instanceName="KR_TG" title="Daegu"/>
+					<ammap:MapArea instanceName="KR_TJ" title="Daejeon"/>
+					<ammap:MapArea instanceName="KR_KW" title="Gangwon-do"/>
+					<ammap:MapArea instanceName="KR_KJ" title="Gwangju"/>
+					<ammap:MapArea instanceName="KR_KG" title="Gyeonggi-do"/>
+					<ammap:MapArea instanceName="KR_KB" title="Gyeongsangbuk-do"/>
+					<ammap:MapArea instanceName="KR_KN" title="Gyeongsangnam-do"/>
+					<ammap:MapArea instanceName="KR_IN" title="Incheon"/>
+					<ammap:MapArea instanceName="KR_CJ" title="Jeju-do"/>
+					<ammap:MapArea instanceName="KR_CB" title="Jeollabuk-do"/>
+					<ammap:MapArea instanceName="KR_CN" title="Jeollanam-do"/>
+					<ammap:MapArea instanceName="KR_SO" title="Seoul"/>
+					<ammap:MapArea instanceName="KR_UL" title="Ulsan"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Seoul" lat="37.557121" long="126.977379" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

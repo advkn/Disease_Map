@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/moldova.swf" leftLongitude="26.649381" topLatitude="48.495537" rightLongitude="30.181365" bottomLatitude="45.461908">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="MD_AN" title="Anenii Noi"/>
+					<ammap:MapArea instanceName="MD_BT" title="Bălţi"/>
+					<ammap:MapArea instanceName="MD_BA" title="Basarabeasca"/>
+					<ammap:MapArea instanceName="MD_BR" title="Briceni"/>
+					<ammap:MapArea instanceName="MD_CH" title="Cahul"/>
+					<ammap:MapArea instanceName="MD_CA" title="Călăraşi"/>
+					<ammap:MapArea instanceName="MD_CN" title="Cantemir"/>
+					<ammap:MapArea instanceName="MD_CU" title="Căuşeni"/>
+					<ammap:MapArea instanceName="MD_CV" title="Chişinău"/>
+					<ammap:MapArea instanceName="MD_CS" title="Cimişlia"/>
+					<ammap:MapArea instanceName="MD_CR" title="Criuleni"/>
+					<ammap:MapArea instanceName="MD_DO" title="Donduşeni"/>
+					<ammap:MapArea instanceName="MD_DR" title="Drochia"/>
+					<ammap:MapArea instanceName="MD_DB" title="Dubăsari"/>
+					<ammap:MapArea instanceName="MD_ED" title="Edinet"/>
+					<ammap:MapArea instanceName="MD_FA" title="Făleşti"/>
+					<ammap:MapArea instanceName="MD_FL" title="Floreşti"/>
+					<ammap:MapArea instanceName="MD_GA" title="Găgăuzia"/>
+					<ammap:MapArea instanceName="MD_GL" title="Glodeni"/>
+					<ammap:MapArea instanceName="MD_HI" title="înceşti"/>
+					<ammap:MapArea instanceName="MD_IA" title="Ialoveni"/>
+					<ammap:MapArea instanceName="MD_LE" title="Leova"/>
+					<ammap:MapArea instanceName="MD_NI" title="Nisporeni"/>
+					<ammap:MapArea instanceName="MD_OC" title="Ocniţa"/>
+					<ammap:MapArea instanceName="MD_OH" title="Orhei"/>
+					<ammap:MapArea instanceName="MD_RZ" title="Rîşcani"/>
+					<ammap:MapArea instanceName="MD_RS" title="Rεscani"/>
+					<ammap:MapArea instanceName="MD_SD" title="Şoldăneşt"/>
+					<ammap:MapArea instanceName="MD_SO" title="Soroca"/>
+					<ammap:MapArea instanceName="MD_SV" title="Ştefan Vodă"/>
+					<ammap:MapArea instanceName="MD_ST" title="Străşeni"/>
+					<ammap:MapArea instanceName="MD_SI" title="Sîngerei"/>
+					<ammap:MapArea instanceName="MD_TA" title="Taraclia"/>
+					<ammap:MapArea instanceName="MD_TE" title="Teleneşti"/>
+					<ammap:MapArea instanceName="MD_TG" title="Tighina"/>
+					<ammap:MapArea instanceName="MD_DU" title="Transnistria"/>
+					<ammap:MapArea instanceName="MD_UG" title="Ungheni"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Chişinău" lat="47.02573" long="28.83831" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

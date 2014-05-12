@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/united_kingdom.swf" leftLongitude="-10.6557" topLatitude="60.8814469837442" rightLongitude="1.7499" bottomLatitude="49.1810510310069">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="GB_ENG" title="England"/>
+					<ammap:MapArea instanceName="GB_SCT" title="Scotland"/>
+					<ammap:MapArea instanceName="GB_WLS" title="Wales"/>
+					<ammap:MapArea instanceName="GB_NIR" title="Northern Ireland"/>
+					<ammap:MapArea instanceName="GB_CHA" title="Channel Islands"/>
+					<ammap:MapArea instanceName="IM" title="Isle of Man"/>
+					<ammap:MapArea instanceName="IE" title="Ireland"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="London. Click to zoom" lat="51.507778" long="-0.128056" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

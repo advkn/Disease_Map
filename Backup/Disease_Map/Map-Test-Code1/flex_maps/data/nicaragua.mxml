@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/nicaragua.swf" leftLongitude="" topLatitude="" rightLongitude="" bottomLatitude="">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="boaco" title="Boaco"/>
+					<ammap:MapArea instanceName="jinotepe" title="Jinotepe"/>
+					<ammap:MapArea instanceName="chinandega" title="Chinandega"/>
+					<ammap:MapArea instanceName="juigalpa" title="Juigalpa"/>
+					<ammap:MapArea instanceName="esteli" title="Estelí"/>
+					<ammap:MapArea instanceName="granada" title="Granada"/>
+					<ammap:MapArea instanceName="jinotega" title="Jinotega"/>
+					<ammap:MapArea instanceName="leon" title="León"/>
+					<ammap:MapArea instanceName="somoto" title="Somoto"/>
+					<ammap:MapArea instanceName="managua" title="Managua"/>
+					<ammap:MapArea instanceName="masaya" title="Masaya"/>
+					<ammap:MapArea instanceName="matagalpa" title="Matagalpa"/>
+					<ammap:MapArea instanceName="ocotal" title="Ocotal"/>
+					<ammap:MapArea instanceName="rivas" title="Rivas"/>
+					<ammap:MapArea instanceName="san_carlos" title="San Carlos"/>
+					<ammap:MapArea instanceName="bilwi" title="Bilwi"/>
+					<ammap:MapArea instanceName="bluefields" title="Bluefields"/>
+				</ammap:areas>
+				<ammap:movies>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

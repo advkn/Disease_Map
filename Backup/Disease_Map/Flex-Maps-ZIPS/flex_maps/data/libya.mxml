@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/libya.swf" leftLongitude="9.390114" topLatitude="33.166667" rightLongitude="25.149744" bottomLatitude="19.506294">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false" alpha="0"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="LY_BN" title="Al Butnan"/>
+					<ammap:MapArea instanceName="LY_JK" title="Al Jabal al Akhdar"/>
+					<ammap:MapArea instanceName="LY_JG" title="Al Jabal al Gharbi"/>
+					<ammap:MapArea instanceName="LY_JR" title="Al Jifarah"/>
+					<ammap:MapArea instanceName="LY_JF" title="Al Jufrah"/>
+					<ammap:MapArea instanceName="LY_KU" title="Al Kufrah"/>
+					<ammap:MapArea instanceName="LY_MA" title="Al Marj"/>
+					<ammap:MapArea instanceName="LY_MR" title="Al Marqab"/>
+					<ammap:MapArea instanceName="LY_AW" title="Al Wahat"/>
+					<ammap:MapArea instanceName="LY_NK" title="An Nuqat al Khams"/>
+					<ammap:MapArea instanceName="LY_ZW" title="Az Zawiyah"/>
+					<ammap:MapArea instanceName="LY_BG" title="Benghazi"/>
+					<ammap:MapArea instanceName="LY_DA" title="Darnah"/>
+					<ammap:MapArea instanceName="LY_GH" title="Ghat"/>
+					<ammap:MapArea instanceName="LY_MS" title="Misratah"/>
+					<ammap:MapArea instanceName="LY_MU" title="Murzuq"/>
+					<ammap:MapArea instanceName="LY_NT" title="Nalut"/>
+					<ammap:MapArea instanceName="LY_SA" title="Sabha"/>
+					<ammap:MapArea instanceName="LY_ST" title="Surt"/>
+					<ammap:MapArea instanceName="LY_TR" title="Tripoli"/>
+					<ammap:MapArea instanceName="LY_WH" title="Wadi al Hayat"/>
+					<ammap:MapArea instanceName="LY_WS" title="Wadi ash Shati'"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tripoli" lat="32.877708" long="13.18732" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

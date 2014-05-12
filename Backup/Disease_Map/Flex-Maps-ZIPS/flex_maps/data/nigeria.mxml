@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/nigeria.swf" leftLongitude="2.668683" topLatitude="13.891763" rightLongitude="14.679994" bottomLatitude="4.270164">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_LKC" color="#003FD5" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="NG_AB" title="Abia"/>
+					<ammap:MapArea instanceName="NG_AD" title="Adamawa"/>
+					<ammap:MapArea instanceName="NG_AK" title="Akwa Ibom"/>
+					<ammap:MapArea instanceName="NG_AN" title="Anambra"/>
+					<ammap:MapArea instanceName="NG_BA" title="Bauchi"/>
+					<ammap:MapArea instanceName="NG_BY" title="Bayelsa"/>
+					<ammap:MapArea instanceName="NG_BE" title="Benue"/>
+					<ammap:MapArea instanceName="NG_BO" title="Borno"/>
+					<ammap:MapArea instanceName="NG_CR" title="Cross River"/>
+					<ammap:MapArea instanceName="NG_DE" title="Delta"/>
+					<ammap:MapArea instanceName="NG_EB" title="Ebonyi"/>
+					<ammap:MapArea instanceName="NG_ED" title="Edo"/>
+					<ammap:MapArea instanceName="NG_EK" title="Ekiti"/>
+					<ammap:MapArea instanceName="NG_EN" title="Enugu"/>
+					<ammap:MapArea instanceName="NG_FC" title="Federal Capital Territory"/>
+					<ammap:MapArea instanceName="NG_GO" title="Gombe"/>
+					<ammap:MapArea instanceName="NG_IM" title="Imo"/>
+					<ammap:MapArea instanceName="NG_JI" title="Jigawa"/>
+					<ammap:MapArea instanceName="NG_KD" title="Kaduna"/>
+					<ammap:MapArea instanceName="NG_KN" title="Kano"/>
+					<ammap:MapArea instanceName="NG_KT" title="Katsina"/>
+					<ammap:MapArea instanceName="NG_KE" title="Kebbi"/>
+					<ammap:MapArea instanceName="NG_KO" title="Kogi"/>
+					<ammap:MapArea instanceName="NG_KW" title="Kwara"/>
+					<ammap:MapArea instanceName="NG_LA" title="Lagos"/>
+					<ammap:MapArea instanceName="NG_NA" title="Nassarawa"/>
+					<ammap:MapArea instanceName="NG_NI" title="Niger"/>
+					<ammap:MapArea instanceName="NG_OG" title="Ogun"/>
+					<ammap:MapArea instanceName="NG_ON" title="Ondo"/>
+					<ammap:MapArea instanceName="NG_OS" title="Osun"/>
+					<ammap:MapArea instanceName="NG_OY" title="Oyo"/>
+					<ammap:MapArea instanceName="NG_PL" title="Plateau"/>
+					<ammap:MapArea instanceName="NG_RI" title="Rivers"/>
+					<ammap:MapArea instanceName="NG_SO" title="Sokoto"/>
+					<ammap:MapArea instanceName="NG_TA" title="Taraba"/>
+					<ammap:MapArea instanceName="NG_YO" title="Yobe"/>
+					<ammap:MapArea instanceName="NG_ZA" title="Zamfara"/>
+					<ammap:MapArea instanceName="NG_LKC" title="Lake Chad" color="#1C83E7" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Abuja" lat="9.073718" long="7.2509" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/argentina.swf" leftLongitude="-73.58106" topLatitude="-21.78505" rightLongitude="-53.649259" bottomLatitude="-55.052478">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AR_BA" title="Buenos Aires"/>
+					<ammap:MapArea instanceName="AR_CT" title="Catamarca"/>
+					<ammap:MapArea instanceName="AR_CC" title="Chaco"/>
+					<ammap:MapArea instanceName="AR_CH" title="Chubut"/>
+					<ammap:MapArea instanceName="AR_DF" title="Ciudad Autónoma de Buenos Aires"/>
+					<ammap:MapArea instanceName="AR_CB" title="Córdoba"/>
+					<ammap:MapArea instanceName="AR_CN" title="Corrientes"/>
+					<ammap:MapArea instanceName="AR_ER" title="Entre Ríos"/>
+					<ammap:MapArea instanceName="AR_FM" title="Formosa"/>
+					<ammap:MapArea instanceName="AR_JY" title="Jujuy"/>
+					<ammap:MapArea instanceName="AR_LP" title="La Pampa"/>
+					<ammap:MapArea instanceName="AR_LR" title="La Rioja"/>
+					<ammap:MapArea instanceName="AR_MZ" title="Mendoza"/>
+					<ammap:MapArea instanceName="AR_MN" title="Misiones"/>
+					<ammap:MapArea instanceName="AR_NQ" title="Neuquén"/>
+					<ammap:MapArea instanceName="AR_RN" title="Río Negro"/>
+					<ammap:MapArea instanceName="AR_SA" title="Salta"/>
+					<ammap:MapArea instanceName="AR_SJ" title="San Juan"/>
+					<ammap:MapArea instanceName="AR_SL" title="San Luis"/>
+					<ammap:MapArea instanceName="AR_SC" title="Santa Cruz"/>
+					<ammap:MapArea instanceName="AR_SF" title="Santa Fe"/>
+					<ammap:MapArea instanceName="AR_SE" title="Santiago del Estero"/>
+					<ammap:MapArea instanceName="AR_TF" title="Tierra del Fuego"/>
+					<ammap:MapArea instanceName="AR_TM" title="Tucumán"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Buenos Aires" lat="-34.604301" long="-58.414681" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

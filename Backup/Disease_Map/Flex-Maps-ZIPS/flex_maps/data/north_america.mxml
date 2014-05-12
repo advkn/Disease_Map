@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/north_america.swf" leftLongitude="-168.131856" topLatitude="83.6896327" rightLongitude="-12.187048" bottomLatitude="7.233026">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AI" title="ANGUILLA"/>
+					<ammap:MapArea instanceName="AG" title="ANTIGUA AND BARBUDA"/>
+					<ammap:MapArea instanceName="AW" title="ARUBA"/>
+					<ammap:MapArea instanceName="BS" title="BAHAMAS"/>
+					<ammap:MapArea instanceName="BB" title="BARBADOS"/>
+					<ammap:MapArea instanceName="BZ" title="BELIZE"/>
+					<ammap:MapArea instanceName="BM" title="BERMUDA"/>
+					<ammap:MapArea instanceName="CA" title="CANADA"/>
+					<ammap:MapArea instanceName="KY" title="CAYMAN ISLANDS"/>
+					<ammap:MapArea instanceName="CR" title="COSTA RICA"/>
+					<ammap:MapArea instanceName="CU" title="CUBA"/>
+					<ammap:MapArea instanceName="DM" title="DOMINICA"/>
+					<ammap:MapArea instanceName="DO" title="DOMINICAN REPUBLIC"/>
+					<ammap:MapArea instanceName="SV" title="EL SALVADOR"/>
+					<ammap:MapArea instanceName="GL" title="GREENLAND"/>
+					<ammap:MapArea instanceName="GD" title="GRENADA"/>
+					<ammap:MapArea instanceName="GP" title="GUADELOUPE"/>
+					<ammap:MapArea instanceName="GT" title="GUATEMALA"/>
+					<ammap:MapArea instanceName="HT" title="HAITI"/>
+					<ammap:MapArea instanceName="HN" title="HONDURAS"/>
+					<ammap:MapArea instanceName="JM" title="JAMAICA"/>
+					<ammap:MapArea instanceName="MQ" title="MARTINIQUE"/>
+					<ammap:MapArea instanceName="MX" title="MEXICO"/>
+					<ammap:MapArea instanceName="MS" title="MONTSERRAT"/>
+					<ammap:MapArea instanceName="AN" title="NETHERLANDS ANTILLES"/>
+					<ammap:MapArea instanceName="NI" title="NICARAGUA"/>
+					<ammap:MapArea instanceName="PA" title="PANAMA"/>
+					<ammap:MapArea instanceName="PR" title="PUERTO RICO"/>
+					<ammap:MapArea instanceName="KN" title="SAINT KITTS AND NEVIS"/>
+					<ammap:MapArea instanceName="LC" title="SAINT LUCIA"/>
+					<ammap:MapArea instanceName="PM" title="SAINT PIERRE AND MIQUELON"/>
+					<ammap:MapArea instanceName="VC" title="SAINT VINCENT AND THE GRENADINES"/>
+					<ammap:MapArea instanceName="TT" title="TRINIDAD AND TOBAGO"/>
+					<ammap:MapArea instanceName="TC" title="TURKS AND CAICOS ISLANDS"/>
+					<ammap:MapArea instanceName="US" title="UNITED STATES"/>
+					<ammap:MapArea instanceName="VG" title="VIRGIN ISLANDS, BRITISH"/>
+					<ammap:MapArea instanceName="VI" title="VIRGIN ISLANDS, US"/>
+				</ammap:areas>
+				<ammap:movies>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,6 @@
+<theme id="us">
+	<map file="areas/fm-us.swf" borderColor="0xCCCCCC" />
+	<areas xmlAreas="areas/areas.xml" xmlCategories="areas/area_categories.xml" />
+	<pois xmlPOIs="pois/pois.xml" xmlCategories="pois/poi_categories.xml" />
+	<polylines xmlPolylines="" xmlCategories="" />
+</theme>

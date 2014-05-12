@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/poland.swf" leftLongitude="14.123256" topLatitude="54.833687" rightLongitude="24.148956" bottomLatitude="49.002533">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="PL_WP" title="Greater Poland (Wielkopolskie)"/>
+					<ammap:MapArea instanceName="PL_KP" title="Kuyavian-Pomeranian (Kujawsko-Pomorskie)"/>
+					<ammap:MapArea instanceName="PL_MA" title="Lesser Poland (Małopolskie)"/>
+					<ammap:MapArea instanceName="PL_LD" title="Łódź (Łódzkie)"/>
+					<ammap:MapArea instanceName="PL_DS" title="Lower Silesian (Dolnośląskie)"/>
+					<ammap:MapArea instanceName="PL_LU" title="Lublin (Lubelskie)"/>
+					<ammap:MapArea instanceName="PL_LB" title="Lubusz (Lubuskie)"/>
+					<ammap:MapArea instanceName="PL_MZ" title="Masovian (Mazowieckie)"/>
+					<ammap:MapArea instanceName="PL_OP" title="Opole (Opolskie)"/>
+					<ammap:MapArea instanceName="PL_PD" title="Podlaskie (Podlaskie)"/>
+					<ammap:MapArea instanceName="PL_PM" title="Pomeranian (Pomorskie)"/>
+					<ammap:MapArea instanceName="PL_SL" title="Silesian (Śląskie)"/>
+					<ammap:MapArea instanceName="PL_PK" title="Subcarpathian (Podkarpackie)"/>
+					<ammap:MapArea instanceName="PL_SK" title="Świętokrzyskie"/>
+					<ammap:MapArea instanceName="PL_WN" title="Warmian-Masurian (Warmińsko-Mazurskie)"/>
+					<ammap:MapArea instanceName="PL_ZP" title="West Pomeranian (Zachodniopomorskie)"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Warsaw" lat="52.23535" long="21.00936" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

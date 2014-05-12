@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/lebanon.swf" leftLongitude="35.103525" topLatitude="34.691364" rightLongitude="36.639191" bottomLatitude="33.053814">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="LB_NA" title="An Nabaţīyah"/>
+					<ammap:MapArea instanceName="LB_BA" title="Beirut"/>
+					<ammap:MapArea instanceName="LB_BQ" title="Beqaa"/>
+					<ammap:MapArea instanceName="LB_JL" title="Mount Lebanon"/>
+					<ammap:MapArea instanceName="LB_NL" title="North Lebanon"/>
+					<ammap:MapArea instanceName="LB_JA" title="South Lebanon"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Beirut" lat="33.89275" long="35.485271" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

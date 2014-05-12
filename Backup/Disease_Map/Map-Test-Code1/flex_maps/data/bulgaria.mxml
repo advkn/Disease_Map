@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/bulgaria.swf" leftLongitude="22.35686" topLatitude="44.215773" rightLongitude="28.61006" bottomLatitude="41.235808">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BG_BL" title="Blagoevgrad"/>
+					<ammap:MapArea instanceName="BG_BR" title="Burgas"/>
+					<ammap:MapArea instanceName="BG_DO" title="Dobric"/>
+					<ammap:MapArea instanceName="BG_GB" title="Gabrovo"/>
+					<ammap:MapArea instanceName="BG_SG" title="Grad Sofija"/>
+					<ammap:MapArea instanceName="BG_KK" title="Khaskovo"/>
+					<ammap:MapArea instanceName="BG_KZ" title="Kurdzhali"/>
+					<ammap:MapArea instanceName="BG_KY" title="Kjustendil"/>
+					<ammap:MapArea instanceName="BG_LV" title="Lovech"/>
+					<ammap:MapArea instanceName="BG_MT" title="Montana"/>
+					<ammap:MapArea instanceName="BG_PZ" title="Pazardzhik"/>
+					<ammap:MapArea instanceName="BG_PN" title="Pernik"/>
+					<ammap:MapArea instanceName="BG_PV" title="Pleven"/>
+					<ammap:MapArea instanceName="BG_PD" title="Plovdiv"/>
+					<ammap:MapArea instanceName="BG_RG" title="Razgrad"/>
+					<ammap:MapArea instanceName="BG_RS" title="Ruse"/>
+					<ammap:MapArea instanceName="BG_SH" title="Shumen"/>
+					<ammap:MapArea instanceName="BG_SI" title="Silistra"/>
+					<ammap:MapArea instanceName="BG_SL" title="Sliven"/>
+					<ammap:MapArea instanceName="BG_SM" title="Smoljan"/>
+					<ammap:MapArea instanceName="BG_SF" title="Sofija"/>
+					<ammap:MapArea instanceName="BG_SZ" title="Stara Zagora"/>
+					<ammap:MapArea instanceName="BG_TU" title="Turgovishte"/>
+					<ammap:MapArea instanceName="BG_VN" title="Varna"/>
+					<ammap:MapArea instanceName="BG_VT" title="Veliko Turnovo"/>
+					<ammap:MapArea instanceName="BG_VD" title="Vidin"/>
+					<ammap:MapArea instanceName="BG_VR" title="Vratsa"/>
+					<ammap:MapArea instanceName="BG_YA" title="Yambol"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Sofia" lat="42.69708" long="23.32455" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

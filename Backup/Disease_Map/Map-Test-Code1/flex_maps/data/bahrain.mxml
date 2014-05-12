@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/bahrain.swf" leftLongitude="50.229582" topLatitude="26.288726" rightLongitude="50.688767" bottomLatitude="25.798738">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BH_CA" title="Capital"/>
+					<ammap:MapArea instanceName="BH_CE" title="Central"/>
+					<ammap:MapArea instanceName="BH_MU" title="Muharraq"/>
+					<ammap:MapArea instanceName="BH_NO" title="Northern"/>
+					<ammap:MapArea instanceName="BH_SO" title="Southern"/>
+					<ammap:MapArea instanceName="borders_inside" title="borders_inside"/>
+					<ammap:MapArea instanceName="borders_outside" title="borders_outside"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Manama" lat="26.2257" long="50.57795" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

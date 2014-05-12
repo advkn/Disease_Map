@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/bangladesh.swf" leftLongitude="88.010734" topLatitude="26.634250" rightLongitude="92.673606" bottomLatitude="20.740954">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BD_BA" title="Barisal"/>
+					<ammap:MapArea instanceName="BD_CG" title="Chittagong"/>
+					<ammap:MapArea instanceName="BD_DA" title="Dhaka"/>
+					<ammap:MapArea instanceName="BD_KH" title="Khulna"/>
+					<ammap:MapArea instanceName="BD_RJ" title="Rajshahi"/>
+					<ammap:MapArea instanceName="BD_SY" title="Sylhet"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Dhaka" lat="23.709801" long="90.40711" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

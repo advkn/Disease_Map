@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/singapore.swf" leftLongitude="103.618757" topLatitude="1.470952" rightLongitude="104.084977" bottomLatitude="1.179887">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_reservoirs"" color="#0000FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_CS" title="Central Singapore"/>
+					<ammap:MapArea instanceName="SG_NE" title="North East"/>
+					<ammap:MapArea instanceName="SG_NW" title="North West"/>
+					<ammap:MapArea instanceName="SG_SE" title="South East"/>
+					<ammap:MapArea instanceName="SG_SW" title="South West"/>
+					<ammap:MapArea instanceName="SG_BAR" title="Badock Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_KRR" title="Kranji Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_LPR" title="Lower Pierce Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_MRR" title="MacRitchie Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_MUR" title="Murai Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_PAR" title="Pandan Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_POR" title="Poyan Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_UNR1" title="Un-named Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_UNR2" title="Un-named Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_SAR" title="Sarimbun Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_SER" title="Seleter Reservoir" color="#0097FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SG_UPR" title="Upper Pierce Reservoir" color="#0097FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Singapore City" lat="1.29393" long="103.85317" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

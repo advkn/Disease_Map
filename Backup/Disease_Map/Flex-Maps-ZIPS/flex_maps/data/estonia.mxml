@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/estonia.swf" leftLongitude="21.7626" topLatitude="59.685014" rightLongitude="28.20975" bottomLatitude="57.510089">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="EE_HA" title="Harju"/>
+					<ammap:MapArea instanceName="EE_HI" title="Hiiu"/>
+					<ammap:MapArea instanceName="EE_IV" title="Ida-Viru"/>
+					<ammap:MapArea instanceName="EE_JR" title="Järva"/>
+					<ammap:MapArea instanceName="EE_JN" title="Jõgeva"/>
+					<ammap:MapArea instanceName="EE_LN" title="Lääne"/>
+					<ammap:MapArea instanceName="EE_LV" title="Lääne-Viru"/>
+					<ammap:MapArea instanceName="EE_PR" title="Pärnu"/>
+					<ammap:MapArea instanceName="EE_PL" title="Põlva"/>
+					<ammap:MapArea instanceName="EE_RA" title="Rapla"/>
+					<ammap:MapArea instanceName="EE_SA" title="Saare"/>
+					<ammap:MapArea instanceName="EE_TA" title="Tartu"/>
+					<ammap:MapArea instanceName="EE_VG" title="Valga"/>
+					<ammap:MapArea instanceName="EE_VD" title="Viljandi"/>
+					<ammap:MapArea instanceName="EE_VR" title="Võru"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tallinn" lat="59.425181" long="24.72622" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

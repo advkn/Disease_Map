@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Center for Biosecurity of UPMC | Everywhere You Look Map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<!-- Cufon -->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/myradpro.font.js"></script>
+<script type="text/javascript">
+Cufon.replace('h1')('h2')('h3')('h4')('div.menu li');
+</script>
+<!-- COntact Form -->
+<script type="text/javascript">
+// <![CDATA[
+jQuery(document).ready(function(){
+	$('#contactform').submit(function(){				  
+		var action = $(this).attr('action');
+		$.post(action, { 
+			name: $('#name').val(),
+			email: $('#email').val(),
+			company: $('#company').val(),
+			subject: $('#subject').val(),
+			message: $('#message').val()
+		},
+			function(data){
+				$('#contactform #submit').attr('disabled','');
+				$('.response').remove();
+				$('#contactform').before('<p class="response">'+data+'</p>');
+				$('.response').slideDown();
+				if(data=='Message sent!') $('#contactform').slideUp();
+			}
+		); 
+		return false;
+	});
+});
+// ]]>
+</script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="Click"> <br>&nbsp;<br></div>
+    
+    <div class="clr"></div>
+    <div class="menu">
+        <div class="logo"><a href="index.html"><img src="images/Center_Biosecurity_logo.gif" width="350" border="0" alt="Center for Biosecurity logo" /></a></div>
+     <ul>
+        <li><a href="index.html"><span>Home</span></a></li>
+         <li><a href="map.html"><span>Map</span></a></li>
+        <li><a href="directions.html"><span>Map Directions</span></a></li>
+        <li><a href="contact.html" class="active"><span> Contact Us</span></a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div id="slider">
+    <h2>Contact Us</h2>
+    <div class="clr"></div>
+    <div class="clr"></div>
+    <div class="clr"></div>
+    <!-- end #slideshow -->
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="body">
+    <div class="body_resize"> <img src="images/body_img_top.gif" alt="picture" width="960" height="13" />
+      <div class="clr"></div>
+      <div class="left">
+        <h2>Our Location<br />
+          <span></span></h2>
+        <p> Mailing Address<br />
+          621  E. Pratt Street<br />
+          Suite 210<br />
+          Baltimore, MD 21217</p>
+        <p>Telephone: 443 573 3305<br />
+          FAX: 44 573 3304<br />
+          Website: <a href="http://www.upmc-biosecurity.org">www.upmc-biosecurity.org</a></p>
+      </div>
+      <div class="content">
+        <h3>Send Us a Message</h3>
+        <div class="clr"></div>
+        <p>For more information about the Center for Biosecurity or to discuss a possible collaboration., please contact us directly buy using the contact form below.</p>
+        <form action="contact.php" method="post" id="contactform">
+          <ol>
+            <li>
+              <label for="name">First Name</label>
+              <input id="name" name="name" class="text" />
+            </li>
+            <li>
+              <label for="email">Your email</label>
+              <input id="email" name="email" class="text" />
+            </li>
+            <li>
+              <label for="company">Company</label>
+              <input id="company" name="company" class="text" />
+            </li>
+            <li>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" cols="50"></textarea>
+            </li>
+            <li class="buttons">
+              <input type="image" name="imageField" id="imageField" src="images/send.gif" class="send" />
+              <div class="clr"></div>
+            </li>
+          </ol>
+        </form>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="footer">
+    <div class="footer_resize">
+      <div class="copyright">
+        <p>© Copyright 2011 </p></div>
+        <div class="home"><a href="http://www.upmc-biosecurity.org">Center for Biosecurity of UPMC</a></div>
+        <div class="clr"></div>
+      </div>
+     
+      <div class="blog last">
+        <Br>
+        
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

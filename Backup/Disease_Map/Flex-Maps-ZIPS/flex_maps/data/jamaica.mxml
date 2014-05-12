@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/jamaica.swf" leftLongitude="-78.369025" topLatitude="18.525093" rightLongitude="-75.969816" bottomLatitude="17.020347">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="JM_CL" title="Clarendon"/>
+					<ammap:MapArea instanceName="JM_HA" title="Hanover"/>
+					<ammap:MapArea instanceName="JM_KI" title="Kingston Parish"/>
+					<ammap:MapArea instanceName="JM_MA" title="Manchester"/>
+					<ammap:MapArea instanceName="JM_PO" title="Portland"/>
+					<ammap:MapArea instanceName="JM_SD" title="Saint Andrew"/>
+					<ammap:MapArea instanceName="JM_SN" title="Saint Ann"/>
+					<ammap:MapArea instanceName="JM_SC" title="Saint Catherine"/>
+					<ammap:MapArea instanceName="JM_SE" title="Saint Elizabeth"/>
+					<ammap:MapArea instanceName="JM_SJ" title="Saint James"/>
+					<ammap:MapArea instanceName="JM_SM" title="Saint Mary"/>
+					<ammap:MapArea instanceName="JM_ST" title="Saint Thomas"/>
+					<ammap:MapArea instanceName="JM_TR" title="Trelawny"/>
+					<ammap:MapArea instanceName="JM_WE" title="Westmoreland"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Kingston" lat="17.983333" long="-76.8" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

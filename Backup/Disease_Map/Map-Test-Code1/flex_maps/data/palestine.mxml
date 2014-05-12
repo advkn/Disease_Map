@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/palestine.swf" leftLongitude="34.229026" topLatitude="33.43979" rightLongitude="35.935202" bottomLatitude="29.497004">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_palestine" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_israel" color="#999999" mouseEnabled="false"/>
+				<!-- Israel --> 
+					<ammap:MapArea instanceName="IL" title="Israel"/>
+				<!-- Palestinian Territories --> 
+					<ammap:MapArea instanceName="PS_WE_JC" title="Jericho"/>
+					<ammap:MapArea instanceName="PS_WE_JN" title="Jenin"/>
+					<ammap:MapArea instanceName="PS_WE_TL" title="Tulkarm"/>
+					<ammap:MapArea instanceName="PS_WE_TB" title="Tubas"/>
+					<ammap:MapArea instanceName="PS_WE_NA" title="Nablus"/>
+					<ammap:MapArea instanceName="PS_WE_QA" title="Qalqilya"/>
+					<ammap:MapArea instanceName="PS_WE_SA" title="Salfit"/>
+					<ammap:MapArea instanceName="PS_WE_RB" title="Ramallah and Al-Bireh"/>
+					<ammap:MapArea instanceName="PS_WE_JS" title="Jerusalem"/>
+					<ammap:MapArea instanceName="PS_WE_BL" title="Bethlehem"/>
+					<ammap:MapArea instanceName="PS_WE_HE" title="Hebron"/>
+					<ammap:MapArea instanceName="PS_GZ_GS" title="Gaza ash Shamaliyah"/>
+					<ammap:MapArea instanceName="PS_GZ_GZ" title="Gaza"/>
+					<ammap:MapArea instanceName="PS_GZ_DB" title="Deir Al-Balah"/>
+					<ammap:MapArea instanceName="PS_GZ_KY" title="Khan Yunis"/>
+					<ammap:MapArea instanceName="PS_GZ_RA" title="Rafah"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Jerusalem" lat="31.783333" long="35.216667" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

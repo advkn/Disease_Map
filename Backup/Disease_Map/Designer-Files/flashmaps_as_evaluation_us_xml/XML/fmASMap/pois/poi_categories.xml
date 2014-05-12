@@ -1,0 +1,13 @@
+<POICategories>
+	<category id='multipoi' enabled='true' iconUrl='multipoi' iconEmbedded='true' tooltip='popups/multipoi.swf' >
+		<action event='onRelease' target='_MC' url='popups/multipoi_info.swf' />
+	</category>
+	<category id='eastern' enabled='true' iconUrl='eastern' iconEmbedded='true' tooltip='popups/team.swf' >
+		<action event='onRelease' target='_MC' url='popups/team_info.swf' />
+		<action event='onRelease' target='_AS' url='' />
+	</category>
+	<category id='western' enabled='true' iconUrl='western' iconEmbedded='true' tooltip='popups/team.swf' >
+		<action event='onRelease' target='_MC' url='popups/team_info.swf' />
+		<action event='onRelease' target='_AS' url='' />
+	</category>
+</POICategories>

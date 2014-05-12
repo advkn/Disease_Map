@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/ukraine.swf" leftLongitude="22.139644" topLatitude="52.379141" rightLongitude="40.220623" bottomLatitude="44.387681">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="UA_CK" title="Cherkasy"/>
+					<ammap:MapArea instanceName="UA_CH" title="Chernihiv"/>
+					<ammap:MapArea instanceName="UA_CV" title="Chernivts"/>
+					<ammap:MapArea instanceName="UA_KR" title="Crimea"/>
+					<ammap:MapArea instanceName="UA_DP" title="Dnipropetrovs'k"/>
+					<ammap:MapArea instanceName="UA_DT" title="Donets'k"/>
+					<ammap:MapArea instanceName="UA_IF" title="Ivano-Frankivs'k"/>
+					<ammap:MapArea instanceName="UA_KK" title="Kharkiv"/>
+					<ammap:MapArea instanceName="UA_KS" title="Kherson"/>
+					<ammap:MapArea instanceName="UA_KM" title="Khmel'nyts'kyy"/>
+					<ammap:MapArea instanceName="UA_KV" title="Kiev"/>
+					<ammap:MapArea instanceName="UA_KH" title="Kirovohrad"/>
+					<ammap:MapArea instanceName="UA_LH" title="Luhans'k"/>
+					<ammap:MapArea instanceName="UA_LV" title="L'viv"/>
+					<ammap:MapArea instanceName="UA_MY" title="Mykolayiv"/>
+					<ammap:MapArea instanceName="UA_OD" title="Odessa"/>
+					<ammap:MapArea instanceName="UA_PL" title="Poltava"/>
+					<ammap:MapArea instanceName="UA_RV" title="Rivne"/>
+					<ammap:MapArea instanceName="UA_SM" title="Sumy"/>
+					<ammap:MapArea instanceName="UA_TP" title="Ternopil'"/>
+					<ammap:MapArea instanceName="UA_ZK" title="Transcarpathia (Zakarpattia)"/>
+					<ammap:MapArea instanceName="UA_VI" title="Vinnytsya"/>
+					<ammap:MapArea instanceName="UA_VO" title="Volyn"/>
+					<ammap:MapArea instanceName="UA_ZP" title="Zaporizhzhya"/>
+					<ammap:MapArea instanceName="UA_ZT" title="Zhytomyr"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Kiev (Kyiv)" lat="50.44138" long="30.522495" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

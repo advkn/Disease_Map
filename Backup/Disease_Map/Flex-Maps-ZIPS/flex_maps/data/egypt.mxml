@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/egypt.swf" leftLongitude="24.698620" topLatitude="31.667485" rightLongitude="36.894654" bottomLatitude="21.725177">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="EG_DQ" title="Ad Daqahlīyah"/>
+					<ammap:MapArea instanceName="EG_BA" title="Al Bahr al Ahmar"/>
+					<ammap:MapArea instanceName="EG_BH" title="Al Buhayrah"/>
+					<ammap:MapArea instanceName="EG_FY" title="Al Fayyūm"/>
+					<ammap:MapArea instanceName="EG_GH" title="Al Gharbīyah"/>
+					<ammap:MapArea instanceName="EG_IK" title="Al Iskandarīyah"/>
+					<ammap:MapArea instanceName="EG_IS" title="Al Ismā`īlīyah"/>
+					<ammap:MapArea instanceName="EG_GZ" title="Al Jīzah"/>
+					<ammap:MapArea instanceName="EG_MF" title="Al Minūfīyah"/>
+					<ammap:MapArea instanceName="EG_MN" title="Al Minyā"/>
+					<ammap:MapArea instanceName="EG_CR" title="Al Qāhirah"/>
+					<ammap:MapArea instanceName="EG_QL" title="Al Qalyūbīyah"/>
+					<ammap:MapArea instanceName="EG_UQ" title="Al Uqsur"/>
+					<ammap:MapArea instanceName="EG_WJ" title="Al Wādī al Jadīd"/>
+					<ammap:MapArea instanceName="EG_SQ" title="Ash Sharqīyah"/>
+					<ammap:MapArea instanceName="EG_SW" title="As Suways"/>
+					<ammap:MapArea instanceName="EG_AN" title="Aswān"/>
+					<ammap:MapArea instanceName="EG_AT" title="Asyūt"/>
+					<ammap:MapArea instanceName="EG_BN" title="Banī Suwayf"/>
+					<ammap:MapArea instanceName="EG_BS" title="Būr Sa`īd"/>
+					<ammap:MapArea instanceName="EG_DT" title="Dumyāt"/>
+					<ammap:MapArea instanceName="EG_HW" title="Helwan"/>
+					<ammap:MapArea instanceName="EG_JS" title="Janūb Sīnā'"/>
+					<ammap:MapArea instanceName="EG_KS" title="Kafr ash Shaykh"/>
+					<ammap:MapArea instanceName="EG_MT" title="Matrūh"/>
+					<ammap:MapArea instanceName="EG_QN" title="Qinā"/>
+					<ammap:MapArea instanceName="EG_SS" title="Shamal Sīnā'"/>
+					<ammap:MapArea instanceName="EG_SO" title="Sixth of October"/>
+					<ammap:MapArea instanceName="EG_SJ" title="Sūhāj"/>
+					<ammap:MapArea instanceName="EG_HT" title="Hala'Ib Triangle"/>
+					<ammap:MapArea instanceName="EG_TER" title="Disputed Territory"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Cairo (Al Qāhirah)" lat="30.068588" long="31.241627" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

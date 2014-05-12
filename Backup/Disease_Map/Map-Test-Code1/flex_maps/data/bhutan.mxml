@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/bhutan.swf" leftLongitude="88.751103" topLatitude="28.324992" rightLongitude="92.120700" bottomLatitude="26.699031">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BT_BU" title="Bumthang"/>
+					<ammap:MapArea instanceName="BT_CK" title="Chhukha"/>
+					<ammap:MapArea instanceName="BT_CR" title="Chirang"/>
+					<ammap:MapArea instanceName="BT_DA" title="Daga"/>
+					<ammap:MapArea instanceName="BT_GA" title="Gasa"/>
+					<ammap:MapArea instanceName="BT_GE" title="Geylegphug"/>
+					<ammap:MapArea instanceName="BT_HA" title="Ha"/>
+					<ammap:MapArea instanceName="BT_LH" title="Lhuntshi"/>
+					<ammap:MapArea instanceName="BT_MO" title="Mongar"/>
+					<ammap:MapArea instanceName="BT_PR" title="Paro"/>
+					<ammap:MapArea instanceName="BT_PM" title="Pemagatsel"/>
+					<ammap:MapArea instanceName="BT_PN" title="Punakha"/>
+					<ammap:MapArea instanceName="BT_SM" title="Samchi"/>
+					<ammap:MapArea instanceName="BT_SJ" title="Samdrup Jongkhar"/>
+					<ammap:MapArea instanceName="BT_SG" title="Shemgang"/>
+					<ammap:MapArea instanceName="BT_TA" title="Tashigang"/>
+					<ammap:MapArea instanceName="BT_TY" title="Tashi Yangtse"/>
+					<ammap:MapArea instanceName="BT_TM" title="Thimphu"/>
+					<ammap:MapArea instanceName="BT_TO" title="Tongsa"/>
+					<ammap:MapArea instanceName="BT_WP" title="Wangdi Phodrang"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Thimphu" lat="27.466" long="89.663002" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

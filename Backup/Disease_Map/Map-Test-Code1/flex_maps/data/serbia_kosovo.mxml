@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/serbia_kosovo.swf" leftLongitude="18.815320" topLatitude="46.189888" rightLongitude="23.006225" bottomLatitude="41.783410">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="RS_BG" title="Belgrade (Grad Beograd)"/>
+					<ammap:MapArea instanceName="RS_BO" title="Bor (Borski Okrug)"/>
+					<ammap:MapArea instanceName="RS_BR" title="Braničevo (Braničevski Okrug)"/>
+					<ammap:MapArea instanceName="RS_SD" title="Central Banat (Srednje-Banatski Okrug)"/>
+					<ammap:MapArea instanceName="RS_PD" title="Podunavlje (Podunavski Okrug)"/>
+					<ammap:MapArea instanceName="RS_JA" title="Jablanica (Jablanički Okrug)"/>
+					<ammap:MapArea instanceName="RS_KB" title="Kolubara (Kolubarski Okrug)"/>
+					<ammap:MapArea instanceName="RS_KO" title="Kosovo (Kosovski Okrug)"/>
+					<ammap:MapArea instanceName="RS_KM" title="Kosovsko-Mitrovica (Kosovsko-Mitrovački Okrug)"/>
+					<ammap:MapArea instanceName="RS_KP" title="Kosovsko-Pomoravlje (Kosovsko-Pomoravski Okrug)"/>
+					<ammap:MapArea instanceName="RS_MA" title="Mačva (Mačvanski Okrug)"/>
+					<ammap:MapArea instanceName="RS_MR" title="Moravica (Moravički Okrug)"/>
+					<ammap:MapArea instanceName="RS_NS" title="Nišava (Nišavski Okrug)"/>
+					<ammap:MapArea instanceName="RS_SC" title="North Bačka (Severno-Bački Okrug)"/>
+					<ammap:MapArea instanceName="RS_SN" title="North Banat (Severno-Banatski Okrug)"/>
+					<ammap:MapArea instanceName="RS_PC" title="Pčinja (Pčinjski Okrug)"/>
+					<ammap:MapArea instanceName="RS_PE" title="Peć (Pećki Okrug)"/>
+					<ammap:MapArea instanceName="RS_PI" title="Pirot (Pirotski Okrug)"/>
+					<ammap:MapArea instanceName="RS_PM" title="Pomoravlje (Pomoravski Okrug)"/>
+					<ammap:MapArea instanceName="RS_PZ" title="Prizren (Prizrenski Okrug)"/>
+					<ammap:MapArea instanceName="RS_RN" title="Rasina (Rasinski Okrug)"/>
+					<ammap:MapArea instanceName="RS_RS" title="Raška (Raški Okrug)"/>
+					<ammap:MapArea instanceName="RS_JC" title="South Bačka (Južno-Bački Okrug)"/>
+					<ammap:MapArea instanceName="RS_JN" title="South Banat (Južno-Banatski Okru)"/>
+					<ammap:MapArea instanceName="RS_SM" title="Srem (Sremski Okrug)"/>
+					<ammap:MapArea instanceName="RS_SU" title="Šumadija (Šumadijski Okrug)"/>
+					<ammap:MapArea instanceName="RS_TO" title="Toplica (Toplički Okrug)"/>
+					<ammap:MapArea instanceName="RS_ZC" title="West Bačka (Zapadno-Bački Okrug)"/>
+					<ammap:MapArea instanceName="RS_ZJ" title="Zaječar (Zaječarski Okrug)"/>
+					<ammap:MapArea instanceName="RS_ZL" title="Zlatibor (Zlatiborski Okrug)"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Belgrade" lat="44.811877" long="20.464145" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/europe.swf" leftLongitude="-28.7153" topLatitude="80.48514" rightLongitude="69.0402" bottomLatitude="27.61925">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AX" title="ALAND ISLANDS"/>
+					<ammap:MapArea instanceName="AL" title="ALBANIA"/>
+					<ammap:MapArea instanceName="AD" title="ANDORRA"/>
+					<ammap:MapArea instanceName="AM" title="ARMENIA"/>
+					<ammap:MapArea instanceName="AT" title="AUSTRIA"/>
+					<ammap:MapArea instanceName="AZ" title="AZERBAIJAN"/>
+					<ammap:MapArea instanceName="BY" title="BELARUS"/>
+					<ammap:MapArea instanceName="BE" title="BELGIUM"/>
+					<ammap:MapArea instanceName="BA" title="BOSNIA AND HERZEGOVINA"/>
+					<ammap:MapArea instanceName="BG" title="BULGARIA"/>
+					<ammap:MapArea instanceName="HR" title="CROATIA"/>
+					<ammap:MapArea instanceName="CY" title="CYPRUS"/>
+					<ammap:MapArea instanceName="CZ" title="CZECH REPUBLIC"/>
+					<ammap:MapArea instanceName="DK" title="DENMARK"/>
+					<ammap:MapArea instanceName="EE" title="ESTONIA"/>
+					<ammap:MapArea instanceName="FO" title="FAEROE ISLANDS"/>
+					<ammap:MapArea instanceName="FI" title="FINLAND"/>
+					<ammap:MapArea instanceName="FR" title="FRANCE"/>
+					<ammap:MapArea instanceName="GE" title="GEORGIA"/>
+					<ammap:MapArea instanceName="DE" title="GERMANY"/>
+					<ammap:MapArea instanceName="GR" title="GREECE"/>
+					<ammap:MapArea instanceName="HU" title="HUNGARY"/>
+					<ammap:MapArea instanceName="IS" title="ICELAND"/>
+					<ammap:MapArea instanceName="IE" title="IRELAND"/>
+					<ammap:MapArea instanceName="IT" title="ITALY"/>
+					<ammap:MapArea instanceName="KV" title="KOSOVO"/>
+					<ammap:MapArea instanceName="LV" title="LATVIA"/>
+					<ammap:MapArea instanceName="LI" title="LIECHTENSTEIN"/>
+					<ammap:MapArea instanceName="LT" title="LITHUANIA"/>
+					<ammap:MapArea instanceName="LU" title="LUXEMBOURG"/>
+					<ammap:MapArea instanceName="MK" title="MACEDONIA"/>
+					<ammap:MapArea instanceName="MT" title="MALTA"/>
+					<ammap:MapArea instanceName="MD" title="MOLDOVA"/>
+					<ammap:MapArea instanceName="ME" title="MONTENEGRO"/>
+					<ammap:MapArea instanceName="NL" title="NETHERLANDS"/>
+					<ammap:MapArea instanceName="NO" title="NORWAY"/>
+					<ammap:MapArea instanceName="PL" title="POLAND"/>
+					<ammap:MapArea instanceName="PT" title="PORTUGAL"/>
+					<ammap:MapArea instanceName="RO" title="ROMANIA"/>
+					<ammap:MapArea instanceName="RU" title="RUSSIAN FEDERATION (European portion)"/>
+					<ammap:MapArea instanceName="RS" title="SERBIA"/>
+					<ammap:MapArea instanceName="SK" title="SLOVAKIA"/>
+					<ammap:MapArea instanceName="SI" title="SLOVENIA"/>
+					<ammap:MapArea instanceName="ES" title="SPAIN"/>
+					<ammap:MapArea instanceName="SJ" title="SVALBARD AND JAN MAYEN"/>
+					<ammap:MapArea instanceName="SE" title="SWEDEN"/>
+					<ammap:MapArea instanceName="CH" title="SWITZERLAND"/>
+					<ammap:MapArea instanceName="TR" title="TURKEY"/>
+					<ammap:MapArea instanceName="GB" title="UNITED KINGDOM"/>
+					<ammap:MapArea instanceName="UA" title="UKRAINE"/>
+					<ammap:MapArea instanceName="GG" title="GUERNSEY"/>
+					<ammap:MapArea instanceName="JE" title="JERSEY"/>
+					<ammap:MapArea instanceName="IM" title="ISLE OF MAN"/>
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

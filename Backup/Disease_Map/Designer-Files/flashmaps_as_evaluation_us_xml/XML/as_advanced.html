@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- FLASHMAPS - FUNCTION LIBRARIES - BEGIN -->
+	<script language="JavaScript" src="include/fmActivate.js"></script>
+	<script language="JavaScript" src="include/fmASAPI.js"></script>
+	<!-- FLASHMAPS - FUNCTION LIBRARIES - END -->
+
+	<title>Flashmaps / AreaSelector Evaluation</title>
+	<link rel="stylesheet" type="text/css" href="images/styles.css">
+</head>
+
+<body>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr><td valign="top"><a href="http://www.flashmaps.com" target="_self" class="imglink"><img src="images/fmlogo.gif" class="imglink"></a></td></tr>
+	<tr><td valign="top">
+		<table class="tb760">
+			<tr><td class="top"></td></tr>
+			<tr><td><a href="index.html" class="navtop" target="_self">Home</a></td></tr>
+			<tr><td><div class="maintit">AreaSelector Advanced: Javascript integration</div></td></tr>
+			<tr><td class="blue"></td></tr>
+			<tr><td class="td20"></td></tr>
+			<tr><td align="center">
+				<!-- FLASHMAPS - MAP OBJECT - BEGIN -->
+				<script type="text/javascript">
+					if (DetectFlashVer(8,0,0)) {
+						fmObjectActivateWrite("fmASEngine","fmASMap/fmASToolbar.swf", "500", "300", "true", "high", "#FFFFFF", ".");
+					} else {
+						var alternateContent = 'This content requires the Adobe Flash Player. <a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+						document.write(alternateContent);
+					}
+				</script>
+				<script language="JavaScript" src="include/fmASInitVars.js"></script>
+				<noscript>
+					This content requires the Adobe Flash Player. <a href=http://www.adobe.com/go/getflash/>Get Flash</a>
+				</noscript>
+				<!-- FLASHMAPS - MAP OBJECT - END -->
+				</td></tr>
+			<tr><td class="td20"></td></tr>
+			<tr><td>
+				<table width="500" border="0" cellpadding="0" cellspacing="0" align="center">
+					<tr><td colspan="3"><div class="txtit">Javascript functions</div></td></tr>
+					<tr><td colspan="3" class="blue"></td></tr>
+					<tr><td colspan="3" height="10"></td></tr>
+					<tr><td width="170">
+						<table width="170" border="0" cellpadding="0" cellspacing="0">
+							<tr><td><div class="tx">Map functions</div></td></tr>
+							<tr><td><a href="Javascript:fmInitialView();">- Initial View</a></td></tr>
+							<tr><td><a href="Javascript:fmAreaCenter('us_ca');">- Zoom in California</a></td></tr>
+							<tr><td><a href="Javascript:fmPrint();">- Print map</a></td></tr>
+						</table>
+						</td>
+						<td width="160">
+						<table width="170" border="0" cellpadding="0" cellspacing="0">
+							<tr><td><div class="tx">Select functions</div></td></tr>
+							<tr><td><a href="Javascript:fmMapModeSelect();">- Select mode</a></td></tr>
+							<tr><td><a href="Javascript:fmMapModeZoom();">- Zoom mode</a></td></tr>
+							<tr><td><a href="Javascript:alert(fmMapModeExportListAreas());">- Get select states</a></td></tr>
+							<tr><td><a href="Javascript:fmMapModeCleanAreas();">- Clean select states</a></td></tr>
+						</table>
+						</td>
+						<td width="170">
+						<table width="170" border="0" cellpadding="0" cellspacing="0">
+							<tr><td><div class="tx">POIs functions</div></td></tr>
+							<tr><td><a href="Javascript:fmPOIsHideCategory('*');">- Hide all teams</a></td></tr>
+							<tr><td><a href="Javascript:fmPOIsShowCategory('*');">- Show all teams</a></td></tr>
+						</table>
+						</td></tr>
+				</table>
+				</td>
+			<tr><td class="td20"></td></tr>
+			<tr><td class="pie"></td></tr>
+		</table>
+		</td>
+</table>
+</body>
+</html>

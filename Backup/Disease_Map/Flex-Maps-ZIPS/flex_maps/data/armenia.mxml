@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/armenia.swf" leftLongitude="43.449890" topLatitude="41.301458" rightLongitude="46.630102" bottomLatitude="38.830468">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AM_AG" title="Aragatsotn"/>
+					<ammap:MapArea instanceName="AM_AR" title="Ararat"/>
+					<ammap:MapArea instanceName="AM_AV" title="Armavir"/>
+					<ammap:MapArea instanceName="AM_ER" title="Yerevan"/>
+					<ammap:MapArea instanceName="AM_GR" title="Gegharkunik"/>
+					<ammap:MapArea instanceName="AM_KT" title="Kotayk"/>
+					<ammap:MapArea instanceName="AM_LO" title="Lori"/>
+					<ammap:MapArea instanceName="AM_SH" title="Shirak"/>
+					<ammap:MapArea instanceName="AM_SU" title="Syunik"/>
+					<ammap:MapArea instanceName="AM_TV" title="Tavush"/>
+					<ammap:MapArea instanceName="AM_VD" title="Vayots Dzor"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Yerevan" lat="40.187558" long="44.512748" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

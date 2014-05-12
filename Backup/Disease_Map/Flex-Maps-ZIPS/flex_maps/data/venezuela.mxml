@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/venezuela.swf" leftLongitude="-73.386524" topLatitude="12.545658" rightLongitude="-59.805618" bottomLatitude="0.645377">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="VE_AM" title="Amazonas"/>
+					<ammap:MapArea instanceName="VE_AN" title="Anzoátegui"/>
+					<ammap:MapArea instanceName="VE_AP" title="Apure"/>
+					<ammap:MapArea instanceName="VE_AR" title="Aragua"/>
+					<ammap:MapArea instanceName="VE_BA" title="Barinas"/>
+					<ammap:MapArea instanceName="VE_BO" title="Bolivar"/>
+					<ammap:MapArea instanceName="VE_CA" title="Carabobo"/>
+					<ammap:MapArea instanceName="VE_CO" title="Cojedes"/>
+					<ammap:MapArea instanceName="VE_DA" title="Delta Amacuro"/>
+					<ammap:MapArea instanceName="VE_DF" title="Distrito Capital"/>
+					<ammap:MapArea instanceName="VE_FA" title="Falcón"/>
+					<ammap:MapArea instanceName="VE_GU" title="Guárico"/>
+					<ammap:MapArea instanceName="VE_LA" title="Lara"/>
+					<ammap:MapArea instanceName="VE_ME" title="Mérida"/>
+					<ammap:MapArea instanceName="VE_MI" title="Miranda"/>
+					<ammap:MapArea instanceName="VE_MO" title="Monagas"/>
+					<ammap:MapArea instanceName="VE_NE" title="Neuva Esparta"/>
+					<ammap:MapArea instanceName="VE_PO" title="Portuguesa"/>
+					<ammap:MapArea instanceName="VE_SU" title="Sucre"/>
+					<ammap:MapArea instanceName="VE_TA" title="Táchira"/>
+					<ammap:MapArea instanceName="VE_TR" title="Trujillo"/>
+					<ammap:MapArea instanceName="VE_VA" title="Vargas"/>
+					<ammap:MapArea instanceName="VE_YA" title="Yaracuy"/>
+					<ammap:MapArea instanceName="VE_ZU" title="Zulia"/>
+					<ammap:MapArea instanceName="VE_DP" title="Dependencias Federales"/>
+					<ammap:MapArea instanceName="AN" title="Netherland Antilles" color="#ff9900"/>
+					<ammap:MapArea instanceName="AW" title="Aruba" color="#ff9900"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Caracas" lat="10.49605" long="-66.898277" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/continents.swf" leftLongitude="-168.127310" topLatitude="83.623095" rightLongitude="190.482617" bottomLatitude="-58.25">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="africa" title="Africa" color="#723C1A"/>
+					<ammap:MapArea instanceName="australia" title="Australia and Oceania" color="#93644A"/>
+					<ammap:MapArea instanceName="europe" title="Europe" color="#AA805A"/>
+					<ammap:MapArea instanceName="asia" title="Asia" color="#C8AB67"/>
+					<ammap:MapArea instanceName="north_america" title="North America" color="#8D725F"/>
+					<ammap:MapArea instanceName="south_america" title="South America" color="#BE8045"/>
+				</ammap:areas>
+				<ammap:movies>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

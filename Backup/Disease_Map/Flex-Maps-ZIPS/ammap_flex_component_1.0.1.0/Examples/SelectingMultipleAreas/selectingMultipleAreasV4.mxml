@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This example is made using amMap Flex component. Visit http://flex.ammap.com to see more examples -->
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   xmlns:ammap="http://www.ammap.com/com_internal"
+			   backgroundColor="#FFFFFF"
+			   width="100%" height="100%"
+			   viewSourceURL="srcview/index.html">
+	
+	
+	<fx:Script>
+		<![CDATA[
+		import com.ammap.mapClasses.MapObject;
+		import com.ammap.events.MapEvent;
+		import com.ammap.events.MapObjectEvent;
+		
+		import flash.utils.setTimeout;
+		
+		[Bindable]
+		[Embed(source="../assets/maps/usa.swf")]
+		private var _usa:Class;
+		
+		// method which is called when user clicks on an area
+		private function toggleSelection(event:MapObjectEvent):void{ 				
+			var mapObject:MapObject = event.mapObject;
+			if(mapObject.showAsSelected)
+			{
+				mapObject.showAsSelected = false;
+			}
+			else
+			{
+				mapObject.showAsSelected = true;
+			} 				
+		}
+		]]>
+	</fx:Script>
+	
+	<!-- this example shows how multiple objects can look as selected. Originally only one map object can be selected at a time
+	To show multiple areas as selected showAsSelected property of MapObject is used. You can also set an array of objects directly 
+	on AmMap class using showAsSelected property. -->
+	
+	<!-- listening to clickMapObject event --> 
+	<ammap:AmMap clickMapObject="{toggleSelection(event)}" id="state_mainMap" width="100%" height="100%">
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings rollOutAnimationDuration="1" rollOverColor="#FF9900" selectedColor="#FF0000"/>
+		</ammap:areasSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet mapClass="{_usa}" zoomLevel="100">
+				<ammap:areas>
+					<ammap:MapArea selectable="true" id="state_al" instanceName="AL" title="Alabama"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ak" instanceName="AK" title="Alaska"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_az" instanceName="AZ" title="Arizona"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ar" instanceName="AR" title="Arkansas"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ca" instanceName="CA" title="California"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_co" instanceName="CO" title="Colorado"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ct" instanceName="CT" title="Connecticut"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_de" instanceName="DE" title="Delaware"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_dc" instanceName="DC" title="District of Columbia"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_fl" instanceName="FL" title="Florida"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ga" instanceName="GA" title="Georgia"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_hi" instanceName="HI" title="Hawaii"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_id" instanceName="ID" title="Idaho"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_il" instanceName="IL" title="Illinois"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_in" instanceName="IN" title="Indiana"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ia" instanceName="IA" title="Iowa"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ks" instanceName="KS" title="Kansas"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ky" instanceName="KY" title="Kentucky"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_la" instanceName="LA" title="Louisiana"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_me" instanceName="ME" title="Maine"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_md" instanceName="MD" title="Maryland"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ma" instanceName="MA" title="Massachusetts"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_mi" instanceName="MI" title="Michigan"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_mn" instanceName="MN" title="Minnesota"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ms" instanceName="MS" title="Mississippi"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_mo" instanceName="MO" title="Missouri"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_mt" instanceName="MT" title="Montana"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ne" instanceName="NE" title="Nebraska"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nv" instanceName="NV" title="Nevada"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nh" instanceName="NH" title="New Hampshire"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nj" instanceName="NJ" title="New Jersey"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nm" instanceName="NM" title="New Mexico"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ny" instanceName="NY" title="New York"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nc" instanceName="NC" title="North Carolina"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_nd" instanceName="ND" title="North Dakota"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_oh" instanceName="OH" title="Ohio"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ok" instanceName="OK" title="Oklahoma"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_or" instanceName="OR" title="Oregon"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_pa" instanceName="PA" title="Pennsylvania"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ri" instanceName="RI" title="Rhode Island"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_sc" instanceName="SC" title="South Carolina"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_sd" instanceName="SD" title="South Dakota"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_tn" instanceName="TN" title="Tennessee"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_tx" instanceName="TX" title="Texas"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_ut" instanceName="UT" title="Utah"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_vt" instanceName="VT" title="Vermont"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_va" instanceName="VA" title="Virginia"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_wa" instanceName="WA" title="Washington"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_wv" instanceName="WV" title="West Virginia"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_wi" instanceName="WI" title="Wisconsin"></ammap:MapArea>
+					<ammap:MapArea selectable="true" id="state_wy" instanceName="WY" title="Wyoming"></ammap:MapArea>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"></ammap:MapArea>					
+				</ammap:areas>
+			</ammap:DataSet>	
+		</ammap:dataSets>
+	</ammap:AmMap>	
+</s:Application>

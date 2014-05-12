@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/ireland.swf" leftLongitude="-10.668966" topLatitude="55.434972" rightLongitude="-5.422566" bottomLatitude="51.420340">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="IE_CW" title="Carlow"/>
+					<ammap:MapArea instanceName="IE_CN" title="Cavan"/>
+					<ammap:MapArea instanceName="IE_CE" title="Clare"/>
+					<ammap:MapArea instanceName="IE_CK" title="Cork"/>
+					<ammap:MapArea instanceName="IE_DL" title="Donegal"/>
+					<ammap:MapArea instanceName="IE_DN" title="Dublin"/>
+					<ammap:MapArea instanceName="IE_SD" title="South Dublin"/>
+					<ammap:MapArea instanceName="IE_LR" title="Dún Laoghaire & Rathdown"/>
+					<ammap:MapArea instanceName="IE_FL" title="Fingal"/>
+					<ammap:MapArea instanceName="IE_GY" title="Galway"/>
+					<ammap:MapArea instanceName="IE_KY" title="Kerry"/>
+					<ammap:MapArea instanceName="IE_KE" title="Kildare"/>
+					<ammap:MapArea instanceName="IE_KK" title="Kilkenny"/>
+					<ammap:MapArea instanceName="IE_LS" title="Laois"/>
+					<ammap:MapArea instanceName="IE_LM" title="Leitrim"/>
+					<ammap:MapArea instanceName="IE_LK" title="Limerick"/>
+					<ammap:MapArea instanceName="IE_LD" title="Longford"/>
+					<ammap:MapArea instanceName="IE_LH" title="Louth"/>
+					<ammap:MapArea instanceName="IE_MO" title="Mayo"/>
+					<ammap:MapArea instanceName="IE_MH" title="Meath"/>
+					<ammap:MapArea instanceName="IE_MN" title="Monaghan"/>
+					<ammap:MapArea instanceName="IE_OY" title="Offaly"/>
+					<ammap:MapArea instanceName="IE_RN" title="Roscommon"/>
+					<ammap:MapArea instanceName="IE_SO" title="Sligo"/>
+					<ammap:MapArea instanceName="IE_TN" title="Tipperary North"/>
+					<ammap:MapArea instanceName="IE_TS" title="Tipperary South"/>
+					<ammap:MapArea instanceName="IE_WD" title="Waterford"/>
+					<ammap:MapArea instanceName="IE_WH" title="Westmeath"/>
+					<ammap:MapArea instanceName="IE_WX" title="Wexford"/>
+					<ammap:MapArea instanceName="IE_WW" title="Wicklow"/>
+					<ammap:MapArea instanceName="GB_NI" title="Northern Ireland"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Dublin" lat="53.3437" long="-6.249569" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

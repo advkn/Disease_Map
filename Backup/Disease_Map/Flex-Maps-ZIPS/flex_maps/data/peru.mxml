@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/peru.swf" leftLongitude="-81.387059" topLatitude="-0.040592" rightLongitude="-68.671816" bottomLatitude="-18.388695">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_lake" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="PE_AM" title="Amazonas"/>
+					<ammap:MapArea instanceName="PE_AN" title="Ancash"/>
+					<ammap:MapArea instanceName="PE_AP" title="Apurímac"/>
+					<ammap:MapArea instanceName="PE_AR" title="Arequipa"/>
+					<ammap:MapArea instanceName="PE_AY" title="Ayacucho"/>
+					<ammap:MapArea instanceName="PE_CJ" title="Cajamarca"/>
+					<ammap:MapArea instanceName="PE_CL" title="Callao"/>
+					<ammap:MapArea instanceName="PE_CS" title="Cusco"/>
+					<ammap:MapArea instanceName="PE_HV" title="Huancavelica"/>
+					<ammap:MapArea instanceName="PE_HC" title="Huánuco"/>
+					<ammap:MapArea instanceName="PE_IC" title="Ica"/>
+					<ammap:MapArea instanceName="PE_JU" title="Junín"/>
+					<ammap:MapArea instanceName="PE_LL" title="La Libertad"/>
+					<ammap:MapArea instanceName="PE_LB" title="Lambayeque"/>
+					<ammap:MapArea instanceName="PE_LP" title="Lima Province"/>
+					<ammap:MapArea instanceName="PE_LR" title="Lima"/>
+					<ammap:MapArea instanceName="PE_LO" title="Loreto"/>
+					<ammap:MapArea instanceName="PE_MD" title="Madre de Dios"/>
+					<ammap:MapArea instanceName="PE_MQ" title="Moquegua"/>
+					<ammap:MapArea instanceName="PE_PA" title="Pasco"/>
+					<ammap:MapArea instanceName="PE_PI" title="Piura"/>
+					<ammap:MapArea instanceName="PE_PU" title="Puno"/>
+					<ammap:MapArea instanceName="PE_SM" title="San Martín"/>
+					<ammap:MapArea instanceName="PE_TA" title="Tacna"/>
+					<ammap:MapArea instanceName="PE_TU" title="Tumbes"/>
+					<ammap:MapArea instanceName="PE_UC" title="Ucayali"/>
+					<ammap:MapArea instanceName="PE_LTC" title="Lake Titicaca" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Lima" lat="-12.078517" long="-77.041816" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

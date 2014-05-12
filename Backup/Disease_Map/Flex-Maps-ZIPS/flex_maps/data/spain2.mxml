@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/spain2.swf" leftLongitude="-18.161674" topLatitude="43.791884" rightLongitude="4.329174" bottomLatitude="27.636887">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="ES_AN" title="Andalusia"/>
+					<ammap:MapArea instanceName="ES_AR" title="Aragon"/>
+					<ammap:MapArea instanceName="ES_AS" title="Asturias"/>
+					<ammap:MapArea instanceName="ES_PM" title="Balearic Islands"/>
+					<ammap:MapArea instanceName="ES_PV" title="Basque Country"/>
+					<ammap:MapArea instanceName="ES_CN" title="Canary Islands"/>
+					<ammap:MapArea instanceName="ES_CB" title="Cantabria"/>
+					<ammap:MapArea instanceName="ES_CL" title="Castile and Leon"/>
+					<ammap:MapArea instanceName="ES_CM" title="Castile-La Mancha"/>
+					<ammap:MapArea instanceName="ES_CT" title="Catalonia"/>
+					<ammap:MapArea instanceName="ES_EX" title="Extremadura"/>
+					<ammap:MapArea instanceName="ES_GA" title="Galicia"/>
+					<ammap:MapArea instanceName="ES_LO" title="La Rioja"/>
+					<ammap:MapArea instanceName="ES_MD" title="Madrid"/>
+					<ammap:MapArea instanceName="ES_MU" title="Murcia"/>
+					<ammap:MapArea instanceName="ES_NA" title="Navarra"/>
+					<ammap:MapArea instanceName="ES_VC" title="Valencia"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Madrid" lat="40.4203" long="-3.705774" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/france.swf" leftLongitude="-5.142757" topLatitude="51.088329" rightLongitude="9.560176" bottomLatitude="41.363571">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="FR_A" title="Alsace"/>
+					<ammap:MapArea instanceName="FR_B" title="Aquitaine"/>
+					<ammap:MapArea instanceName="FR_C" title="Auvergne"/>
+					<ammap:MapArea instanceName="FR_P" title="Basse-Normandie (Upper Normandy)"/>
+					<ammap:MapArea instanceName="FR_D" title="Bourgogne (Burgundy)"/>
+					<ammap:MapArea instanceName="FR_E" title="Bretagne (Brittany)"/>
+					<ammap:MapArea instanceName="FR_F" title="Centre"/>
+					<ammap:MapArea instanceName="FR_G" title="Champagne-Ardenne"/>
+					<ammap:MapArea instanceName="FR_H" title="Corse (Corsica)"/>
+					<ammap:MapArea instanceName="FR_I" title="Franche-Comté"/>
+					<ammap:MapArea instanceName="FR_Q" title="Haute-Normandie (Lower Normandy)"/>
+					<ammap:MapArea instanceName="FR_J" title="Île-de-France"/>
+					<ammap:MapArea instanceName="FR_K" title="Languedoc-Roussillon"/>
+					<ammap:MapArea instanceName="FR_L" title="Limousin"/>
+					<ammap:MapArea instanceName="FR_M" title="Lorraine"/>
+					<ammap:MapArea instanceName="FR_N" title="Midi-Pyrénées"/>
+					<ammap:MapArea instanceName="FR_O" title="Nord-Pas-de-Calais"/>
+					<ammap:MapArea instanceName="FR_R" title="Pays-de-la-Loire"/>
+					<ammap:MapArea instanceName="FR_S" title="Picardie"/>
+					<ammap:MapArea instanceName="FR_T" title="Poitou-Charentes"/>
+					<ammap:MapArea instanceName="FR_U" title="Provence-Alpes-Côte d'Azur"/>
+					<ammap:MapArea instanceName="FR_V" title="Rhône-Alpes"/>
+				<!-- One small area of Spain is surrounded by France -->
+					<ammap:MapArea instanceName="ES_GI" title="Spain - Girona"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Paris" lat="48.856925" long="2.34121" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

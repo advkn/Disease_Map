@@ -1,0 +1,18 @@
+*********************************************************************************
+This AmMap software, amMap Flex Component is free under a linkware license
+
+This means you may not remove or hide in any other way link to ammap web site.
+
+If you wish to remove the link, you should purchase commercial license.
+
+You may not redistribute, sublicense or sell this program without written
+permission of Antanas Marcelionis, the author of ammap software.
+
+This software is provided without warranty.
+*********************************************************************************
+A commercial version (without link) is available at amMap's website: 
+http://flex.ammap.com/buy/
+
+Please use amMap Support Forum for any support queries:
+http://www.ammap.com/forum
+*********************************************************************************

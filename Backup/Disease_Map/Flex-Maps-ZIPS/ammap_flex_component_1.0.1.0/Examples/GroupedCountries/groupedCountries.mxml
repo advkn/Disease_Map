@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				layout="absolute" 
+				xmlns:ammap="http://www.ammap.com/com_internal"
+				width="100%"
+				height="100%" xmlns:amcharts="http://www.amcharts.com/com_internal">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.ammap.mapClasses.MapObject;
+			import com.ammap.events.MapObjectEvent;
+			import mx.collections.ArrayCollection;
+			
+			[Bindable]
+			[Embed(source="../assets/maps/world.swf")]
+			private var _world:Class
+			
+		]]>
+	</mx:Script>
+	
+	<!-- This example shows how map objects can be grouped. 
+	Grouped objects change colors together when user rolls-over or clicks on one of them -->
+	<ammap:AmMap developerMode="false"
+				 id="ammap" 
+				 width="100%" 
+				 height="100%"
+				 backgroundColor="#FFFFFF">
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl buttonIconColor="#DADADA" buttonBorderColor="#DADADA"/>
+		</ammap:zoomControl>
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings unlistedAreasColor="#DDDDDD" rollOverAlpha="1" rollOverColor="#CC0000" alpha="0.9" balloonText="[[title]] joined EU at [[customData]]"/>
+		</ammap:areasSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet
+				mapClass="{_world}" 
+				leftLongitude="-168.49" 
+				topLatitude="83.63" 
+				rightLongitude="190.3" 
+				bottomLatitude="-55.58"
+				zoomLevel="400" zoomLong="23.7826" zoomLat="53.9362">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<!-- grouping is made by setting linkWith property with array of objects to link with. -->
+					<ammap:MapArea title="Austria" id="AT" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="AT" customData="1995"></ammap:MapArea>
+					<ammap:MapArea title="Ireland" id="IE" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="IE" customData="1973"></ammap:MapArea>
+					<ammap:MapArea title="Denmark" id="DK" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="DK" customData="1973"></ammap:MapArea>
+					<ammap:MapArea title="Finland" id="FI" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="FI" customData="1995"></ammap:MapArea>
+					<ammap:MapArea title="Sweden" id="SE" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="SE" customData="1995"></ammap:MapArea>
+					<ammap:MapArea title="Great Britain" id="GB" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="GB" customData="1973"></ammap:MapArea>
+					<ammap:MapArea title="Italy" id="IT" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="IT" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="France" id="FR" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="FR" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="Spain" id="ES" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="ES" customData="1986"></ammap:MapArea>
+					<ammap:MapArea title="Greece" id="GR" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="GR" customData="1981"></ammap:MapArea>
+					<ammap:MapArea title="Germany" id="DE" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="DE" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="Belgium" id="BE" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="BE" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="Luxembourg" id="LU" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="LU" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="Netherlands" id="NL" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="NL" customData="1957"></ammap:MapArea>
+					<ammap:MapArea title="Portugal" id="PT" linkWith="{[AT,IE,DK,FI,SE,GB,IT,FR,ES,GR,DE,BE,LU,NL,PT]}" color="#3366CC" instanceName="PT" customData="1986"></ammap:MapArea>
+					
+					<ammap:MapArea title="Lithuania" id="LT" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="LT" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Latvia" id="LV" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="LV" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Czech Republic " id="CZ" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="CZ" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Slovakia" id="SK" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="SK" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Slovenia" id="SI" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="SI" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Estonia" id="EE" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="EE" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Hungary" id="HU" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="HU" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Cyprus" id="CY" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="CY" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Malta" id="MT" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="MT" customData="2004"></ammap:MapArea>
+					<ammap:MapArea title="Poland" id="PL" linkWith="{[LT,LV,CZ,SK,SI,EE,HU,CY,MT,PL]}" color="#FFCC33" instanceName="PL" customData="2004"></ammap:MapArea>
+					
+					<ammap:MapArea title="Romania" linkWith="{[BG]}" id="RO" color="#66CC99" instanceName="RO" customData="2007"></ammap:MapArea> 
+					<ammap:MapArea title="Bulgaria" linkWith="{[RO]}" id="BG" color="#66CC99" instanceName="BG" customData="2007"></ammap:MapArea>  
+					
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+	<!-- legend of the map -->
+	<ammap:AmMapLegend 
+		width="600" 
+		backgroundAlpha="0.5" 
+		backgroundColor="#FFFFFF" 
+		bottom="15" 
+		left="15" 
+		borderColor="#666666"
+		borderStyle="solid"
+		paddingTop="10"
+		paddingBottom="10"
+		paddingRight="10"
+		paddingLeft="10">
+		
+		<ammap:LegendItem text="Joined EU before 2004" markerColor="#3366CC"/>
+		<ammap:LegendItem text="Joined EU at 2004" markerColor="#FFCC33"/>
+		<ammap:LegendItem text="Joined EU at 2007" markerColor="#66CC99"/>		
+	</ammap:AmMapLegend>
+	
+</mx:Application>

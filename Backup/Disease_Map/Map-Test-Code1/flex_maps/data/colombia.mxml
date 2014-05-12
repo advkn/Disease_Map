@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/colombia.swf" leftLongitude="-81.719363" topLatitude="12.58954" rightLongitude="-66.869199" bottomLatitude="-4.237857">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="CO_AM" title="Amazonas"/>
+					<ammap:MapArea instanceName="CO_AN" title="Antioquia"/>
+					<ammap:MapArea instanceName="CO_AR" title="Arauca"/>
+					<ammap:MapArea instanceName="CO_AT" title="Atlántic"/>
+					<ammap:MapArea instanceName="CO_BL" title="Bolívar"/>
+					<ammap:MapArea instanceName="CO_BY" title="Boyacá"/>
+					<ammap:MapArea instanceName="CO_CL" title="Caldas"/>
+					<ammap:MapArea instanceName="CO_CQ" title="Caquetá"/>
+					<ammap:MapArea instanceName="CO_CS" title="Casanare"/>
+					<ammap:MapArea instanceName="CO_CA" title="Cauca"/>
+					<ammap:MapArea instanceName="CO_CE" title="Cesar"/>
+					<ammap:MapArea instanceName="CO_CH" title="Chocó"/>
+					<ammap:MapArea instanceName="CO_CO" title="Córdoba"/>
+					<ammap:MapArea instanceName="CO_CU" title="Cundinamarca"/>
+					<ammap:MapArea instanceName="CO_DC" title="Distrito Capital de Bogotá"/>
+					<ammap:MapArea instanceName="CO_GN" title="Guainía"/>
+					<ammap:MapArea instanceName="CO_GV" title="Guaviare"/>
+					<ammap:MapArea instanceName="CO_HU" title="Huila"/>
+					<ammap:MapArea instanceName="CO_LG" title="La Guajira"/>
+					<ammap:MapArea instanceName="CO_MA" title="Magdalena"/>
+					<ammap:MapArea instanceName="CO_ME" title="Meta"/>
+					<ammap:MapArea instanceName="CO_NA" title="Nariño"/>
+					<ammap:MapArea instanceName="CO_NS" title="Norte de Santander"/>
+					<ammap:MapArea instanceName="CO_PU" title="Putumayo"/>
+					<ammap:MapArea instanceName="CO_QD" title="Quindío"/>
+					<ammap:MapArea instanceName="CO_RI" title="Risaralda"/>
+					<ammap:MapArea instanceName="CO_SA" title="San Andrés y Providencia"/>
+					<ammap:MapArea instanceName="CO_ST" title="Santander"/>
+					<ammap:MapArea instanceName="CO_SU" title="Sucre"/>
+					<ammap:MapArea instanceName="CO_TO" title="Tolima"/>
+					<ammap:MapArea instanceName="CO_VC" title="Valle del Cauca"/>
+					<ammap:MapArea instanceName="CO_VP" title="Vaupés"/>
+					<ammap:MapArea instanceName="CO_VD" title="Vichada"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Bogotá" lat="4.614622" long="-74.084831" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/kazakhstan.swf" leftLongitude="46.492762" topLatitude="55.431255" rightLongitude="87.313465" bottomLatitude="40.551137">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_aral_sea" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="KZ_AA" title="Almaty"/>
+					<ammap:MapArea instanceName="KZ_AM" title="Aqmola"/>
+					<ammap:MapArea instanceName="KZ_AT" title="Aqtöbe"/>
+					<ammap:MapArea instanceName="KZ_AR" title="Atyrau"/>
+					<ammap:MapArea instanceName="KZ_EK" title="East Kazakhstan"/>
+					<ammap:MapArea instanceName="KZ_MG" title="Mangghystau"/>
+					<ammap:MapArea instanceName="KZ_NK" title="North Kazakhstan"/>
+					<ammap:MapArea instanceName="KZ_PA" title="Pavlodar"/>
+					<ammap:MapArea instanceName="KZ_QG" title="Qaraghandy"/>
+					<ammap:MapArea instanceName="KZ_QS" title="Qostanay"/>
+					<ammap:MapArea instanceName="KZ_QO" title="Qyzylorda"/>
+					<ammap:MapArea instanceName="KZ_SK" title="South Kazakhstan"/>
+					<ammap:MapArea instanceName="KZ_WK" title="West Kazakhstan"/>
+					<ammap:MapArea instanceName="KZ_ZM" title="Zhambyl"/>
+					<ammap:MapArea instanceName="KZ_ARS" title="Aral Sea" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Astana" lat="51.189442" long="71.432091" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

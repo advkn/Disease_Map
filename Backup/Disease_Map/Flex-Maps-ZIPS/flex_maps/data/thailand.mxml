@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/thailand.swf" leftLongitude="97.345785" topLatitude="20.462652" rightLongitude="105.639420" bottomLatitude="5.615745">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_lake" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="TH_AC" title="Amnat Charoen"/>
+					<ammap:MapArea instanceName="TH_AT" title="Ang Thong"/>
+					<ammap:MapArea instanceName="TH_BM" title="Bangkok Metropolis"/>
+					<ammap:MapArea instanceName="TH_BR" title="Buri Ram"/>
+					<ammap:MapArea instanceName="TH_CC" title="Chachoengsao"/>
+					<ammap:MapArea instanceName="TH_CN" title="Chai Nat"/>
+					<ammap:MapArea instanceName="TH_CY" title="Chaiyaphum"/>
+					<ammap:MapArea instanceName="TH_CT" title="Chanthaburi"/>
+					<ammap:MapArea instanceName="TH_CM" title="Chiang Mai"/>
+					<ammap:MapArea instanceName="TH_CR" title="Chiang Rai"/>
+					<ammap:MapArea instanceName="TH_CB" title="Chon Buri"/>
+					<ammap:MapArea instanceName="TH_CP" title="Chumphon"/>
+					<ammap:MapArea instanceName="TH_KL" title="Kalasin"/>
+					<ammap:MapArea instanceName="TH_KP" title="Kamphaeng Phet"/>
+					<ammap:MapArea instanceName="TH_KN" title="Kanchanaburi"/>
+					<ammap:MapArea instanceName="TH_KK" title="Khon Kaen"/>
+					<ammap:MapArea instanceName="TH_KR" title="Krabi"/>
+					<ammap:MapArea instanceName="TH_LG" title="Lampang"/>
+					<ammap:MapArea instanceName="TH_LN" title="Lamphun"/>
+					<ammap:MapArea instanceName="TH_LE" title="Loei"/>
+					<ammap:MapArea instanceName="TH_LB" title="Lop Buri"/>
+					<ammap:MapArea instanceName="TH_MH" title="Mae Hong Son"/>
+					<ammap:MapArea instanceName="TH_MS" title="Maha Sarakham"/>
+					<ammap:MapArea instanceName="TH_MD" title="Mukdahan"/>
+					<ammap:MapArea instanceName="TH_NN" title="Nakhon Nayok"/>
+					<ammap:MapArea instanceName="TH_NP" title="Nakhon Pathom"/>
+					<ammap:MapArea instanceName="TH_NF" title="Nakhon Phanom"/>
+					<ammap:MapArea instanceName="TH_NR" title="Nakhon Ratchasima"/>
+					<ammap:MapArea instanceName="TH_NS" title="Nakhon Sawan"/>
+					<ammap:MapArea instanceName="TH_NT" title="Nakhon Si Thammarat"/>
+					<ammap:MapArea instanceName="TH_NA" title="Nan"/>
+					<ammap:MapArea instanceName="TH_NW" title="Narathiwat"/>
+					<ammap:MapArea instanceName="TH_NB" title="Nong Bua Lam Phu"/>
+					<ammap:MapArea instanceName="TH_NK" title="Nong Khai"/>
+					<ammap:MapArea instanceName="TH_NO" title="Nonthaburi"/>
+					<ammap:MapArea instanceName="TH_PT" title="Pathum Thani"/>
+					<ammap:MapArea instanceName="TH_PI" title="Pattani"/>
+					<ammap:MapArea instanceName="TH_PG" title="Phangnga"/>
+					<ammap:MapArea instanceName="TH_PL" title="Phatthalung"/>
+					<ammap:MapArea instanceName="TH_PY" title="Phayao"/>
+					<ammap:MapArea instanceName="TH_PH" title="Phetchabun"/>
+					<ammap:MapArea instanceName="TH_PE" title="Phetchaburi"/>
+					<ammap:MapArea instanceName="TH_PC" title="Phichit"/>
+					<ammap:MapArea instanceName="TH_PS" title="Phitsanulok"/>
+					<ammap:MapArea instanceName="TH_PR" title="Phrae"/>
+					<ammap:MapArea instanceName="TH_PA" title="Phra Nakhon Si Ayutthaya"/>
+					<ammap:MapArea instanceName="TH_PU" title="Phuket"/>
+					<ammap:MapArea instanceName="TH_PB" title="Prachin Buri"/>
+					<ammap:MapArea instanceName="TH_PK" title="Prachuap Khiri Khan"/>
+					<ammap:MapArea instanceName="TH_RN" title="Ranong"/>
+					<ammap:MapArea instanceName="TH_RT" title="Ratchaburi"/>
+					<ammap:MapArea instanceName="TH_RY" title="Rayong"/>
+					<ammap:MapArea instanceName="TH_RE" title="Roi Et"/>
+					<ammap:MapArea instanceName="TH_SK" title="Sa Kaeo"/>
+					<ammap:MapArea instanceName="TH_SN" title="Sakon Nakhon"/>
+					<ammap:MapArea instanceName="TH_SP" title="Samut Prakan"/>
+					<ammap:MapArea instanceName="TH_SS" title="Samut Sakhon"/>
+					<ammap:MapArea instanceName="TH_SM" title="Samut Songkhram"/>
+					<ammap:MapArea instanceName="TH_SR" title="Saraburi"/>
+					<ammap:MapArea instanceName="TH_SA" title="Satun"/>
+					<ammap:MapArea instanceName="TH_SB" title="Sing Buri"/>
+					<ammap:MapArea instanceName="TH_SI" title="Si Sa Ket"/>
+					<ammap:MapArea instanceName="TH_SG" title="Songkhla"/>
+					<ammap:MapArea instanceName="TH_SO" title="Sukhothai"/>
+					<ammap:MapArea instanceName="TH_SH" title="Suphan Buri"/>
+					<ammap:MapArea instanceName="TH_ST" title="Surat Thani"/>
+					<ammap:MapArea instanceName="TH_SU" title="Surin"/>
+					<ammap:MapArea instanceName="TH_TK" title="Tak"/>
+					<ammap:MapArea instanceName="TH_TG" title="Trang"/>
+					<ammap:MapArea instanceName="TH_TT" title="Trat"/>
+					<ammap:MapArea instanceName="TH_UR" title="Ubon Ratchathani"/>
+					<ammap:MapArea instanceName="TH_UN" title="Udon Thani"/>
+					<ammap:MapArea instanceName="TH_UT" title="Uthai Thani"/>
+					<ammap:MapArea instanceName="TH_UD" title="Uttaradit"/>
+					<ammap:MapArea instanceName="TH_YL" title="Yala"/>
+					<ammap:MapArea instanceName="TH_YS" title="Yasothon"/>
+					<ammap:MapArea instanceName="TH_SGLK" title="Songkhla Lake" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Bangkok" lat="13.753335" long="100.504825" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

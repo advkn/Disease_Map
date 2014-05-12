@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/tajikistan.swf" leftLongitude="67.387131" topLatitude="41.042128" rightLongitude="75.137376" bottomLatitude="36.671874">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="TJ_BG" title="Gorno-Badakhshan"/>
+					<ammap:MapArea instanceName="TJ_RR" title="Regions of Republican Subordination"/>
+					<ammap:MapArea instanceName="TJ_KT" title="Khatlon"/>
+					<ammap:MapArea instanceName="TJ_SU" title="Sughd"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Dushanbe" lat="38.572204" long="68.771538" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

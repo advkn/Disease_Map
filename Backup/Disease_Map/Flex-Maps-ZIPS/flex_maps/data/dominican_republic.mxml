@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/dominican_republic.swf" leftLongitude="-72.009694" topLatitude="19.934733" rightLongitude="-68.325263" bottomLatitude="17.469318">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="DO_AZ" title="Azua"/>
+					<ammap:MapArea instanceName="DO_BR" title="Bahoruco"/>
+					<ammap:MapArea instanceName="DO_BH" title="Barahona"/>
+					<ammap:MapArea instanceName="DO_DA" title="Dajabón"/>
+					<ammap:MapArea instanceName="DO_NC" title="Distrito Nacional"/>
+					<ammap:MapArea instanceName="DO_DU" title="Duarte"/>
+					<ammap:MapArea instanceName="DO_EP" title="Elías Piña"/>
+					<ammap:MapArea instanceName="DO_SE" title="El Seybo"/>
+					<ammap:MapArea instanceName="DO_ES" title="Espaillat"/>
+					<ammap:MapArea instanceName="DO_HM" title="Hato Mayor"/>
+					<ammap:MapArea instanceName="DO_SC" title="Hermanas Mirabal"/>
+					<ammap:MapArea instanceName="DO_IN" title="Independencia"/>
+					<ammap:MapArea instanceName="DO_AL" title="La Altagracia"/>
+					<ammap:MapArea instanceName="DO_RO" title="La Romana"/>
+					<ammap:MapArea instanceName="DO_VE" title="La Vega"/>
+					<ammap:MapArea instanceName="DO_MT" title="María Trinidad Sánchez"/>
+					<ammap:MapArea instanceName="DO_MN" title="Monseñor Nouel"/>
+					<ammap:MapArea instanceName="DO_MC" title="Monte Cristi"/>
+					<ammap:MapArea instanceName="DO_MP" title="Monte Plata"/>
+					<ammap:MapArea instanceName="DO_PN" title="Pedernales"/>
+					<ammap:MapArea instanceName="DO_PV" title="Peravia"/>
+					<ammap:MapArea instanceName="DO_PP" title="Puerto Plata"/>
+					<ammap:MapArea instanceName="DO_SM" title="Samaná"/>
+					<ammap:MapArea instanceName="DO_SZ" title="Sánchez Ramírez"/>
+					<ammap:MapArea instanceName="DO_CR" title="San Cristóbal"/>
+					<ammap:MapArea instanceName="DO_JO" title="San José de Ocoa"/>
+					<ammap:MapArea instanceName="DO_JU" title="San Juan"/>
+					<ammap:MapArea instanceName="DO_PM" title="San Pedro de Macorís"/>
+					<ammap:MapArea instanceName="DO_ST" title="Santiago"/>
+					<ammap:MapArea instanceName="DO_SR" title="Santiago Rodríguez"/>
+					<ammap:MapArea instanceName="DO_SD" title="Santo Domingo"/>
+					<ammap:MapArea instanceName="DO_VA" title="Valverde"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Santo Domingo" lat="18.482141" long="-69.909935" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/malaysia.swf" leftLongitude="99.641321" topLatitude="7.362782" rightLongitude="119.269335" bottomLatitude="0.854361">
+				<ammap:areas>
+					<ammap:MapArea instanceName="MY_inside_border" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="MY_outside_border" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BN_inside_borde" color="#999999" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BN_outside_borde" color="#999999" mouseEnabled="false"/>
+				<!-- Malaysia -->
+					<ammap:MapArea instanceName="MY_JH" title="Johor"/>
+					<ammap:MapArea instanceName="MY_KH" title="Kedah"/>
+					<ammap:MapArea instanceName="MY_KN" title="Kelantan"/>
+					<ammap:MapArea instanceName="MY_LA" title="Labuan"/>
+					<ammap:MapArea instanceName="MY_ME" title="Melaka"/>
+					<ammap:MapArea instanceName="MY_NS" title="Negeri Sembilan"/>
+					<ammap:MapArea instanceName="MY_PH" title="Pahang"/>
+					<ammap:MapArea instanceName="MY_PK" title="Perak"/>
+					<ammap:MapArea instanceName="MY_PL" title="Perlis"/>
+					<ammap:MapArea instanceName="MY_PG" title="Pulau Pinang"/>
+					<ammap:MapArea instanceName="MY_SA" title="Sabah"/>
+					<ammap:MapArea instanceName="MY_SK" title="Sarawak"/>
+					<ammap:MapArea instanceName="MY_SL" title="Selangor"/>
+					<ammap:MapArea instanceName="MY_TE" title="Terengganu"/>
+					<ammap:MapArea instanceName="MY_inside_border" title="Malaysia internal borders"/>
+					<ammap:MapArea instanceName="MY_outside_border" title="Malaysia external borders"/>
+				<!-- Brunei --> 
+					<ammap:MapArea instanceName="BN" title="Brunei Darussalam" color="#DEDEDE"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Kuala Lumpur" lat="3.104635" long="101.690975" zoomLevel="500"/>
+					<ammap:MapMovie type="round" color="#CC0000" title="Putrajaya" lat="2.95763" long="101.684517" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

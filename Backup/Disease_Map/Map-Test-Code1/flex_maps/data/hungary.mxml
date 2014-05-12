@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/hungary.swf" leftLongitude="16.114278" topLatitude="48.58597" rightLongitude="22.897" bottomLatitude="45.737024">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="HU_BK" title="Bács-Kiskun"/>
+					<ammap:MapArea instanceName="HU_BA" title="Baranya"/>
+					<ammap:MapArea instanceName="HU_BE" title="Békés"/>
+					<ammap:MapArea instanceName="HU_BC" title="Békéscsaba"/>
+					<ammap:MapArea instanceName="HU_BZ" title="Borsod-Abaúj-Zemplén"/>
+					<ammap:MapArea instanceName="HU_BU" title="Budapest"/>
+					<ammap:MapArea instanceName="HU_CS" title="Csongrád"/>
+					<ammap:MapArea instanceName="HU_DE" title="Debrecen"/>
+					<ammap:MapArea instanceName="HU_DU" title="Dunaújváros"/>
+					<ammap:MapArea instanceName="HU_EG" title="Eger"/>
+					<ammap:MapArea instanceName="HU_FE" title="Fejér"/>
+					<ammap:MapArea instanceName="HU_GY" title="Győr"/>
+					<ammap:MapArea instanceName="HU_GS" title="Győr-Moson-Sopron"/>
+					<ammap:MapArea instanceName="HU_HB" title="Hajdú-Bihar"/>
+					<ammap:MapArea instanceName="HU_HE" title="Heves"/>
+					<ammap:MapArea instanceName="HU_HV" title="Hódmezővásárhely"/>
+					<ammap:MapArea instanceName="HU_JN" title="Jász-Nagykun-Szolnok"/>
+					<ammap:MapArea instanceName="HU_KV" title="Kaposvár"/>
+					<ammap:MapArea instanceName="HU_KM" title="Kecskemét"/>
+					<ammap:MapArea instanceName="HU_KE" title="Komárom-Esztergom"/>
+					<ammap:MapArea instanceName="HU_MI" title="Miskolc"/>
+					<ammap:MapArea instanceName="HU_NK" title="Nagykanizsa"/>
+					<ammap:MapArea instanceName="HU_NO" title="Nógrád"/>
+					<ammap:MapArea instanceName="HU_NY" title="Nyíregyháza"/>
+					<ammap:MapArea instanceName="HU_PS" title="Pécs"/>
+					<ammap:MapArea instanceName="HU_PE" title="Pest"/>
+					<ammap:MapArea instanceName="HU_SO" title="Somogy"/>
+					<ammap:MapArea instanceName="HU_SN" title="Sopron"/>
+					<ammap:MapArea instanceName="HU_SZ" title="Szabolcs-Szatmár-Bereg"/>
+					<ammap:MapArea instanceName="HU_SD" title="Szeged"/>
+					<ammap:MapArea instanceName="HU_SF" title="Székesfehérvár"/>
+					<ammap:MapArea instanceName="HU_SK" title="Szolnok"/>
+					<ammap:MapArea instanceName="HU_SH" title="Szombathely"/>
+					<ammap:MapArea instanceName="HU_TB" title="Tatabánya"/>
+					<ammap:MapArea instanceName="HU_TO" title="Tolna"/>
+					<ammap:MapArea instanceName="HU_VA" title="Vas"/>
+					<ammap:MapArea instanceName="HU_VE" title="Veszprém"/>
+					<ammap:MapArea instanceName="HU_VM" title="Veszprém (urban)"/>
+					<ammap:MapArea instanceName="HU_ZA" title="Zala"/>
+					<ammap:MapArea instanceName="HU_ZE" title="Zalaegerszeg"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Budapest" lat="47.506225" long="19.06482" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

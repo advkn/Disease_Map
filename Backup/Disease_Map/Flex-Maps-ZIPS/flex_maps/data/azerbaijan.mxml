@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/azerbaijan.swf" leftLongitude="44.761011" topLatitude="41.907395" rightLongitude="50.614212" bottomLatitude="38.353577">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="AZ_AR" title="Absheron"/>
+					<ammap:MapArea instanceName="AZ_AM" title="Aghdam"/>
+					<ammap:MapArea instanceName="AZ_AS" title="Aghdash"/>
+					<ammap:MapArea instanceName="AZ_AC" title="Aghjabedi"/>
+					<ammap:MapArea instanceName="AZ_AF" title="Aghstafa"/>
+					<ammap:MapArea instanceName="AZ_AU" title="Aghsu"/>
+					<ammap:MapArea instanceName="AZ_AB" title="Shirvan"/>
+					<ammap:MapArea instanceName="AZ_AA" title="Astara"/>
+					<ammap:MapArea instanceName="AZ_BB" title="Babek"/>
+					<ammap:MapArea instanceName="AZ_BA" title="Baku"/>
+					<ammap:MapArea instanceName="AZ_BL" title="Balaken"/>
+					<ammap:MapArea instanceName="AZ_BR" title="Barda"/>
+					<ammap:MapArea instanceName="AZ_BQ" title="Beylagan"/>
+					<ammap:MapArea instanceName="AZ_BS" title="Bilasuvar"/>
+					<ammap:MapArea instanceName="AZ_DS" title="Dashkasan"/>
+					<ammap:MapArea instanceName="AZ_DV" title="Davachi"/>
+					<ammap:MapArea instanceName="AZ_FU" title="Fizuli"/>
+					<ammap:MapArea instanceName="AZ_QA" title="Gabala"/>
+					<ammap:MapArea instanceName="AZ_GD" title="Gadabey"/>
+					<ammap:MapArea instanceName="AZ_QX" title="Gakh"/>
+					<ammap:MapArea instanceName="AZ_GA" title="Ganja"/>
+					<ammap:MapArea instanceName="AZ_QZ" title="Gazakh"/>
+					<ammap:MapArea instanceName="AZ_GR" title="Geranboy"/>
+					<ammap:MapArea instanceName="AZ_QO" title="Gobustan"/>
+					<ammap:MapArea instanceName="AZ_GY" title="Goychay"/>
+					<ammap:MapArea instanceName="AZ_QB" title="Guba"/>
+					<ammap:MapArea instanceName="AZ_QD" title="Gubadly"/>
+					<ammap:MapArea instanceName="AZ_QR" title="Gusar"/>
+					<ammap:MapArea instanceName="AZ_HA" title="Hacuqabul"/>
+					<ammap:MapArea instanceName="AZ_IM" title="Imishli"/>
+					<ammap:MapArea instanceName="AZ_IS" title="Ismailly"/>
+					<ammap:MapArea instanceName="AZ_CL" title="Jalilabad"/>
+					<ammap:MapArea instanceName="AZ_CB" title="Jebrail"/>
+					<ammap:MapArea instanceName="AZ_CF" title="Julfa"/>
+					<ammap:MapArea instanceName="AZ_KG" title="Kangarli"/>
+					<ammap:MapArea instanceName="AZ_KA" title="Kelbajar"/>
+					<ammap:MapArea instanceName="AZ_XZ" title="Khachmaz"/>
+					<ammap:MapArea instanceName="AZ_XA" title="Khankendy"/>
+					<ammap:MapArea instanceName="AZ_XR" title="Khanlar"/>
+					<ammap:MapArea instanceName="AZ_XC" title="Khojaly"/>
+					<ammap:MapArea instanceName="AZ_XD" title="Khojavend"/>
+					<ammap:MapArea instanceName="AZ_XI" title="Khyzy"/>
+					<ammap:MapArea instanceName="AZ_KU" title="Kyurdamir"/>
+					<ammap:MapArea instanceName="AZ_LC" title="Lachin"/>
+					<ammap:MapArea instanceName="AZ_LN" title="Lenkaran"/>
+					<ammap:MapArea instanceName="AZ_LA" title="Lenkaran City"/>
+					<ammap:MapArea instanceName="AZ_LE" title="Lerik"/>
+					<ammap:MapArea instanceName="AZ_MA" title="Masally"/>
+					<ammap:MapArea instanceName="AZ_MI" title="Mingechevir"/>
+					<ammap:MapArea instanceName="AZ_NA" title="Naftalan"/>
+					<ammap:MapArea instanceName="AZ_NX" title="Nakhchivan"/>
+					<ammap:MapArea instanceName="AZ_NE" title="Neftchala"/>
+					<ammap:MapArea instanceName="AZ_OG" title="Oghuz"/>
+					<ammap:MapArea instanceName="AZ_OR" title="Ordubad"/>
+					<ammap:MapArea instanceName="AZ_ST" title="Saatly"/>
+					<ammap:MapArea instanceName="AZ_SB" title="Sabirabad"/>
+					<ammap:MapArea instanceName="AZ_SL" title="Salyan"/>
+					<ammap:MapArea instanceName="AZ_SX" title="Samuh"/>
+					<ammap:MapArea instanceName="AZ_SD" title="Sedarak"/>
+					<ammap:MapArea instanceName="AZ_SH" title="Shahbuz"/>
+					<ammap:MapArea instanceName="AZ_SI" title="Shamakhy"/>
+					<ammap:MapArea instanceName="AZ_SM" title="Shamkir"/>
+					<ammap:MapArea instanceName="AZ_SK" title="Sheki"/>
+					<ammap:MapArea instanceName="AZ_SA" title="Sheki City"/>
+					<ammap:MapArea instanceName="AZ_SR" title="Sherur"/>
+					<ammap:MapArea instanceName="AZ_SU" title="Shusha"/>
+					<ammap:MapArea instanceName="AZ_SY" title="Siazan"/>
+					<ammap:MapArea instanceName="AZ_SQ" title="Sumgayit"/>
+					<ammap:MapArea instanceName="AZ_TA" title="Terter"/>
+					<ammap:MapArea instanceName="AZ_TO" title="Tovuz"/>
+					<ammap:MapArea instanceName="AZ_UC" title="Ujar"/>
+					<ammap:MapArea instanceName="AZ_YR" title="Yardymly"/>
+					<ammap:MapArea instanceName="AZ_YV" title="Yevlakh"/>
+					<ammap:MapArea instanceName="AZ_YE" title="Yevlakh City"/>
+					<ammap:MapArea instanceName="AZ_ZQ" title="Zagatala"/>
+					<ammap:MapArea instanceName="AZ_ZG" title="Zangilan"/>
+					<ammap:MapArea instanceName="AZ_ZR" title="Zerdab"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Baku" lat="40.400086" long="49.866012" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

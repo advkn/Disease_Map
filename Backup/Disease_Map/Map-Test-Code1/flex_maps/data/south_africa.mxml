@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/south_africa.swf" leftLongitude="16.458622" topLatitude="-22.127170" rightLongitude="38.003723" bottomLatitude="-46.982910">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_ZA" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_LS" color="#999999" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="ZA_EC" title="Eastern Cape"/>
+					<ammap:MapArea instanceName="ZA_PE" title="Prince Edward Islands"/>
+					<ammap:MapArea instanceName="ZA_FS" title="Free State"/>
+					<ammap:MapArea instanceName="ZA_GT" title="Gauteng"/>
+					<ammap:MapArea instanceName="ZA_NL" title="KwaZulu-Natal"/>
+					<ammap:MapArea instanceName="ZA_NP" title="Limpopo"/>
+					<ammap:MapArea instanceName="ZA_MP" title="Mpumalanga"/>
+					<ammap:MapArea instanceName="ZA_NC" title="Northern Cape"/>
+					<ammap:MapArea instanceName="ZA_NW" title="North West"/>
+					<ammap:MapArea instanceName="ZA_WC" title="Western Cape"/>
+					<ammap:MapArea instanceName="LS" title="Lesotho" color="#CCCCCC"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Pretoria" lat="-25.731513" long="28.170723" zoomLevel="500"/>
+					<ammap:MapMovie type="round" color="#CC0000" title="Bloemfontein" lat="-29.1024" long="26.208427" zoomLevel="500"/>
+					<ammap:MapMovie type="round" color="#CC0000" title="Cape Town" lat="-33.916667" long="18.416667" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

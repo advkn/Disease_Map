@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				layout="absolute" 
+				xmlns:ammap="http://www.ammap.com/com_internal"
+				width="100%"
+				height="100%" xmlns:amcharts="http://www.amcharts.com/com_internal">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.ammap.mapClasses.MapObject;
+			import com.ammap.events.MapObjectEvent;
+			import mx.collections.ArrayCollection;
+			
+			// map file is embeded
+			[Bindable]
+			[Embed(source="../assets/maps/world.swf")]
+			private var _world:Class
+			
+			// this is data for the chart
+			[Bindable]
+			private var dpGB:ArrayCollection = new ArrayCollection([{category:"sample 1",val:100}, {category:"sample 2",val:60}, {category:"sample 3",val:77}]);
+			
+			[Bindable]
+			private var dpDE:ArrayCollection = new ArrayCollection([{category:"sample 1",val:110}, {category:"sample 2",val:90}, {category:"sample 3",val:97}]);
+			
+			[Bindable]
+			private var dpFR:ArrayCollection = new ArrayCollection([{category:"sample 1",val:88}, {category:"sample 2",val:97}, {category:"sample 3",val:105}]);	
+			
+			// this method is called when user rolls-over the country
+			private function setChartData(event:MapObjectEvent):void
+			{
+				// set data to the chart
+				var mapObject:MapObject = event.mapObject;
+				chart.dataProvider = mapObject.customData;
+				
+				// change label text
+				chartLabel.text = mapObject.title;				
+			}					
+			
+		]]>
+	</mx:Script>
+	
+	<!-- This example shows how amMap can be used with amCharts (or any other component). Chart changes data when user rolls-over the country. -->
+	<!-- listen to rollOverMapObject event and call setChartData -->
+	<ammap:AmMap developerMode="false"
+				 rollOverMapObject="{setChartData(event)}" 
+				 id="ammap" 
+				 width="100%" 
+				 height="100%"
+				 backgroundColor="#FFFFFF">
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl buttonIconColor="#DADADA" buttonBorderColor="#DADADA"/>
+		</ammap:zoomControl>
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings unlistedAreasColor="#FFCC00"/>
+		</ammap:areasSettings>
+		
+		<ammap:moviesSettings>
+			<ammap:MoviesSettings bringForwardOnHover="true" color="#FFFFFF" rollOverColor="#CC0000" selectedColor="#000000"/>
+		</ammap:moviesSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet
+				mapClass="{_world}" 
+				leftLongitude="-168.49" 
+				topLatitude="83.63" 
+				rightLongitude="190.3" 
+				bottomLatitude="-55.58"
+				zoomLevel="400" zoomLong="23.7826" zoomLat="56.9718">
+				
+				<!-- customData object can accept any Object - we use it to hold chart data -->
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="DE" color="#CC0000" title="Germany" customData="{dpGB}"/>
+					<ammap:MapArea instanceName="FR" color="#CC0000" title="France" customData="{dpFR}"/>
+					<ammap:MapArea instanceName="GB" color="#CC0000" title="Great Britain" customData="{dpGB}"/>
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+	<!-- label which displays country name -->
+	<mx:Label id="chartLabel" right="20" textAlign="center" width="300" top="70" fontSize="14" fontThickness="2"/>
+	
+	<!-- the chart -->
+	<amcharts:AmSerialChart marginRight="0" marginTop="10" width="300" height="180" startDuration="1" id="chart" right="50" top="100" categoryField="category" plotAreaFillAlphas="[0.6]">
+		<amcharts:graphs>
+			<amcharts:AmGraph type="column" valueField="val" fillAlphas="[1]" itemColors="[0x7F8DA9,0xFEC514,0xDB4C3C]" lineAlpha="0"/>		
+		</amcharts:graphs>
+	</amcharts:AmSerialChart>	
+	
+</mx:Application>

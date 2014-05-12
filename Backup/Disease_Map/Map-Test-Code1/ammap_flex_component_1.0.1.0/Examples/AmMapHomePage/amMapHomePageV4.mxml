@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:ammap="http://www.ammap.com/com_internal">
+
+		
+		<fx:Script>
+			<![CDATA[
+			import mx.effects.easing.Sine;
+			import mx.effects.easing.Linear;
+			[Bindable]
+			[Embed(source="../assets/maps/world.swf")]
+			private var _world:Class
+			
+			[Bindable]
+			[Embed(source="../assets/icons/target.swf")]
+			private var _target:Class	
+			
+			[Bindable]
+			[Embed(source="../assets/icons/plane.swf")]
+			private var _plane:Class
+			
+			[Bindable]
+			[Embed(source="../assets/maps/continents.swf")]
+			private var _continents:Class;
+			
+			[Bindable]
+			[Embed(source="../assets/icons/homeIcon.gif")]
+			private var _homeIcon:Class;
+			
+			[Bindable]
+			[Embed(source="../assets/bg.gif")]
+			private var _bg:Class;			
+			
+			
+			]]>
+		</fx:Script>		
+		
+		<fx:Declarations>
+		<ammap:MapMovie movieClass="{_homeIcon}" 
+						rollOverColor="#CC0000" 
+						labelColor="#000000" 
+						labelRollOverColor="#CC0000" 
+						useTargetsZoomValues="true"
+						url="{dsMain}" 
+						marginLeft="100" marginTop="45"
+						id="backButton">
+			<ammap:label><![CDATA[<b>Back to world map</b>]]></ammap:label>
+		</ammap:MapMovie>
+		
+		<fx:Array id="countries">
+			<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+			<ammap:MapArea title="AFGHANISTAN" instanceName="AF"></ammap:MapArea>
+			<ammap:MapArea title="ALAND ISLANDS" instanceName="AX"></ammap:MapArea>
+			<ammap:MapArea title="ALBANIA" instanceName="AL"></ammap:MapArea>
+			<ammap:MapArea title="ALGERIA" instanceName="DZ"></ammap:MapArea>
+			<ammap:MapArea title="ANDORRA" instanceName="AD"></ammap:MapArea>
+			<ammap:MapArea title="ANGOLA" instanceName="AO"></ammap:MapArea>
+			<ammap:MapArea title="ANGUILLA" instanceName="AI"></ammap:MapArea>
+			<ammap:MapArea title="ANTIGUA AND BARBUDA" instanceName="AG"></ammap:MapArea>
+			<ammap:MapArea title="ARGENTINA" instanceName="AR"></ammap:MapArea>
+			<ammap:MapArea title="ARMENIA" instanceName="AM"></ammap:MapArea>
+			<ammap:MapArea title="ARUBA" instanceName="AW"></ammap:MapArea>
+			<ammap:MapArea title="AUSTRALIA" instanceName="AU"></ammap:MapArea>
+			<ammap:MapArea title="AUSTRIA" instanceName="AT"></ammap:MapArea>
+			<ammap:MapArea title="AZERBAIJAN" instanceName="AZ"></ammap:MapArea>
+			<ammap:MapArea title="BAHAMAS" instanceName="BS"></ammap:MapArea>
+			<ammap:MapArea title="BAHRAIN" instanceName="BH"></ammap:MapArea>
+			<ammap:MapArea title="BANGLADESH" instanceName="BD"></ammap:MapArea>
+			<ammap:MapArea title="BARBADOS" instanceName="BB"></ammap:MapArea>
+			<ammap:MapArea title="BELARUS" instanceName="BY"></ammap:MapArea>
+			<ammap:MapArea title="BELGIUM" instanceName="BE"></ammap:MapArea>
+			<ammap:MapArea title="BELIZE" instanceName="BZ"></ammap:MapArea>
+			<ammap:MapArea title="BENIN" instanceName="BJ"></ammap:MapArea>
+			<ammap:MapArea title="BERMUDA" instanceName="BM"></ammap:MapArea>
+			<ammap:MapArea title="BHUTAN" instanceName="BT"></ammap:MapArea>
+			<ammap:MapArea title="BOLIVIA" instanceName="BO"></ammap:MapArea>
+			<ammap:MapArea title="BOSNIA AND HERZEGOVINA" instanceName="BA"></ammap:MapArea>
+			<ammap:MapArea title="BOTSWANA" instanceName="BW"></ammap:MapArea>
+			<ammap:MapArea title="BRAZIL" instanceName="BR"></ammap:MapArea>
+			<ammap:MapArea title="BRUNEI DARUSSALAM" instanceName="BN"></ammap:MapArea>
+			<ammap:MapArea title="BULGARIA" instanceName="BG"></ammap:MapArea>
+			<ammap:MapArea title="BURKINA FASO" instanceName="BF"></ammap:MapArea>
+			<ammap:MapArea title="BURUNDI" instanceName="BI"></ammap:MapArea>
+			<ammap:MapArea title="CAMBODIA" instanceName="KH"></ammap:MapArea>
+			<ammap:MapArea title="CAMEROON" instanceName="CM"></ammap:MapArea>
+			<ammap:MapArea title="CANADA" instanceName="CA"></ammap:MapArea>
+			<ammap:MapArea title="CAPE VERDE" instanceName="CV"></ammap:MapArea>
+			<ammap:MapArea title="CAYMAN ISLANDS" instanceName="KY"></ammap:MapArea>
+			<ammap:MapArea title="CENTRAL AFRICAN REPUBLIC" instanceName="CF"></ammap:MapArea>
+			<ammap:MapArea title="CHAD" instanceName="TD"></ammap:MapArea>
+			<ammap:MapArea title="CHILE" instanceName="CL"></ammap:MapArea>
+			<ammap:MapArea title="CHINA" instanceName="CN"></ammap:MapArea>
+			<ammap:MapArea title="COLOMBIA" instanceName="CO"></ammap:MapArea>
+			<ammap:MapArea title="COMOROS" instanceName="KM"></ammap:MapArea>
+			<ammap:MapArea title="REPUBLIC OF CONGO" instanceName="CG"></ammap:MapArea>
+			<ammap:MapArea title="THE DEMOCRATIC REPUBLIC OF THE CONGO" instanceName="CD"></ammap:MapArea>
+			<ammap:MapArea title="COSTA RICA" instanceName="CR"></ammap:MapArea>
+			<ammap:MapArea title="COTE D'IVOIRE" instanceName="CI"></ammap:MapArea>
+			<ammap:MapArea title="CROATIA" instanceName="HR"></ammap:MapArea>
+			<ammap:MapArea title="CUBA" instanceName="CU"></ammap:MapArea>
+			<ammap:MapArea title="CYPRUS" instanceName="CY"></ammap:MapArea>
+			<ammap:MapArea title="CZECH REPUBLIC" instanceName="CZ"></ammap:MapArea>
+			<ammap:MapArea title="DENMARK" instanceName="DK"></ammap:MapArea>
+			<ammap:MapArea title="DJIBOUTI" instanceName="DJ"></ammap:MapArea>
+			<ammap:MapArea title="DOMINICA" instanceName="DM"></ammap:MapArea>
+			<ammap:MapArea title="DOMINICAN REPUBLIC" instanceName="DO"></ammap:MapArea>
+			<ammap:MapArea title="ECUADOR" instanceName="EC"></ammap:MapArea>
+			<ammap:MapArea title="EGYPT" instanceName="EG"></ammap:MapArea>
+			<ammap:MapArea title="EL SALVADOR" instanceName="SV"></ammap:MapArea>
+			<ammap:MapArea title="EQUATORIAL GUINEA" instanceName="GQ"></ammap:MapArea>
+			<ammap:MapArea title="ERITREA" instanceName="ER"></ammap:MapArea>
+			<ammap:MapArea title="ESTONIA" instanceName="EE"></ammap:MapArea>
+			<ammap:MapArea title="ETHIOPIA" instanceName="ET"></ammap:MapArea>
+			<ammap:MapArea title="FAEROE ISLANDS" instanceName="FO"></ammap:MapArea>
+			<ammap:MapArea title="FALKLAND ISLANDS" instanceName="FK"></ammap:MapArea>
+			<ammap:MapArea title="FIJI" instanceName="FJ"></ammap:MapArea>
+			<ammap:MapArea title="FINLAND" instanceName="FI"></ammap:MapArea>
+			<ammap:MapArea title="FRANCE" instanceName="FR"></ammap:MapArea>
+			<ammap:MapArea title="FRENCH GUIANA" instanceName="GF"></ammap:MapArea>
+			<ammap:MapArea title="GABON" instanceName="GA"></ammap:MapArea>
+			<ammap:MapArea title="GAMBIA, THE" instanceName="GM"></ammap:MapArea>
+			<ammap:MapArea title="GEORGIA" instanceName="GE"></ammap:MapArea>
+			<ammap:MapArea title="GERMANY" instanceName="DE"></ammap:MapArea>
+			<ammap:MapArea title="GHANA" instanceName="GH"></ammap:MapArea>
+			<ammap:MapArea title="GREECE" instanceName="GR"></ammap:MapArea>
+			<ammap:MapArea title="GREENLAND" instanceName="GL"></ammap:MapArea>
+			<ammap:MapArea title="GRENADA" instanceName="GD"></ammap:MapArea>
+			<ammap:MapArea title="GUADELOUPE" instanceName="GP"></ammap:MapArea>
+			<ammap:MapArea title="GUATEMALA" instanceName="GT"></ammap:MapArea>
+			<ammap:MapArea title="GUINEA" instanceName="GN"></ammap:MapArea>
+			<ammap:MapArea title="GUINEA-BISSAU" instanceName="GW"></ammap:MapArea>
+			<ammap:MapArea title="GUYANA" instanceName="GY"></ammap:MapArea>
+			<ammap:MapArea title="HAITI" instanceName="HT"></ammap:MapArea>
+			<ammap:MapArea title="HONDURAS" instanceName="HN"></ammap:MapArea>
+			<ammap:MapArea title="HONG KONG" instanceName="HK"></ammap:MapArea>
+			<ammap:MapArea title="HUNGARY" instanceName="HU"></ammap:MapArea>
+			<ammap:MapArea title="ICELAND" instanceName="IS"></ammap:MapArea>
+			<ammap:MapArea title="INDIA" instanceName="IN"></ammap:MapArea>
+			<ammap:MapArea title="INDONESIA" instanceName="ID"></ammap:MapArea>
+			<ammap:MapArea title="IRAN" instanceName="IR"></ammap:MapArea>
+			<ammap:MapArea title="IRAQ" instanceName="IQ"></ammap:MapArea>
+			<ammap:MapArea title="IRELAND" instanceName="IE"></ammap:MapArea>
+			<ammap:MapArea title="ISRAEL" instanceName="IL"></ammap:MapArea>
+			<ammap:MapArea title="ITALY" instanceName="IT"></ammap:MapArea>
+			<ammap:MapArea title="JAMAICA" instanceName="JM"></ammap:MapArea>
+			<ammap:MapArea title="JAPAN" instanceName="JP"></ammap:MapArea>
+			<ammap:MapArea title="JORDAN" instanceName="JO"></ammap:MapArea>
+			<ammap:MapArea title="KAZAKHSTAN" instanceName="KZ"></ammap:MapArea>
+			<ammap:MapArea title="KENYA" instanceName="KE"></ammap:MapArea>
+			<ammap:MapArea title="NAURU" instanceName="NR"></ammap:MapArea>
+			<ammap:MapArea title="NORTH KOREA" instanceName="KP"></ammap:MapArea>
+			<ammap:MapArea title="SOUTH KOREA" instanceName="KR"></ammap:MapArea>
+			<ammap:MapArea title="KOSOVO" instanceName="KV"></ammap:MapArea>
+			<ammap:MapArea title="KUWAIT" instanceName="KW"></ammap:MapArea>
+			<ammap:MapArea title="KYRGYZSTAN" instanceName="KG"></ammap:MapArea>
+			<ammap:MapArea title="LAO PEOPLE'S DEMOCRATIC REPUBLIC" instanceName="LA"></ammap:MapArea>
+			<ammap:MapArea title="LATVIA" instanceName="LV"></ammap:MapArea>
+			<ammap:MapArea title="LEBANON" instanceName="LB"></ammap:MapArea>
+			<ammap:MapArea title="LESOTHO" instanceName="LS"></ammap:MapArea>
+			<ammap:MapArea title="LIBERIA" instanceName="LR"></ammap:MapArea>
+			<ammap:MapArea title="LIBYA" instanceName="LY"></ammap:MapArea>
+			<ammap:MapArea title="LIECHTENSTEIN" instanceName="LI"></ammap:MapArea>
+			<ammap:MapArea title="LITHUANIA" instanceName="LT"></ammap:MapArea>
+			<ammap:MapArea title="LUXEMBOURG" instanceName="LU"></ammap:MapArea>
+			<ammap:MapArea title="MACEDONIA" instanceName="MK"></ammap:MapArea>
+			<ammap:MapArea title="MADAGASCAR" instanceName="MG"></ammap:MapArea>
+			<ammap:MapArea title="MALAWI" instanceName="MW"></ammap:MapArea>
+			<ammap:MapArea title="MALAYSIA" instanceName="MY"></ammap:MapArea>
+			<ammap:MapArea title="MALI" instanceName="ML"></ammap:MapArea>
+			<ammap:MapArea title="MALTA" instanceName="MT"></ammap:MapArea>
+			<ammap:MapArea title="MARTINIQUE" instanceName="MQ"></ammap:MapArea>
+			<ammap:MapArea title="MAURITANIA" instanceName="MR"></ammap:MapArea>
+			<ammap:MapArea title="MAURITIUS" instanceName="MU"></ammap:MapArea>
+			<ammap:MapArea title="MEXICO" instanceName="MX"></ammap:MapArea>
+			<ammap:MapArea title="MOLDOVA" instanceName="MD"></ammap:MapArea>
+			<ammap:MapArea title="MONGOLIA" instanceName="MN"></ammap:MapArea>
+			<ammap:MapArea title="MONTENEGRO" instanceName="ME"></ammap:MapArea>
+			<ammap:MapArea title="MONTSERRAT" instanceName="MS"></ammap:MapArea>
+			<ammap:MapArea title="MOROCCO" instanceName="MA"></ammap:MapArea>
+			<ammap:MapArea title="MOZAMBIQUE" instanceName="MZ"></ammap:MapArea>
+			<ammap:MapArea title="MYANMAR" instanceName="MM"></ammap:MapArea>
+			<ammap:MapArea title="NAMIBIA" instanceName="NA"></ammap:MapArea>
+			<ammap:MapArea title="NAURU" instanceName="NR"></ammap:MapArea>
+			<ammap:MapArea title="NEPAL" instanceName="NP"></ammap:MapArea>
+			<ammap:MapArea title="NETHERLANDS" instanceName="NL"></ammap:MapArea>
+			<ammap:MapArea title="NETHERLANDS ANTILLES" instanceName="AN"></ammap:MapArea>
+			<ammap:MapArea title="NEW CALEDONIA" instanceName="NC"></ammap:MapArea>
+			<ammap:MapArea title="NEW ZEALAND" instanceName="NZ"></ammap:MapArea>
+			<ammap:MapArea title="NICARAGUA" instanceName="NI"></ammap:MapArea>
+			<ammap:MapArea title="NIGER" instanceName="NE"></ammap:MapArea>
+			<ammap:MapArea title="NIGERIA" instanceName="NG"></ammap:MapArea>
+			<ammap:MapArea title="NORWAY" instanceName="NO"></ammap:MapArea>
+			<ammap:MapArea title="OMAN" instanceName="OM"></ammap:MapArea>
+			<ammap:MapArea title="PAKISTAN" instanceName="PK"></ammap:MapArea>
+			<ammap:MapArea title="PALAU" instanceName="PW"></ammap:MapArea>
+			<ammap:MapArea title="PALESTINIAN TERRITORIES" instanceName="PS"></ammap:MapArea>
+			<ammap:MapArea title="PANAMA" instanceName="PA"></ammap:MapArea>
+			<ammap:MapArea title="PAPUA NEW GUINEA" instanceName="PG"></ammap:MapArea>
+			<ammap:MapArea title="PARAGUAY" instanceName="PY"></ammap:MapArea>
+			<ammap:MapArea title="PERU" instanceName="PE"></ammap:MapArea>
+			<ammap:MapArea title="PHILIPPINES" instanceName="PH"></ammap:MapArea>
+			<ammap:MapArea title="POLAND" instanceName="PL"></ammap:MapArea>
+			<ammap:MapArea title="PORTUGAL" instanceName="PT"></ammap:MapArea>
+			<ammap:MapArea title="PUERTO RICO" instanceName="PR"></ammap:MapArea>
+			<ammap:MapArea title="QATAR" instanceName="QA"></ammap:MapArea>
+			<ammap:MapArea title="REUNION" instanceName="RE"></ammap:MapArea>
+			<ammap:MapArea title="ROMANIA" instanceName="RO"></ammap:MapArea>
+			<ammap:MapArea title="RUSSIAN FEDERATION" instanceName="RU"></ammap:MapArea>
+			<ammap:MapArea title="RWANDA" instanceName="RW"></ammap:MapArea>
+			<ammap:MapArea title="SAINT KITTS AND NEVIS" instanceName="KN"></ammap:MapArea>
+			<ammap:MapArea title="SAINT LUCIA" instanceName="LC"></ammap:MapArea>
+			<ammap:MapArea title="SAINT MARTIN" instanceName="MF"></ammap:MapArea>
+			<ammap:MapArea title="SAINT VINCENT AND THE GRENADINES" instanceName="VC"></ammap:MapArea>
+			<ammap:MapArea title="SAMOA" instanceName="WS"></ammap:MapArea>
+			<ammap:MapArea title="SAO TOME AND PRINCIPE" instanceName="ST"></ammap:MapArea>
+			<ammap:MapArea title="SAUDI ARABIA" instanceName="SA"></ammap:MapArea>
+			<ammap:MapArea title="SENEGAL" instanceName="SN"></ammap:MapArea>
+			<ammap:MapArea title="SERBIA" instanceName="RS"></ammap:MapArea>
+			<ammap:MapArea title="SIERRA LEONE" instanceName="SL"></ammap:MapArea>
+			<ammap:MapArea title="SINGAPORE" instanceName="SG"></ammap:MapArea>
+			<ammap:MapArea title="SLOVAKIA" instanceName="SK"></ammap:MapArea>
+			<ammap:MapArea title="SLOVENIA" instanceName="SI"></ammap:MapArea>
+			<ammap:MapArea title="SOLOMON ISLANDS" instanceName="SB"></ammap:MapArea>
+			<ammap:MapArea title="SOMALIA" instanceName="SO"></ammap:MapArea>
+			<ammap:MapArea title="SOUTH AFRICA" instanceName="ZA"></ammap:MapArea>
+			<ammap:MapArea title="SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS" instanceName="GS"></ammap:MapArea>
+			<ammap:MapArea title="SPAIN" instanceName="ES"></ammap:MapArea>
+			<ammap:MapArea title="SRI LANKA" instanceName="LK"></ammap:MapArea>
+			<ammap:MapArea title="SUDAN" instanceName="SD"></ammap:MapArea>
+			<ammap:MapArea title="SURINAME" instanceName="SR"></ammap:MapArea>
+			<ammap:MapArea title="SVALBARD AND JAN MAYEN" instanceName="SJ"></ammap:MapArea>
+			<ammap:MapArea title="SWAZILAND" instanceName="SZ"></ammap:MapArea>
+			<ammap:MapArea title="SWEDEN" instanceName="SE"></ammap:MapArea>
+			<ammap:MapArea title="SWITZERLAND" instanceName="CH"></ammap:MapArea>
+			<ammap:MapArea title="SYRIAN ARAB REPUBLIC" instanceName="SY"></ammap:MapArea>
+			<ammap:MapArea title="TAIWAN" instanceName="TW"></ammap:MapArea>
+			<ammap:MapArea title="TAJIKISTAN" instanceName="TJ"></ammap:MapArea>
+			<ammap:MapArea title="TANZANIA" instanceName="TZ"></ammap:MapArea>
+			<ammap:MapArea title="THAILAND" instanceName="TH"></ammap:MapArea>
+			<ammap:MapArea title="TIMOR-LESTE" instanceName="TL"></ammap:MapArea>
+			<ammap:MapArea title="TOGO" instanceName="TG"></ammap:MapArea>
+			<ammap:MapArea title="TONGA" instanceName="TO"></ammap:MapArea>
+			<ammap:MapArea title="TRINIDAD AND TOBAGO" instanceName="TT"></ammap:MapArea>
+			<ammap:MapArea title="TUNISIA" instanceName="TN"></ammap:MapArea>
+			<ammap:MapArea title="TURKEY" instanceName="TR"></ammap:MapArea>
+			<ammap:MapArea title="TURKMENISTAN" instanceName="TM"></ammap:MapArea>
+			<ammap:MapArea title="TURKS AND CAICOS ISLANDS" instanceName="TC"></ammap:MapArea>
+			<ammap:MapArea title="UGANDA" instanceName="UG"></ammap:MapArea>
+			<ammap:MapArea title="UKRAINE" instanceName="UA"></ammap:MapArea>
+			<ammap:MapArea title="UNITED ARAB EMIRATES" instanceName="AE"></ammap:MapArea>
+			<ammap:MapArea title="UNITED KINGDOM" instanceName="GB"></ammap:MapArea>
+			<ammap:MapArea title="UNITED STATES" instanceName="US"></ammap:MapArea>
+			<ammap:MapArea title="URUGUAY" instanceName="UY"></ammap:MapArea>
+			<ammap:MapArea title="UZBEKISTAN" instanceName="UZ"></ammap:MapArea>
+			<ammap:MapArea title="VANUATU" instanceName="VU"></ammap:MapArea>
+			<ammap:MapArea title="VENEZUELA" instanceName="VE"></ammap:MapArea>
+			<ammap:MapArea title="VIET NAM" instanceName="VN"></ammap:MapArea>
+			<ammap:MapArea title="VIRGIN ISLANDS, BRITISH" instanceName="VG"></ammap:MapArea>
+			<ammap:MapArea title="VIRGIN ISLANDS, US" instanceName="VI"></ammap:MapArea>
+			<ammap:MapArea title="WESTERN SAHARA" instanceName="EH"></ammap:MapArea>
+			<ammap:MapArea title="YEMEN" instanceName="YE"></ammap:MapArea>
+			<ammap:MapArea title="ZAMBIA" instanceName="ZM"></ammap:MapArea>
+			<ammap:MapArea title="ZIMBABWE" instanceName="ZW"></ammap:MapArea>
+			<ammap:MapArea title="GUERNSEY" instanceName="GG"></ammap:MapArea>
+			<ammap:MapArea title="JERSEY" instanceName="JE"></ammap:MapArea>
+			<ammap:MapArea title="ISLE OF MAN" instanceName="IM"></ammap:MapArea>
+			<ammap:MapArea title="MALDIVES" instanceName="MV"></ammap:MapArea>		
+		</fx:Array>	
+		</fx:Declarations>
+		
+		<mx:TabNavigator width="650" height="454" historyManagementEnabled="false">
+			<mx:Canvas width="100%" height="100%" label="Flight routes">
+				
+				<ammap:AmMap id="ammap1" width="100%" height="100%" backgroundAlpha="0" fontSize="15">
+					
+					<ammap:zoomControl>
+						<ammap:ZoomControl homeIconColor="#000000"/>
+					</ammap:zoomControl>
+					
+					<ammap:areasSettings>
+						<ammap:AreasSettings unlistedAreasColor="#FFCC00"/>
+					</ammap:areasSettings>
+					
+					<ammap:moviesSettings>
+						<ammap:MoviesSettings centered="false" bringForwardOnHover="true" color="#FFFFFF" rollOverColor="#CC0000" selectedColor="#000000"/>
+					</ammap:moviesSettings>
+					
+					<ammap:linesSettings>
+						<ammap:LinesSettings color="#CC0000" alpha="0.4"/>
+					</ammap:linesSettings>
+					
+					<ammap:dataSets>
+						<ammap:DataSet				 
+							mapClass="{_world}" 
+							leftLongitude="-168.49" 
+							topLatitude="83.63" 
+							rightLongitude="190.3" 
+							bottomLatitude="-55.58"
+							url="{london}">
+							<ammap:areas>
+								<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+							</ammap:areas>
+							
+							<ammap:movies>
+								<!--<ammap:MapMovie component="{ta}" x="100" y="100"/>-->
+								
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Brussels" lat="50.8371" long="4.3676"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Prague" lat="50.0878" long="14.4205"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Athens" lat="37.9792" long="23.7166"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Reykjavik" lat="64.1353" long="-21.8952"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Dublin" lat="53.3441" long="-6.2675"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Oslo" lat="59.9138" long="10.7387"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Lisbon" lat="38.7072" long="-9.1355"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Moscow" lat="55.7558" long="37.6176"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Belgrade" lat="44.8048" long="20.4781"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Bratislava" lat="48.2116" long="17.1547"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Ljubljana" lat="46.0514" long="14.5060"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Madrid" lat="40.4167" long="-3.7033"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Stockholm" lat="59.3328" long="18.0645"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Bern" lat="46.9480" long="7.4481"/>    
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Kiev" lat="50.4422" long="30.5367"/>
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="Paris" lat="48.8567" long="2.3510"/> 
+								<ammap:MapMovie color="#CC0000" movieClass="{_target}" title="New York" lat="40.43" long="-74"/> 
+								
+								<ammap:MapMovie 
+									id="london" 
+									centered="false"
+									color="#000000"
+									movieClass="{_target}" 
+									title="London" 
+									lat="51.5002" 
+									long="-0.1262" 
+									width="16" 
+									height="16" 
+									fixedSize="true" 
+									zoomLevel="273.169" 
+									zoomX="-64.46" 
+									zoomY="-78.29"> 
+									
+									<ammap:lines> 
+										<ammap:MapLine latArray="{[51.5002,50.4422]}" longArray="{[-0.1262,30.5367]}"/> 
+										<ammap:MapLine latArray="{[51.5002,46.9480]}" longArray="{[-0.1262,7.4481]}"/>   
+										<ammap:MapLine latArray="{[51.5002,59.3328]}" longArray="{[-0.1262,18.0645]}"/>    
+										<ammap:MapLine latArray="{[51.5002,40.4167]}" longArray="{[-0.1262,-3.7033]}"/>    
+										<ammap:MapLine latArray="{[51.5002,46.0514]}" longArray="{[-0.1262,14.5060]}"/>    
+										<ammap:MapLine latArray="{[51.5002,48.2116]}" longArray="{[-0.1262,17.1547]}"/>    
+										<ammap:MapLine latArray="{[51.5002,44.8048]}" longArray="{[-0.1262,20.4781]}"/>    
+										<ammap:MapLine latArray="{[51.5002,55.7558]}" longArray="{[-0.1262,37.6176]}"/>    
+										<ammap:MapLine latArray="{[51.5002,38.7072]}" longArray="{[-0.1262,-9.1355]}"/>    
+										<ammap:MapLine latArray="{[51.5002,54.6896]}" longArray="{[-0.1262,25.2799]}"/> 
+										<ammap:MapLine latArray="{[51.5002,59.4749,64.1353]}" longArray="{[-0.1262,-6.4367,-21.8952]}" curved="true"/>         
+										<ammap:MapLine latArray="{[51.5002,43.4357,40.43]}" longArray="{[-0.1262,-36.9038,-74]}" curved="true"/> 
+									</ammap:lines>    
+									
+									<ammap:movies>
+										<ammap:MapMovie movieClass="{_plane}"
+														centered="false"
+														marginLeft="100" marginTop="45"
+														color="#CC0000" 
+														labelColor="#CC0000">
+											<ammap:label><![CDATA[<b>Flights from London</b>]]></ammap:label>
+										</ammap:MapMovie>
+										<ammap:MapMovie
+											marginLeft="113" marginTop="55" 
+											labelColor="#000000"
+											labelRollOverColor="#CC0000"
+											labelFontSize="11" 
+											rollOverColor="#CC0000"
+											url="{vilnius}"
+											label="show flights from Vilnius"/>
+									</ammap:movies>
+									
+								</ammap:MapMovie> 
+								
+								<ammap:MapMovie
+									movieClass="{_target}"
+									centered="false"
+									id="vilnius" 
+									color="#000000"
+									title="Vilnius" 
+									lat="54.6896" 
+									long="25.2799" 
+									width="16" 
+									height="16" 						
+									fixedSize="true" 
+									zoomLevel="492.24" 
+									zoomX="-197.17" 
+									zoomY="-176.79"> 
+									
+									<ammap:lines> 
+										<ammap:MapLine latArray="{[54.6896,50.8371]}" longArray="{[25.2799,4.3676]}"/> 
+										<ammap:MapLine latArray="{[54.6896,59.9138]}" longArray="{[25.2799,10.7387]}"/>    
+										<ammap:MapLine latArray="{[54.6896,40.4167]}" longArray="{[25.2799,-3.7033]}"/>          
+										<ammap:MapLine latArray="{[54.6896,50.0878]}" longArray="{[25.2799,14.4205]}"/>    
+										<ammap:MapLine latArray="{[54.6896,48.2116]}" longArray="{[25.2799,17.1547]}"/>    
+										<ammap:MapLine latArray="{[54.6896,44.8048]}" longArray="{[25.2799,20.4781]}"/>    
+										<ammap:MapLine latArray="{[54.6896,55.7558]}" longArray="{[25.2799,37.6176]}"/>    
+										<ammap:MapLine latArray="{[54.6896,37.9792]}" longArray="{[25.2799,23.7166]}"/>    
+										<ammap:MapLine latArray="{[54.6896,54.6896]}" longArray="{[25.2799,25.2799]}"/> 
+										<ammap:MapLine latArray="{[54.6896,51.5002]}" longArray="{[25.2799,-0.1262]}"/> 
+										<ammap:MapLine latArray="{[54.6896,53.3441]}" longArray="{[25.2799,-6.2675]}"/>             
+									</ammap:lines> 
+									
+									<ammap:movies>
+										<ammap:MapMovie movieClass="{_plane}"
+														centered="false"
+														marginLeft="100" marginTop="45"
+														color="#CC0000" 
+														labelColor="#CC0000">
+											<ammap:label><![CDATA[<b>Flights from Vilnius</b>]]></ammap:label>
+										</ammap:MapMovie>
+										<ammap:MapMovie
+											marginLeft="113" marginTop="55" 
+											labelColor="#000000"
+											labelRollOverColor="#CC0000"
+											labelFontSize="11" 
+											rollOverColor="#CC0000"
+											url="{london}"
+											label="show flights from London"/>
+									</ammap:movies>					  
+									
+								</ammap:MapMovie> 				
+							</ammap:movies>
+							
+						</ammap:DataSet>
+					</ammap:dataSets>
+				</ammap:AmMap>
+			</mx:Canvas>
+			
+			<mx:Canvas width="100%" height="100%" label="Drill-down map">
+				<ammap:AmMap width="100%" height="100%" backgroundColor="#FFFFFF">
+					
+					<!-- autoZoom must be set to true if you want to zoom-in area when user clicks on it -->
+					<ammap:areasSettings>
+						<ammap:AreasSettings autoZoom="true"/>
+					</ammap:areasSettings>
+					
+					<ammap:zoomControl>
+						<ammap:ZoomControl homeIconColor="#000000"/>
+					</ammap:zoomControl>
+					
+					<!-- data sets -->
+					<ammap:dataSets>
+						<!-- main data set of continents map-->
+						<ammap:DataSet title="main" id="dsMain" mapClass="{_continents}">				
+							<ammap:areas>
+								<!-- every area has url defined, and a different data set is set for each continent -->
+								<ammap:MapArea instanceName="africa" url="{dsAfrica}" title="Africa" color="#723C1A" zoomLevel="241.559" zoomLong="5.9546" zoomLat="-77.613" passZoomValuesToTarget="true"/>
+								<ammap:MapArea instanceName="australia" url="{dsAustralia}" title="Australia and Oceania" color="#93644A" zoomLevel="477.113" zoomLong="133.3124" zoomLat="-87.2331" passZoomValuesToTarget="true"/>
+								<ammap:MapArea instanceName="europe" url="{dsEurope}" title="Europe" color="#AA805A" zoomLevel="349.924" zoomLong="8.7258" zoomLat="42.3608" passZoomValuesToTarget="true"/>
+								<ammap:MapArea instanceName="asia" url="{dsAsia}" title="Asia" color="#C8AB67" zoomLevel="235.18" zoomLong="98.2628" zoomLat="-34.5275" passZoomValuesToTarget="true"/>
+								<ammap:MapArea instanceName="north_america" url="{dsNorthAmerica}" title="North America" color="#8D725F" zoomLevel="235.18" zoomLong="-111.5557" zoomLat="19.7661" passZoomValuesToTarget="true"/>
+								<ammap:MapArea instanceName="south_america" url="{dsSouthAmerica}" title="South America" color="#BE8045" zoomLevel="241.559" zoomLong="-71.3621" zoomLat="-86.8508" passZoomValuesToTarget="true"/>					
+							</ammap:areas>
+						</ammap:DataSet>
+						
+						<!-- data sets of continents. they are quite the same, only zoomLevel, zoomX and zoomY is different -->
+						<ammap:DataSet title="afrika" id="dsAfrica" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>
+						<ammap:DataSet id="dsAustralia" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>				
+						<ammap:DataSet id="dsEurope" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>
+						<ammap:DataSet id="dsAsia" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>
+						<ammap:DataSet id="dsNorthAmerica" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>
+						<ammap:DataSet id="dsSouthAmerica" mapClass="{_world}" areas="{countries}" movies="{[backButton]}"/>
+					</ammap:dataSets>
+				</ammap:AmMap>	
+			</mx:Canvas>
+			
+			<!-- world capitals -->
+			<mx:Canvas width="100%" height="100%" label="World Capitals">
+				<ammap:AmMap easingFunction="{Sine.easeOut}" id="ammap3" width="100%" height="100%" backgroundAlpha="0">
+					
+					<ammap:zoomControl>
+						<ammap:ZoomControl homeIconColor="#000000"/>
+					</ammap:zoomControl>
+					
+					<ammap:areasSettings>
+						<ammap:AreasSettings unlistedAreasColor="#999999"/>
+					</ammap:areasSettings>
+					
+					<ammap:moviesSettings>
+						<ammap:MoviesSettings centered="false" bringForwardOnHover="true" color="#444444" rollOverColor="#CC0000" selectedColor="#CC0000"/>
+					</ammap:moviesSettings>
+					
+					<ammap:dataSets>
+						<ammap:DataSet mapClass="{_world}" leftLongitude="-168.49" topLatitude="83.63" rightLongitude="190.3" bottomLatitude="-55.58">
+							<ammap:areas>
+								<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+							</ammap:areas>
+							
+							<ammap:movies>
+								<!-- zoomX and zoomY for these movies is not defined, in this case the 
+								map is zoomed so that the movie is in the center of a map container -->
+								
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Andorra la Vella" lat="42.5075" long="1.5218"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Vienna" lat="48.2092" long="16.3728"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Minsk" lat="53.9678" long="27.5766"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Brussels" lat="50.8371" long="4.3676"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Sarajevo" lat="43.8608" long="18.4214"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Sofia" lat="42.7105" long="23.3238"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Zagreb" lat="45.8150" long="15.9785"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pristina" lat="42.666667" long="21.166667"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Prague" lat="50.0878" long="14.4205"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Copenhagen" lat="55.6763" long="12.5681"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tallinn" lat="59.4389" long="24.7545"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Helsinki" lat="60.1699" long="24.9384"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Paris" lat="48.8567" long="2.3510"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Berlin" lat="52.5235" long="13.4115"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Athens" lat="37.9792" long="23.7166"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Budapest" lat="47.4984" long="19.0408"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Reykjavik" lat="64.1353" long="-21.8952"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dublin" lat="53.3441" long="-6.2675"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Rome" lat="41.8955" long="12.4823"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Riga" lat="56.9465" long="24.1049"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Vaduz" lat="47.1411" long="9.5215"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Vilnius" lat="54.6896" long="25.2799"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Luxembourg" lat="49.6100" long="6.1296"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Skopje" lat="42.0024" long="21.4361"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Valletta" lat="35.9042" long="14.5189"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Chisinau" lat="47.0167" long="28.8497"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Monaco" lat="43.7325" long="7.4189"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Podgorica" lat="42.4602" long="19.2595"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Amsterdam" lat="52.3738" long="4.8910"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Oslo" lat="59.9138" long="10.7387"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Warsaw" lat="52.2297" long="21.0122"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lisbon" lat="38.7072" long="-9.1355"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bucharest" lat="44.4479" long="26.0979"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Moscow" lat="55.7558" long="37.6176"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="San Marino" lat="43.9424" long="12.4578"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Belgrade" lat="44.8048" long="20.4781"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bratislava" lat="48.2116" long="17.1547"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ljubljana" lat="46.0514" long="14.5060"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Madrid" lat="40.4167" long="-3.7033"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Stockholm" lat="59.3328" long="18.0645"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bern" lat="46.9480" long="7.4481"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kiev" lat="50.4422" long="30.5367"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="London" lat="51.5002" long="-0.1262"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Torshavn (on Streymoy)" lat="62.0177" long="-6.7719"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Gibraltar" lat="36.1377" long="-5.3453"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint Peter Port" lat="49.4660" long="-2.5522"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Douglas" lat="54.1670" long="-4.4821"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint Helier" lat="49.1919" long="-2.1071"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Longyearbyen" lat="78.2186" long="15.6488"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kabul" lat="34.5155" long="69.1952"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Yerevan" lat="40.1596" long="44.5090"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Baku" lat="40.3834" long="49.8932"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Manama" lat="26.1921" long="50.5354"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dhaka" lat="23.7106" long="90.3978"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Thimphu" lat="27.4405" long="89.6730"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bandar Seri Begawan" lat="4.9431" long="114.9425"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Phnom Penh" lat="11.5434" long="104.8984"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Peking" lat="39.9056" long="116.3958"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nicosia" lat="35.1676" long="33.3736"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="T'bilisi / Tiflis" lat="41.7010" long="44.7930"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="New Delhi" lat="28.6353" long="77.2250"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Jakarta (on Java)" lat="-6.1862" long="106.8063"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tehran / Teheran" lat="35.7061" long="51.4358"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Baghdad" lat="33.3157" long="44.3922"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Yerushalayim / Jerusalem" lat="31.7857" long="35.2007"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tokyo" lat="35.6785" long="139.6823"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Amman" lat="31.9394" long="35.9349"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Astana" lat="51.1796" long="71.4475"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Al Kuwayt / Kuwait" lat="29.3721" long="47.9824"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bishkek" lat="42.8679" long="74.5984"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Viangchan / Vientiane" lat="17.9689" long="102.6137"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Beyrouth / Beirut" lat="33.8872" long="35.5134"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kuala Lumpur" lat="3.1502" long="101.7077"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Maale / Male (on Male)" lat="4.1742" long="73.5109"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ulaanbaatar / Ulan Bator" lat="47.9138" long="106.9220"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pyinmana" lat="19.7378" long="96.2083"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kathmandu" lat="27.7058" long="85.3157"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="P'yongyang" lat="39.0187" long="125.7468"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Masqat / Muscat" lat="23.6086" long="58.5922"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Islamabad" lat="33.6751" long="73.0946"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Manila" lat="14.5790" long="120.9726"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ad Dawhah / Doha" lat="25.2948" long="51.5082"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ar Riyad / Riyadh" lat="24.6748" long="46.6977"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Singapore" lat="1.2894" long="103.8500"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Seoul" lat="37.5139" long="126.9828"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Colombo" lat="6.9155" long="79.8572"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dimashq / Damascus" lat="33.5158" long="36.2939"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="T'ai-pei / Taipei" lat="25.0338" long="121.5645"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dushanbe" lat="38.5737" long="68.7738"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Krung Thep / Bangkok" lat="13.7573" long="100.5020"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dili" lat="-8.5662" long="125.5880"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ankara" lat="39.9439" long="32.8560"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Asgabat / Ashgabat" lat="37.9509" long="58.3794"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Abu Zaby / Abu Dhabi" lat="24.4764" long="54.3705"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Toshkent / Tashkent" lat="41.3193" long="69.2481"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ha Noi / Hanoi" lat="21.0341" long="105.8372"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="San'a' / Sanaa" lat="15.3556" long="44.2081"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint John's (on Antigua)" lat="17.1175" long="-61.8456"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Buenos Aires" lat="-34.6118" long="-58.4173"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nassau (on New Providence)" lat="25.0661" long="-77.3390"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bridgetown" lat="13.0935" long="-59.6105"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Belmopan" lat="17.2534" long="-88.7713"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Sucre" lat="-19.0421" long="-65.2559"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Brasilia" lat="-15.7801" long="-47.9292"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ottawa" lat="45.4235" long="-75.6979"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Santiago" lat="-33.4691" long="-70.6420"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bogota" lat="4.6473" long="-74.0962"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="San Jose" lat="9.9402" long="-84.1002"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="La Habana / Havana" lat="23.1333" long="-82.3667"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Roseau" lat="15.2976" long="-61.3900"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Santo Domingo" lat="18.4790" long="-69.8908"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Quito" lat="-0.2295" long="-78.5243"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="San Salvador" lat="13.7034" long="-89.2073"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint George's" lat="12.0540" long="-61.7486"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Guatemala" lat="14.6248" long="-90.5328"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Georgetown" lat="6.8046" long="-58.1548"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Port-au-Prince" lat="18.5392" long="-72.3288"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tegucigalpa" lat="14.0821" long="-87.2063"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kingston" lat="17.9927" long="-76.7920"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ciudad de Mexico" lat="19.4271" long="-99.1276"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Managua" lat="12.1475" long="-86.2734"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Panama" lat="8.9943" long="-79.5188"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Asuncion" lat="-25.3005" long="-57.6362"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lima" lat="-12.0931" long="-77.0465"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Basseterre (on St. Kitts)" lat="17.2968" long="-62.7138"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Castries" lat="13.9972" long="-60.0018"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kingstown (on St. Vincent)" lat="13.2035" long="-61.2653"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Paramaribo" lat="5.8232" long="-55.1679"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Port of Spain (on Trinidad)" lat="10.6596" long="-61.4789"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Washington" lat="38.8921" long="-77.0241"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Montevideo" lat="-34.8941" long="-56.0675"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Caracas" lat="10.4961" long="-66.8983"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="The Valley" lat="18.2249" long="-63.0669"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Oranjestad" lat="12.5246" long="-70.0265"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Hamilton (on Main Island)" lat="32.2930" long="-64.7820"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Road Town (on Tortola)" lat="18.4328" long="-64.6235"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="George Town (on Grand Cayman)" lat="19.3022" long="-81.3857"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Stanley (on East Falkland)" lat="-51.7010" long="-57.8492"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Cayenne" lat="4.9346" long="-52.3303"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nuuk" lat="64.1836" long="-51.7214"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Basse-Terre" lat="15.9985" long="-61.7220"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Fort-de-France" lat="14.5997" long="-61.0760"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Plymouth" lat="16.6802" long="-62.2014"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Willemstad (on Curacao)" lat="12.1034" long="-68.9335"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="San Juan" lat="18.4500" long="-66.0667"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint-Pierre (on St. Pierre)" lat="46.7878" long="-56.1968"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Cockburn Town (on Grand Turk)" lat="21.4608" long="-71.1363"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Charlotte Amalie (on St. Thomas)" lat="18.3405" long="-64.9326"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Alger /Algiers" lat="36.7755" long="3.0597"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Luanda" lat="-8.8159" long="13.2306"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Porto-Novo" lat="6.4779" long="2.6323"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Gaborone" lat="-24.6570" long="25.9089"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Ouagadougou" lat="12.3569" long="-1.5352"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bujumbura" lat="-3.3818" long="29.3622"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Yaounde" lat="3.8612" long="11.5217"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Praia (on Sao Tiago)" lat="14.9195" long="-23.5153"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bangui" lat="4.3621" long="18.5873"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="N'djamena" lat="12.1121" long="15.0355"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Moroni (on Njazidja)" lat="-11.7004" long="43.2412"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Brazzaville" lat="-4.2767" long="15.2662"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kinshasa" lat="-4.3369" long="15.3271"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Yamoussoukro" lat="6.8067" long="-5.2728"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Djibouti" lat="11.5806" long="43.1425"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Al Qahirah / Cairo" lat="30.0571" long="31.2272"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Malabo (on Bioko)" lat="3.7523" long="8.7741"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Asmara" lat="15.3315" long="38.9183"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Addis Ababa / Addis Abeba" lat="9.0084" long="38.7575"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Libreville" lat="0.3858" long="9.4496"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Banjul" lat="13.4399" long="-16.6775"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Accra" lat="5.5401" long="-0.2074"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Conakry" lat="9.5370" long="-13.6785"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bissau" lat="11.8598" long="-15.5875"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nairobi" lat="-1.2762" long="36.7965"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Maseru" lat="-29.2976" long="27.4854"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Monrovia" lat="6.3106" long="-10.8047"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tarabulus / Tripoli" lat="32.8830" long="13.1897"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Antananarivo" lat="-18.9201" long="47.5237"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lilongwe" lat="-13.9899" long="33.7703"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bamako" lat="12.6530" long="-7.9864"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nouakchott" lat="18.0669" long="-15.9900"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Port Louis" lat="-20.1654" long="57.4896"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Rabat" lat="33.9905" long="-6.8704"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Maputo" lat="-25.9686" long="32.5804"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Windhoek" lat="-22.5749" long="17.0805"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Niamey" lat="13.5164" long="2.1157"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Abuja" lat="9.0580" long="7.4891"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kigali" lat="-1.9441" long="30.0619"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Sao Tome (on Sao Tome)" lat="0.3360" long="6.7311"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dakar" lat="14.6953" long="-17.4439"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Victoria (on Mahe)" lat="-4.6167" long="55.4500"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Freetown" lat="8.4697" long="-13.2659"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Muqdisho / Mogadishu" lat="2.0411" long="45.3426"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pretoria" lat="-25.7463" long="28.1876"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Al Khartum / Khartoum" lat="15.6331" long="32.5330"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Mbabane" lat="-26.3186" long="31.1410"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dodoma" lat="-6.1670" long="35.7497"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lome" lat="6.1228" long="1.2255"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tunis" lat="36.8117" long="10.1761"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kampala" lat="0.3133" long="32.5714"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lusaka" lat="-15.4145" long="28.2809"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Harare" lat="-17.8227" long="31.0496"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Mamoudzou" lat="-12.7806" long="45.2278"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint Denis" lat="-20.8732" long="55.4603"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Jamestown" lat="-15.9244" long="-5.7181"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Laayoune / El Aaiun" lat="27.1536" long="-13.2033"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Canberra" lat="-35.2820" long="149.1286"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Suva (on Viti Levu)" lat="-18.1416" long="178.4419"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bairiki (on Tarawa)" lat="1.3282" long="172.9784"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dalap-Uliga-Darrit (on Majuro)" lat="7.1167" long="171.3667"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Palikir (on Pohnpei)" lat="6.9177" long="158.1854"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Yaren" lat="-0.5434" long="166.9196"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Wellington" lat="-41.2865" long="174.7762"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Melekeok (on Babelthuap)" lat="7.5007" long="134.6241"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Port Moresby" lat="-9.4656" long="147.1969"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Apia (on Upolu)" lat="-13.8314" long="-171.7518"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Honiara (on Guadalcanal)" lat="-9.4333" long="159.9500"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nuku'alofa (on Tongatapu)" lat="-21.1360" long="-175.2164"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Vaiaku (on Funafuti)" lat="-8.5210" long="179.1983"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Port Vila (on Efate)" lat="-17.7404" long="168.3210"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pago Pago (on Tutuila)" lat="-14.2793" long="-170.7009"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="The Settlement / Flying Fish Cove" lat="-10.4286" long="105.6807"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pulu Panjang / West Island" lat="-12.1869" long="96.8283"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Avarua (on Rarotonga)" lat="-21.2039" long="-159.7658"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Papeete (on Tahiti)" lat="-17.5350" long="-149.5696"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Hagatna" lat="13.4667" long="144.7470"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Noumea (on Grande Terre)" lat="-22.2758" long="166.4581"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Alofi" lat="-19.0565" long="-169.9237"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Kingston" lat="-29.0545" long="167.9666"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Garapan (on Saipan)" lat="15.2069" long="145.7197"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Adamstown (on Pitcairn)" lat="-25.0662" long="-130.1027"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Mata-Utu (on Wallis)" lat="-13.2784" long="-176.1430"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Montgomery" lat="32.3754" long="-86.2996"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Juneau" lat="58.3637" long="-134.5721"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Phoenix" lat="33.4483" long="-112.0738"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Little Rock" lat="34.7244" long="-92.2789"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Sacramento" lat="38.5737" long="-121.4871"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Denver" lat="39.7551" long="-104.9881"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Hartford" lat="41.7665" long="-72.6732"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Dover" lat="39.1615" long="-75.5136"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Tallahassee" lat="30.4382" long="-84.2806"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Atlanta" lat="33.7545" long="-84.3897"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Honolulu (on Oahu)" lat="21.2920" long="-157.8219"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Boise" lat="43.6021" long="-116.2125"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Springfield" lat="39.8018" long="-89.6533"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Indianapolis" lat="39.7670" long="-86.1563"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Des Moines" lat="41.5888" long="-93.6203"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Topeka" lat="39.0474" long="-95.6815"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Frankfort" lat="38.1894" long="-84.8715"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Baton Rouge" lat="30.4493" long="-91.1882"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Augusta" lat="44.3294" long="-69.7323"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Annapolis" lat="38.9693" long="-76.5197"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Boston" lat="42.3589" long="-71.0568"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lansing" lat="42.7336" long="-84.5466"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Saint Paul" lat="44.9446" long="-93.1027"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Jackson" lat="32.3122" long="-90.1780"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Jefferson City" lat="38.5698" long="-92.1941"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Helena" lat="46.5911" long="-112.0205"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Lincoln" lat="40.8136" long="-96.7026"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Carson City" lat="39.1501" long="-119.7519"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Concord" lat="43.2314" long="-71.5597"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Trenton" lat="40.2202" long="-74.7642"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Santa Fe" lat="35.6816" long="-105.9381"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Albany" lat="42.6517" long="-73.7551"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Raleigh" lat="35.7797" long="-78.6434"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Bismarck" lat="46.8084" long="-100.7694"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Columbus" lat="39.9622" long="-83.0007"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Oklahoma City" lat="35.4931" long="-97.4591"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Salem" lat="44.9370" long="-123.0272"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Harrisburg" lat="40.2740" long="-76.8849"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Providence" lat="41.8270" long="-71.4087"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Columbia" lat="34.0007" long="-81.0353"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Pierre" lat="44.3776" long="-100.3177"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Nashville" lat="36.1589" long="-86.7821"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Austin" lat="30.2687" long="-97.7452"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Salt Lake City" lat="40.7716" long="-111.8882"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Montpelier" lat="44.2627" long="-72.5716"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Richmond" lat="37.5408" long="-77.4339"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Olympia" lat="47.0449" long="-122.9016"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Charleston" lat="38.3533" long="-81.6354"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Madison" lat="43.0632" long="-89.4007"></ammap:MapMovie>
+								<ammap:MapMovie movieClass="{_target}" zoomLevel="500" width="8" height="8" title="Cheyenne" lat="41.1389" long="-104.8165"></ammap:MapMovie> 					
+							</ammap:movies>
+							
+						</ammap:DataSet>
+					</ammap:dataSets>
+				</ammap:AmMap>
+				
+				<!-- Object list is created as a separate component -->
+				<ammap:ObjectList color="#000000" amMap="{ammap3}" right="10" top="10" width="150" height="100%" bottom="10">
+					<ammap:list>
+						<mx:List selectionColor="#000000" textSelectedColor="#FFFFFF" rollOverColor="#CC0000"/>		
+					</ammap:list>		
+				</ammap:ObjectList>			
+			</mx:Canvas>
+			
+		</mx:TabNavigator>
+</s:Application>

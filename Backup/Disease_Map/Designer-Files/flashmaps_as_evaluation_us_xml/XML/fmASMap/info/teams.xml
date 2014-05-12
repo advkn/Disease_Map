@@ -1,0 +1,32 @@
+<teams>
+	<team id='1' state='us_ga' label='Atlanta Hawks' />
+	<team id='2' state='us_ma' label='Boston Celtics' />
+	<team id='3' state='us_nc' label='Charlotte Bobcats' />
+	<team id='4' state='us_il' label='Chicago Bulls' />
+	<team id='5' state='us_oh' label='Cleveland Cavaliers' />
+	<team id='6' state='us_tx' label='Dallas Mavericks' />
+	<team id='7' state='us_co' label='Denver Nuggets' />
+	<team id='8' state='us_mi' label='Detroit Pistons' />
+	<team id='9' state='us_ca' label='Golden State Warriors' />
+	<team id='10' state='us_tx' label='Houston Rockets' />
+	<team id='11' state='us_in' label='Indiana Pacers' />
+	<team id='12' state='us_ca' label='Los Angeles Clippers' />
+	<team id='13' state='us_ca' label='Los Angeles Lakers' />
+	<team id='14' state='us_tn' label='Memphis Grizzlies' />
+	<team id='15' state='us_fl' label='Miami Heat' />
+	<team id='16' state='us_wi' label='Milwaukee Bucks' />
+	<team id='17' state='us_mn' label='Minnesota Timberwolves' />
+	<team id='18' state='us_nj' label='New Jersey Nets' />
+	<team id='20' state='us_ny' label='New York Knicks' />
+	<team id='19' state='us_ok' label='NO / Oklahoma Hornets' />
+	<team id='21' state='us_fl' label='Orlando Magic' />
+	<team id='22' state='us_pa' label='Philadelphia 76ers' />
+	<team id='23' state='us_az' label='Phoenix Suns' />
+	<team id='24' state='us_or' label='Portland Trail Blazers' />
+	<team id='25' state='us_ca' label='Sacramento Kings' />
+	<team id='26' state='us_tx' label='San Antonio Spurs' />
+	<team id='27' state='us_wa' label='Seattle Supersonics' />
+	<team id='28' state='us_ny' label='Toronto Raptors' />
+	<team id='29' state='us_ut' label='Utah Jazz' />
+	<team id='30' state='us_dc' label='Washington Wizards' />
+</teams>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/brazil.swf" leftLongitude="-74.003996" topLatitude="5.272333" rightLongitude="-34.791917" bottomLatitude="-33.74136">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BR_AC" title="Acre"/>
+					<ammap:MapArea instanceName="BR_AL" title="Alagoas"/>
+					<ammap:MapArea instanceName="BR_AP" title="Amapá"/>
+					<ammap:MapArea instanceName="BR_AM" title="Amazonas"/>
+					<ammap:MapArea instanceName="BR_BA" title="Bahia"/>
+					<ammap:MapArea instanceName="BR_CE" title="Ceará"/>
+					<ammap:MapArea instanceName="BR_DF" title="Distrito Federal"/>
+					<ammap:MapArea instanceName="BR_ES" title="Espírito Santo"/>
+					<ammap:MapArea instanceName="BR_GO" title="Goiás"/>
+					<ammap:MapArea instanceName="BR_MA" title="Maranhão"/>
+					<ammap:MapArea instanceName="BR_MT" title="Mato Gross"/>
+					<ammap:MapArea instanceName="BR_MS" title="Mato Grosso do Sul"/>
+					<ammap:MapArea instanceName="BR_MG" title="Minas Gerais"/>
+					<ammap:MapArea instanceName="BR_PA" title="Pará"/>
+					<ammap:MapArea instanceName="BR_PB" title="Paraíba"/>
+					<ammap:MapArea instanceName="BR_PR" title="Paraná"/>
+					<ammap:MapArea instanceName="BR_PE" title="Pernambuco"/>
+					<ammap:MapArea instanceName="BR_PI" title="Piauí"/>
+					<ammap:MapArea instanceName="BR_RJ" title="Rio de Janeiro"/>
+					<ammap:MapArea instanceName="BR_RN" title="Rio Grande do Norte"/>
+					<ammap:MapArea instanceName="BR_RS" title="Rio Grande do Sul"/>
+					<ammap:MapArea instanceName="BR_RO" title="Rondônia"/>
+					<ammap:MapArea instanceName="BR_RR" title="Roraima"/>
+					<ammap:MapArea instanceName="BR_SC" title="Santa Catarina"/>
+					<ammap:MapArea instanceName="BR_SP" title="São Paulo"/>
+					<ammap:MapArea instanceName="BR_SE" title="Sergipe"/>
+					<ammap:MapArea instanceName="BR_TO" title="Tocantins"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Brasilia" lat="-15.77846" long="-47.928661" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

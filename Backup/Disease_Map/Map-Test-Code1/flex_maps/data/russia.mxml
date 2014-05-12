@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/russia.swf" leftLongitude="19.627254" topLatitude="81.851927" rightLongitude="-169.009712" bottomLatitude="41.196582">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="RU_ALT" title="Altai Krai"/>
+					<ammap:MapArea instanceName="RU_AL" title="Altai Republic"/>
+					<ammap:MapArea instanceName="RU_AMU" title="Amur Oblast"/>
+					<ammap:MapArea instanceName="RU_ARK" title="Arkhangelsk Oblast"/>
+					<ammap:MapArea instanceName="RU_AST" title="Astrakhan Oblast"/>
+					<ammap:MapArea instanceName="RU_BEL" title="Belgorod Oblast"/>
+					<ammap:MapArea instanceName="RU_BRY" title="Bryansk Oblast"/>
+					<ammap:MapArea instanceName="RU_BU" title="Buryat Republic"/>
+					<ammap:MapArea instanceName="RU_CE" title="Chechen Republic"/>
+					<ammap:MapArea instanceName="RU_CHE" title="Chelyabinsk Oblast"/>
+					<ammap:MapArea instanceName="RU_CHU" title="Chukotka Autonomous Okrug"/>
+					<ammap:MapArea instanceName="RU_CU" title="Chuvash Republic"/>
+					<ammap:MapArea instanceName="RU_IRK" title="Irkutsk Oblast"/>
+					<ammap:MapArea instanceName="RU_IVA" title="Ivanovo Oblast"/>
+					<ammap:MapArea instanceName="RU_YEV" title="Jewish Autonomous Oblast"/>
+					<ammap:MapArea instanceName="RU_KB" title="Kabardino-Balkar Republic"/>
+					<ammap:MapArea instanceName="RU_KGD" title="Kaliningrad Oblast"/>
+					<ammap:MapArea instanceName="RU_KLU" title="Kaluga Oblast"/>
+					<ammap:MapArea instanceName="RU_KAM" title="Kamchatka Krai"/>
+					<ammap:MapArea instanceName="RU_KC" title="Karachay-Cherkess Republic"/>
+					<ammap:MapArea instanceName="RU_KEM" title="Kemerovo Oblast"/>
+					<ammap:MapArea instanceName="RU_KHA" title="Khabarovsk Krai"/>
+					<ammap:MapArea instanceName="RU_KHM" title="Khanty-Mansi Autonomous Okrug—Yugra"/>
+					<ammap:MapArea instanceName="RU_KIR" title="Kirov Oblast"/>
+					<ammap:MapArea instanceName="RU_KO" title="Komi Republic"/>
+					<ammap:MapArea instanceName="RU_KOS" title="Kostroma Oblast"/>
+					<ammap:MapArea instanceName="RU_KDA" title="Krasnodar Krai"/>
+					<ammap:MapArea instanceName="RU_KYA" title="Krasnoyarsk Krai"/>
+					<ammap:MapArea instanceName="RU_KGN" title="Kurgan Oblast"/>
+					<ammap:MapArea instanceName="RU_KRS" title="Kursk Oblast"/>
+					<ammap:MapArea instanceName="RU_LEN" title="Leningrad Oblast"/>
+					<ammap:MapArea instanceName="RU_LIP" title="Lipetsk Oblast"/>
+					<ammap:MapArea instanceName="RU_MAG" title="Magadan Oblast"/>
+					<ammap:MapArea instanceName="RU_ME" title="Mari El Republic"/>
+					<ammap:MapArea instanceName="RU_MOW" title="Moscow"/>
+					<ammap:MapArea instanceName="RU_MOS" title="Moscow Oblast"/>
+					<ammap:MapArea instanceName="RU_MUR" title="Murmansk Oblast"/>
+					<ammap:MapArea instanceName="RU_NEN" title="Nenets Autonomous Okrug"/>
+					<ammap:MapArea instanceName="RU_NIZ" title="Nizhny Novgorod Oblast"/>
+					<ammap:MapArea instanceName="RU_NGR" title="Novgorod Oblast"/>
+					<ammap:MapArea instanceName="RU_NVS" title="Novosibirsk Oblast"/>
+					<ammap:MapArea instanceName="RU_OMS" title="Omsk Oblast"/>
+					<ammap:MapArea instanceName="RU_ORE" title="Orenburg Oblast"/>
+					<ammap:MapArea instanceName="RU_ORL" title="Oryol Oblast"/>
+					<ammap:MapArea instanceName="RU_PNZ" title="Penza Oblast"/>
+					<ammap:MapArea instanceName="RU_PER" title="Perm Krai"/>
+					<ammap:MapArea instanceName="RU_PRI" title="Primorsky Krai"/>
+					<ammap:MapArea instanceName="RU_PSK" title="Pskov Oblast"/>
+					<ammap:MapArea instanceName="RU_AD" title="Republic of Adygea"/>
+					<ammap:MapArea instanceName="RU_BA" title="Republic of Bashkortostan"/>
+					<ammap:MapArea instanceName="RU_DA" title="Republic of Dagestan"/>
+					<ammap:MapArea instanceName="RU_IN" title="Republic of Ingushetia"/>
+					<ammap:MapArea instanceName="RU_KL" title="Republic of Kalmykia"/>
+					<ammap:MapArea instanceName="RU_KR" title="Republic of Karelia"/>
+					<ammap:MapArea instanceName="RU_KK" title="Republic of Khakassia"/>
+					<ammap:MapArea instanceName="RU_MO" title="Republic of Mordovia"/>
+					<ammap:MapArea instanceName="RU_SE" title="Republic of North Ossetia-Alania"/>
+					<ammap:MapArea instanceName="RU_TA" title="Republic of Tatarstan"/>
+					<ammap:MapArea instanceName="RU_ROS" title="Rostov Oblast"/>
+					<ammap:MapArea instanceName="RU_RYA" title="Ryazan Oblast"/>
+					<ammap:MapArea instanceName="RU_SPE" title="Saint Petersburg"/>
+					<ammap:MapArea instanceName="RU_SA" title="Sakha (Yakutia) Republic"/>
+					<ammap:MapArea instanceName="RU_SAK" title="Sakhalin Oblast"/>
+					<ammap:MapArea instanceName="RU_SAM" title="Samara Oblast"/>
+					<ammap:MapArea instanceName="RU_SAR" title="Saratov Oblast"/>
+					<ammap:MapArea instanceName="RU_SMO" title="Smolensk Oblast"/>
+					<ammap:MapArea instanceName="RU_STA" title="Stavropol Krai"/>
+					<ammap:MapArea instanceName="RU_SVE" title="Sverdlovsk Oblast"/>
+					<ammap:MapArea instanceName="RU_TAM" title="Tambov Oblast"/>
+					<ammap:MapArea instanceName="RU_TOM" title="Tomsk Oblast"/>
+					<ammap:MapArea instanceName="RU_TUL" title="Tula Oblast"/>
+					<ammap:MapArea instanceName="RU_TVE" title="Tver Oblast"/>
+					<ammap:MapArea instanceName="RU_TYU" title="Tyumen Oblast"/>
+					<ammap:MapArea instanceName="RU_TY" title="Tyva Republic"/>
+					<ammap:MapArea instanceName="RU_UD" title="Udmurt Republic"/>
+					<ammap:MapArea instanceName="RU_ULY" title="Ulyanovsk Oblast"/>
+					<ammap:MapArea instanceName="RU_VLA" title="Vladimir Oblast"/>
+					<ammap:MapArea instanceName="RU_VGG" title="Volgograd Oblast"/>
+					<ammap:MapArea instanceName="RU_VLG" title="Vologda Oblast"/>
+					<ammap:MapArea instanceName="RU_VOR" title="Voronezh Oblast"/>
+					<ammap:MapArea instanceName="RU_YAN" title="Yamalo-Nenets Autonomous Okrug"/>
+					<ammap:MapArea instanceName="RU_YAR" title="Yaroslavl Oblast"/>
+					<ammap:MapArea instanceName="RU_ZAB" title="Zabaykalsky Krai"/>
+				</ammap:areas>
+				<ammap:movies>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

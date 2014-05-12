@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/usa_mercator.swf" leftLongitude="-178.244751" topLatitude="71.455555" rightLongitude="-66.936676" bottomLatitude="18.96519">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="US_AL" title="Alabama"/>
+					<ammap:MapArea instanceName="US_AK" title="Alaska"/>
+					<ammap:MapArea instanceName="US_AZ" title="Arizona"/>
+					<ammap:MapArea instanceName="US_AR" title="Arkansas"/>
+					<ammap:MapArea instanceName="US_CA" title="California"/>
+					<ammap:MapArea instanceName="US_CO" title="Colorado"/>
+					<ammap:MapArea instanceName="US_CT" title="Connecticut"/>
+					<ammap:MapArea instanceName="US_DE" title="Delaware"/>
+					<ammap:MapArea instanceName="US_DC" title="District of Columbia"/>
+					<ammap:MapArea instanceName="US_FL" title="Florida"/>
+					<ammap:MapArea instanceName="US_GA" title="Georgia"/>
+					<ammap:MapArea instanceName="US_HI" title="Hawaii"/>
+					<ammap:MapArea instanceName="US_ID" title="Idaho"/>
+					<ammap:MapArea instanceName="US_IL" title="Illinois"/>
+					<ammap:MapArea instanceName="US_IN" title="Indiana"/>
+					<ammap:MapArea instanceName="US_IA" title="Iowa"/>
+					<ammap:MapArea instanceName="US_KS" title="Kansas"/>
+					<ammap:MapArea instanceName="US_KY" title="Kentucky"/>
+					<ammap:MapArea instanceName="US_LA" title="Louisiana"/>
+					<ammap:MapArea instanceName="US_ME" title="Maine"/>
+					<ammap:MapArea instanceName="US_MD" title="Maryland"/>
+					<ammap:MapArea instanceName="US_MA" title="Massachusetts"/>
+					<ammap:MapArea instanceName="US_MI" title="Michigan"/>
+					<ammap:MapArea instanceName="US_MN" title="Minnesota"/>
+					<ammap:MapArea instanceName="US_MS" title="Mississippi"/>
+					<ammap:MapArea instanceName="US_MO" title="Missouri"/>
+					<ammap:MapArea instanceName="US_MT" title="Montana"/>
+					<ammap:MapArea instanceName="US_NE" title="Nebraska"/>
+					<ammap:MapArea instanceName="US_NV" title="Nevada"/>
+					<ammap:MapArea instanceName="US_NH" title="New Hampshire"/>
+					<ammap:MapArea instanceName="US_NJ" title="New Jersey"/>
+					<ammap:MapArea instanceName="US_NM" title="New Mexico"/>
+					<ammap:MapArea instanceName="US_NY" title="New York"/>
+					<ammap:MapArea instanceName="US_NC" title="North Carolina"/>
+					<ammap:MapArea instanceName="US_ND" title="North Dakota"/>
+					<ammap:MapArea instanceName="US_OH" title="Ohio"/>
+					<ammap:MapArea instanceName="US_OK" title="Oklahoma"/>
+					<ammap:MapArea instanceName="US_OR" title="Oregon"/>
+					<ammap:MapArea instanceName="US_PA" title="Pennsylvania"/>
+					<ammap:MapArea instanceName="US_RI" title="Rhode Island"/>
+					<ammap:MapArea instanceName="US_SC" title="South Carolina"/>
+					<ammap:MapArea instanceName="US_SD" title="South Dakota"/>
+					<ammap:MapArea instanceName="US_TN" title="Tennessee"/>
+					<ammap:MapArea instanceName="US_TX" title="Texas"/>
+					<ammap:MapArea instanceName="US_UT" title="Utah"/>
+					<ammap:MapArea instanceName="US_VT" title="Vermont"/>
+					<ammap:MapArea instanceName="US_VA" title="Virginia"/>
+					<ammap:MapArea instanceName="US_WA" title="Washington"/>
+					<ammap:MapArea instanceName="US_WV" title="West Virginia"/>
+					<ammap:MapArea instanceName="US_WI" title="Wisconsin"/>
+					<ammap:MapArea instanceName="US_WY" title="Wyoming"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Washington, D.C." lat="38.89037" long="-77.031959" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

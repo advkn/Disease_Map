@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/france_departments.swf" leftLongitude="-5.18114" topLatitude="51.088566" rightLongitude="9.560176" bottomLatitude="41.364989">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="FR_AI" title="01-Ain"/>
+					<ammap:MapArea instanceName="FR_AS" title="02-Aisne"/>
+					<ammap:MapArea instanceName="FR_AL" title="03-Allier"/>
+					<ammap:MapArea instanceName="FR_AP" title="04-Alpes-de-Haute-Provence"/>
+					<ammap:MapArea instanceName="FR_AM" title="06-Alpes-Maritimes"/>
+					<ammap:MapArea instanceName="FR_AH" title="07-Ardèche"/>
+					<ammap:MapArea instanceName="FR_AN" title="08-Ardennes"/>
+					<ammap:MapArea instanceName="FR_AG" title="09-Ariège"/>
+					<ammap:MapArea instanceName="FR_AB" title="10-Aube"/>
+					<ammap:MapArea instanceName="FR_AD" title="11-Aude"/>
+					<ammap:MapArea instanceName="FR_AV" title="12-Aveyron"/>
+					<ammap:MapArea instanceName="FR_BR" title="67-Bas-Rhin"/>
+					<ammap:MapArea instanceName="FR_BD" title="13-Bouches-du-Rhône"/>
+					<ammap:MapArea instanceName="FR_CV" title="14-Calvados"/>
+					<ammap:MapArea instanceName="FR_CL" title="15-Cantal"/>
+					<ammap:MapArea instanceName="FR_CT" title="16-Charente"/>
+					<ammap:MapArea instanceName="FR_CM" title="17-Charente-Maritime"/>
+					<ammap:MapArea instanceName="FR_CH" title="18-Cher"/>
+					<ammap:MapArea instanceName="FR_CZ" title="19-Corrèze"/>
+					<ammap:MapArea instanceName="FR_CS" title="2A-Corse-du-Sud"/>
+					<ammap:MapArea instanceName="FR_CO" title="21-Côte-d'Or"/>
+					<ammap:MapArea instanceName="FR_CA" title="22-Côtes-d'Armor"/>
+					<ammap:MapArea instanceName="FR_CR" title="23-Creus"/>
+					<ammap:MapArea instanceName="FR_DS" title="79-Deux-Sèvres"/>
+					<ammap:MapArea instanceName="FR_DD" title="24-Dordogne"/>
+					<ammap:MapArea instanceName="FR_DB" title="25-Doubs"/>
+					<ammap:MapArea instanceName="FR_DM" title="26-Drôme"/>
+					<ammap:MapArea instanceName="FR_ES" title="91-Essonne"/>
+					<ammap:MapArea instanceName="FR_EU" title="27-Eure"/>
+					<ammap:MapArea instanceName="FR_EL" title="28-Eure-et-Loir"/>
+					<ammap:MapArea instanceName="FR_FI" title="29-Finistère"/>
+					<ammap:MapArea instanceName="FR_GA" title="30-Gard"/>
+					<ammap:MapArea instanceName="FR_GE" title="32-Gers"/>
+					<ammap:MapArea instanceName="FR_GI" title="33-Gironde"/>
+					<ammap:MapArea instanceName="FR_HC" title="2B-Haute-Corse"/>
+					<ammap:MapArea instanceName="FR_HG" title="31-Haute-Garonne"/>
+					<ammap:MapArea instanceName="FR_HL" title="43-Haute-Loire"/>
+					<ammap:MapArea instanceName="FR_HM" title="52-Haute-Marne"/>
+					<ammap:MapArea instanceName="FR_HA" title="05-Hautes-Alpes"/>
+					<ammap:MapArea instanceName="FR_HN" title="70-Haute-Saône"/>
+					<ammap:MapArea instanceName="FR_HS" title="74-Haute-Savoie"/>
+					<ammap:MapArea instanceName="FR_HP" title="65-Hautes-Pyrénées"/>
+					<ammap:MapArea instanceName="FR_HV" title="87-Haute-Vienne"/>
+					<ammap:MapArea instanceName="FR_HR" title="68-Haut-Rhin"/>
+					<ammap:MapArea instanceName="FR_HD" title="92-Hauts-de-Seine"/>
+					<ammap:MapArea instanceName="FR_HE" title="34-Hérault"/>
+					<ammap:MapArea instanceName="FR_IV" title="35-Ille-et-Vilaine"/>
+					<ammap:MapArea instanceName="FR_IN" title="36-Indre"/>
+					<ammap:MapArea instanceName="FR_IL" title="37-Indre-et-Loire"/>
+					<ammap:MapArea instanceName="FR_IS" title="38-Isère"/>
+					<ammap:MapArea instanceName="FR_JU" title="39-Jura"/>
+					<ammap:MapArea instanceName="FR_LD" title="40-Landes"/>
+					<ammap:MapArea instanceName="FR_LR" title="42-Loire"/>
+					<ammap:MapArea instanceName="FR_LA" title="44-Loire-Atlantique"/>
+					<ammap:MapArea instanceName="FR_LT" title="45-Loiret"/>
+					<ammap:MapArea instanceName="FR_LC" title="41-Loir-et-Cher"/>
+					<ammap:MapArea instanceName="FR_LO" title="46-Lot"/>
+					<ammap:MapArea instanceName="FR_LG" title="47-Lot-et-Garonne"/>
+					<ammap:MapArea instanceName="FR_LZ" title="48-Lozère"/>
+					<ammap:MapArea instanceName="FR_ML" title="49-Maine-et-Loire"/>
+					<ammap:MapArea instanceName="FR_MH" title="50-Manche"/>
+					<ammap:MapArea instanceName="FR_MR" title="51-Marne"/>
+					<ammap:MapArea instanceName="FR_MY" title="53-Mayenne"/>
+					<ammap:MapArea instanceName="FR_MM" title="54-Meurthe-et-Moselle"/>
+					<ammap:MapArea instanceName="FR_MS" title="55-Meuse"/>
+					<ammap:MapArea instanceName="FR_MB" title="56-Morbihan"/>
+					<ammap:MapArea instanceName="FR_MO" title="57-Moselle"/>
+					<ammap:MapArea instanceName="FR_NI" title="58-Nièvre"/>
+					<ammap:MapArea instanceName="FR_NO" title="59-Nord"/>
+					<ammap:MapArea instanceName="FR_OI" title="60-Oise"/>
+					<ammap:MapArea instanceName="FR_OR" title="61-Orne"/>
+					<ammap:MapArea instanceName="FR_PC" title="62-Pas-de-Calais"/>
+					<ammap:MapArea instanceName="FR_PD" title="63-Puy-de-Dôme"/>
+					<ammap:MapArea instanceName="FR_PA" title="64-Pyrénées-Atlantiques"/>
+					<ammap:MapArea instanceName="FR_PO" title="66-Pyrénées-Orientales"/>
+					<ammap:MapArea instanceName="FR_RH" title="69-Rhône"/>
+					<ammap:MapArea instanceName="FR_SL" title="71-Saône-et-Loire"/>
+					<ammap:MapArea instanceName="FR_ST" title="72-Sarthe"/>
+					<ammap:MapArea instanceName="FR_SV" title="73-Savoie"/>
+					<ammap:MapArea instanceName="FR_SE" title="77-Seine-et-Marne"/>
+					<ammap:MapArea instanceName="FR_SM" title="76-Seine-Maritime"/>
+					<ammap:MapArea instanceName="FR_SS" title="93-Seine-Saint-Denis"/>
+					<ammap:MapArea instanceName="FR_SO" title="80-Somme"/>
+					<ammap:MapArea instanceName="FR_TA" title="81-Tarn"/>
+					<ammap:MapArea instanceName="FR_TG" title="82-Tarn-et-Garonne"/>
+					<ammap:MapArea instanceName="FR_TB" title="90-Territoire de Belfort"/>
+					<ammap:MapArea instanceName="FR_VM" title="94-Val-de-Marne"/>
+					<ammap:MapArea instanceName="FR_VO" title="95-Val-d'Oise"/>
+					<ammap:MapArea instanceName="FR_VR" title="83-Var"/>
+					<ammap:MapArea instanceName="FR_VC" title="84-Vaucluse"/>
+					<ammap:MapArea instanceName="FR_VD" title="85-Vendée"/>
+					<ammap:MapArea instanceName="FR_VN" title="86-Vienne"/>
+					<ammap:MapArea instanceName="FR_VP" title="75-Ville de Paris"/>
+					<ammap:MapArea instanceName="FR_VG" title="88-Vosges"/>
+					<ammap:MapArea instanceName="FR_YO" title="89-Yonne"/>
+					<ammap:MapArea instanceName="FR_YV" title="78-Yvelines"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Paris" lat="48.856925" long="2.34121" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

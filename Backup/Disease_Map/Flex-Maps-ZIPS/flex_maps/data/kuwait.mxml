@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/kuwait.swf" leftLongitude="46.568243" topLatitude="30.084322" rightLongitude="48.654008" bottomLatitude="28.524575">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="KW_JA" title="Al Jahrah"/>
+					<ammap:MapArea instanceName="KW_KU" title="Al Kuwayt"/>
+					<ammap:MapArea instanceName="KW_HW" title="Hawalli"/>
+					<ammap:MapArea instanceName="KW_FA" title="Al Farwaniyah"/>
+					<ammap:MapArea instanceName="KW_AH" title="Al Ahmadi"/>
+					<ammap:MapArea instanceName="KW_MU" title="Mubarak Al-Kabeer"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Kuwait City" lat="29.37429" long="47.97481" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

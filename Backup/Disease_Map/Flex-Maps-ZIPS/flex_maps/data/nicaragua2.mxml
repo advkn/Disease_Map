@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/nicaragua.swf" leftLongitude="-87.69018" topLatitude="15.025784" rightLongitude="-82.738113" bottomLatitude="10.707461">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_lake" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="NI_BO" title="Boaco"/>
+					<ammap:MapArea instanceName="NI_CA" title="Carazo"/>
+					<ammap:MapArea instanceName="NI_CI" title="Chinandega"/>
+					<ammap:MapArea instanceName="NI_CO" title="Chontales"/>
+					<ammap:MapArea instanceName="NI_ES" title="Estelí"/>
+					<ammap:MapArea instanceName="NI_GR" title="Granada"/>
+					<ammap:MapArea instanceName="NI_JI" title="Jinotega"/>
+					<ammap:MapArea instanceName="NI_LE" title="León"/>
+					<ammap:MapArea instanceName="NI_MD" title="Madriz"/>
+					<ammap:MapArea instanceName="NI_MN" title="Managua"/>
+					<ammap:MapArea instanceName="NI_MS" title="Masaya"/>
+					<ammap:MapArea instanceName="NI_MT" title="Matagalpa"/>
+					<ammap:MapArea instanceName="NI_NS" title="Nueva Segovia"/>
+					<ammap:MapArea instanceName="NI_AN" title="Región Autónoma del Atlántico Norte"/>
+					<ammap:MapArea instanceName="NI_AS" title="Región Autónoma del Atlántico Sur"/>
+					<ammap:MapArea instanceName="NI_SJ" title="Río San Juan"/>
+					<ammap:MapArea instanceName="NI_RI" title="Rivas"/>
+					<ammap:MapArea instanceName="NI_LMN" title="Lago de Managua" color="#0098FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="NI_LNI" title="Lago de Nicaragua" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Managua" lat="12.146294" long="-86.27037" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

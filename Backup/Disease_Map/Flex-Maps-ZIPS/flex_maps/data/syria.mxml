@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/syria.swf" leftLongitude="35.70064" topLatitude="37.319019" rightLongitude="42.369486" bottomLatitude="32.310546">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="SY_HL" title="Aleppo"/>
+					<ammap:MapArea instanceName="SY_HA" title="Al Hasakah"/>
+					<ammap:MapArea instanceName="SY_RA" title="Ar Raqqah"/>
+					<ammap:MapArea instanceName="SY_SU" title="As Suwaydā'"/>
+					<ammap:MapArea instanceName="SY_DI" title="Damascus"/>
+					<ammap:MapArea instanceName="SY_DR" title="Dar`ā"/>
+					<ammap:MapArea instanceName="SY_DY" title="Dayr az Zawr"/>
+					<ammap:MapArea instanceName="SY_HM" title="Hama"/>
+					<ammap:MapArea instanceName="SY_HI" title="Hims"/>
+					<ammap:MapArea instanceName="SY_ID" title="Idlib"/>
+					<ammap:MapArea instanceName="SY_LA" title="Latakia"/>
+					<ammap:MapArea instanceName="SY_QU" title="Quneitra"/>
+					<ammap:MapArea instanceName="SY_RD" title="Rif Dimashq"/>
+					<ammap:MapArea instanceName="SY_TA" title="Ţarţūs"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Damascus" lat="33.556756" long="36.3408" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

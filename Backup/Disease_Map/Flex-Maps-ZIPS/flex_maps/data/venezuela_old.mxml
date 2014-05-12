@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/venezuela_old.swf" leftLongitude="-73.378147" topLatitude="12.620056" rightLongitude="-59.802557" bottomLatitude="0.698421">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="VE_AMZ" title="Amazonas"/>
+					<ammap:MapArea instanceName="VE_ANZ" title="Anzoategui"/>
+					<ammap:MapArea instanceName="VE_APU" title="Apure"/>
+					<ammap:MapArea instanceName="VE_ARA" title="Aragua"/>
+					<ammap:MapArea instanceName="VE_BRN" title="Barinas"/>
+					<ammap:MapArea instanceName="VE_BLV" title="Bolivar"/>
+					<ammap:MapArea instanceName="VE_CRB" title="Carabobo"/>
+					<ammap:MapArea instanceName="VE_CJD" title="Cojedes"/>
+					<ammap:MapArea instanceName="VE_DAM" title="Delta Amacuro"/>
+					<ammap:MapArea instanceName="VE_DFD" title="Distrito Federal"/>
+					<ammap:MapArea instanceName="VE_FLC" title="Falcon"/>
+					<ammap:MapArea instanceName="VE_GUA" title="Guarico"/>
+					<ammap:MapArea instanceName="VE_LAR" title="Lara"/>
+					<ammap:MapArea instanceName="VE_MER" title="Merida"/>
+					<ammap:MapArea instanceName="VE_MRN" title="Miranda"/>
+					<ammap:MapArea instanceName="VE_MNG" title="Monagas"/>
+					<ammap:MapArea instanceName="VE_NES" title="Neuva Esparta"/>
+					<ammap:MapArea instanceName="VE_PRT" title="Portuguesa"/>
+					<ammap:MapArea instanceName="VE_SUC" title="Sucre"/>
+					<ammap:MapArea instanceName="VE_TCH" title="Tachira"/>
+					<ammap:MapArea instanceName="VE_TRJ" title="Trujillo"/>
+					<ammap:MapArea instanceName="VE_YRC" title="Yaracuy"/>
+					<ammap:MapArea instanceName="VE_ZUL" title="Zulia"/>
+					<ammap:MapArea instanceName="VE_DFR" title="Dependencias Federales"/>
+					<ammap:MapArea instanceName="AN" title="Netherland Antilles"/>
+					<ammap:MapArea instanceName="AW" title="Aruba"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Carcas" lat="10.53966" long="-66.930992" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

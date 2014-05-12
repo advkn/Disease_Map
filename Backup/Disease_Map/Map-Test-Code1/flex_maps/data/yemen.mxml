@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/yemen.swf" leftLongitude="41.814582" topLatitude="19.005068" rightLongitude="54.535669" bottomLatitude="12.124824">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="YE_AD" title="`Adan"/>
+					<ammap:MapArea instanceName="YE_AB" title="Abyan"/>
+					<ammap:MapArea instanceName="YE_BA" title="Al Bayda'"/>
+					<ammap:MapArea instanceName="YE_DL" title="Al Dali'"/>
+					<ammap:MapArea instanceName="YE_HU" title="Al Hudaydah"/>
+					<ammap:MapArea instanceName="YE_JA" title="Al Jawf"/>
+					<ammap:MapArea instanceName="YE_MR" title="Al Mahrah"/>
+					<ammap:MapArea instanceName="YE_MW" title="Al Mahwit"/>
+					<ammap:MapArea instanceName="YE_AA" title="Amanat Al Asimah"/>
+					<ammap:MapArea instanceName="YE_AM" title="'Amran"/>
+					<ammap:MapArea instanceName="YE_DH" title="Dhamar"/>
+					<ammap:MapArea instanceName="YE_HD" title="Hadramaut"/>
+					<ammap:MapArea instanceName="YE_HJ" title="Hajjah"/>
+					<ammap:MapArea instanceName="YE_IB" title="Ibb"/>
+					<ammap:MapArea instanceName="YE_LA" title="Lahij"/>
+					<ammap:MapArea instanceName="YE_MA" title="Ma'rib"/>
+					<ammap:MapArea instanceName="YE_RM" title="Raymah"/>
+					<ammap:MapArea instanceName="YE_SD" title="Sa`dah"/>
+					<ammap:MapArea instanceName="YE_SN" title="San`a'"/>
+					<ammap:MapArea instanceName="YE_SH" title="Shabwah"/>
+					<ammap:MapArea instanceName="YE_TA" title="Ta`izz"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Sana`a" lat="15.356003" long="44.207683" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

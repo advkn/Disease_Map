@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/latvia.swf" leftLongitude="20.96893" topLatitude="58.085964" rightLongitude="28.2434" bottomLatitude="55.672595">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="LV_AI" title="Aizkraukle"/>
+					<ammap:MapArea instanceName="LV_AL" title="Alūksne"/>
+					<ammap:MapArea instanceName="LV_BL" title="Balvi"/>
+					<ammap:MapArea instanceName="LV_BU" title="Bauska"/>
+					<ammap:MapArea instanceName="LV_CE" title="Cēsis"/>
+					<ammap:MapArea instanceName="LV_DG" title="Daugavpils"/>
+					<ammap:MapArea instanceName="LV_DO" title="Dobele"/>
+					<ammap:MapArea instanceName="LV_GU" title="Gulbene"/>
+					<ammap:MapArea instanceName="LV_JK" title="Jēkabpils"/>
+					<ammap:MapArea instanceName="LV_JG" title="Jelgava"/>
+					<ammap:MapArea instanceName="LV_KR" title="Krāslava"/>
+					<ammap:MapArea instanceName="LV_KU" title="Kuldīga"/>
+					<ammap:MapArea instanceName="LV_LP" title="Liepāja"/>
+					<ammap:MapArea instanceName="LV_LM" title="Limbaži"/>
+					<ammap:MapArea instanceName="LV_LU" title="Ludza"/>
+					<ammap:MapArea instanceName="LV_MA" title="Madona"/>
+					<ammap:MapArea instanceName="LV_OG" title="Ogre"/>
+					<ammap:MapArea instanceName="LV_PR" title="Preili"/>
+					<ammap:MapArea instanceName="LV_RZ" title="Rēzekne"/>
+					<ammap:MapArea instanceName="LV_RG" title="Riga"/>
+					<ammap:MapArea instanceName="LV_SA" title="Saldus"/>
+					<ammap:MapArea instanceName="LV_TA" title="Talsi"/>
+					<ammap:MapArea instanceName="LV_TU" title="Tukum"/>
+					<ammap:MapArea instanceName="LV_VK" title="Valka"/>
+					<ammap:MapArea instanceName="LV_VM" title="Valmiera"/>
+					<ammap:MapArea instanceName="LV_VN" title="Ventspils"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Riga" lat="56.946" long="24.114905" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

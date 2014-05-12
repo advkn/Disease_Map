@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/greece.swf" leftLongitude="19.374861" topLatitude="41.749607" rightLongitude="28.245126" bottomLatitude="34.801341">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="GR_DO" title="Dodekanissa"/>
+					<ammap:MapArea instanceName="GR_IP" title="Ipiros"/>
+					<ammap:MapArea instanceName="GR_KK" title="Kiklades"/>
+					<ammap:MapArea instanceName="GR_KR" title="Kriti (Crete)"/>
+					<ammap:MapArea instanceName="GR_MK" title="Makedonia"/>
+					<ammap:MapArea instanceName="GR_MA" title="Mount Athos"/>
+					<ammap:MapArea instanceName="GR_NE" title="Nissia Egeou"/>
+					<ammap:MapArea instanceName="GR_NI" title="Nissia Ioniou"/>
+					<ammap:MapArea instanceName="GR_PP" title="Peloponissos"/>
+					<ammap:MapArea instanceName="GR_TH" title="Thraki"/>
+					<ammap:MapArea instanceName="GR_TS" title="Thessalia (Thessaly)"/>
+					<ammap:MapArea instanceName="GR_SE" title="Sterea Ellada"/>
+					<ammap:MapArea instanceName="GR_SK" title="Skiros"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Athens" lat="37.97615" long="23.736415" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

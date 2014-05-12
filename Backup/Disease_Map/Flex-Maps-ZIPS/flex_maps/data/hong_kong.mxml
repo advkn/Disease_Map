@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/hong_kong.swf" leftLongitude="113.834603" topLatitude="22.562078" rightLongitude="114.440987" bottomLatitude="22.153181">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="HK_CW" title="Central and Western"/>
+					<ammap:MapArea instanceName="HK_EA" title="Eastern"/>
+					<ammap:MapArea instanceName="HK_IS" title="Islands"/>
+					<ammap:MapArea instanceName="HK_KC" title="Kowloon City"/>
+					<ammap:MapArea instanceName="HK_KI" title="Kwai Tsing"/>
+					<ammap:MapArea instanceName="HK_KU" title="Kwun Tong"/>
+					<ammap:MapArea instanceName="HK_NO" title="North"/>
+					<ammap:MapArea instanceName="HK_SK" title="Sai Kung"/>
+					<ammap:MapArea instanceName="HK_SS" title="Sham Shui Po"/>
+					<ammap:MapArea instanceName="HK_ST" title="Sha Tin"/>
+					<ammap:MapArea instanceName="HK_SO" title="Southern"/>
+					<ammap:MapArea instanceName="HK_TP" title="Tai Po"/>
+					<ammap:MapArea instanceName="HK_TW" title="Tsuen Wan"/>
+					<ammap:MapArea instanceName="HK_TM" title="Tuen Mun"/>
+					<ammap:MapArea instanceName="HK_WC" title="Wan Chai"/>
+					<ammap:MapArea instanceName="HK_WT" title="Wong Tai Sin"/>
+					<ammap:MapArea instanceName="HK_YT" title="Yau Tsim Mong"/>
+					<ammap:MapArea instanceName="HK_YL" title="Yuen Long"/>
+				</ammap:areas>
+				<ammap:movies>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

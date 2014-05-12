@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/mongolia.swf" leftLongitude="87.749656" topLatitude="52.153906" rightLongitude="119.924936" bottomLatitude="41.567067">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="MN_AR" title="Arhangay"/>
+					<ammap:MapArea instanceName="MN_BH" title="Bayanhongor"/>
+					<ammap:MapArea instanceName="MN_BO" title="Bayan-Ölgiy"/>
+					<ammap:MapArea instanceName="MN_BU" title="Bulgan"/>
+					<ammap:MapArea instanceName="MN_DA" title="Darhan-Uul"/>
+					<ammap:MapArea instanceName="MN_DD" title="Dornod"/>
+					<ammap:MapArea instanceName="MN_DG" title="Dornogovi"/>
+					<ammap:MapArea instanceName="MN_DU" title="Dundgovi"/>
+					<ammap:MapArea instanceName="MN_DZ" title="Dzavhan"/>
+					<ammap:MapArea instanceName="MN_GA" title="Govi-Altay"/>
+					<ammap:MapArea instanceName="MN_GS" title="Govisumber"/>
+					<ammap:MapArea instanceName="MN_HN" title="Hentiy"/>
+					<ammap:MapArea instanceName="MN_HD" title="Hovd"/>
+					<ammap:MapArea instanceName="MN_HG" title="Hövsgöl"/>
+					<ammap:MapArea instanceName="MN_OG" title="Ömnögovi"/>
+					<ammap:MapArea instanceName="MN_ER" title="Orhon"/>
+					<ammap:MapArea instanceName="MN_OH" title="Övörhangay"/>
+					<ammap:MapArea instanceName="MN_SL" title="Selenge"/>
+					<ammap:MapArea instanceName="MN_SB" title="Sühbaatar"/>
+					<ammap:MapArea instanceName="MN_TO" title="Töv"/>
+					<ammap:MapArea instanceName="MN_UB" title="Ulaanbaatar"/>
+					<ammap:MapArea instanceName="MN_UV" title="Uvs"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Ulaanbaatar" lat="47.926661" long="106.904412" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

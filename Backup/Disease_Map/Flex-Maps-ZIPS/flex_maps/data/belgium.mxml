@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/belgium.swf" leftLongitude="2.545923" topLatitude="51.505334" rightLongitude="6.408304" bottomLatitude="49.496909">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="BE_VAN" title="Antwerp"/>
+					<ammap:MapArea instanceName="BE_WBR" title="Walloon Brabant"/>
+					<ammap:MapArea instanceName="BE_BRU" title="Brussels-Capital Region"/>
+					<ammap:MapArea instanceName="BE_WHT" title="Hainaut"/>
+					<ammap:MapArea instanceName="BE_WLG" title="Liège"/>
+					<ammap:MapArea instanceName="BE_VLI" title="Limburg"/>
+					<ammap:MapArea instanceName="BE_WLX" title="Luxembourg"/>
+					<ammap:MapArea instanceName="BE_WNA" title="Namur"/>
+					<ammap:MapArea instanceName="BE_VOV" title="East Flanders"/>
+					<ammap:MapArea instanceName="BE_VBR" title="Flemish Brabant"/>
+					<ammap:MapArea instanceName="BE_VWV" title="West Flanders"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Brussels" lat="50.848385" long="4.349685" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

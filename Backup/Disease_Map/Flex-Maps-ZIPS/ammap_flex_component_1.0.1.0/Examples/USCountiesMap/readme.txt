@@ -1,0 +1,1 @@
+US Counties maps are available only in US County map pack (150 Euro), available at http://www.amcharts.com/buy/

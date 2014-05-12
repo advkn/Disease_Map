@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/romania.swf" leftLongitude="20.2627" topLatitude="48.262504" rightLongitude="29.7128" bottomLatitude="43.617425">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="RO_AB" title="Alba"/>
+					<ammap:MapArea instanceName="RO_AR" title="Arad"/>
+					<ammap:MapArea instanceName="RO_AG" title="Argeş"/>
+					<ammap:MapArea instanceName="RO_BC" title="Bacău"/>
+					<ammap:MapArea instanceName="RO_BH" title="Bihor"/>
+					<ammap:MapArea instanceName="RO_BN" title="Bistriţa-Năsăud"/>
+					<ammap:MapArea instanceName="RO_BT" title="Botoşani"/>
+					<ammap:MapArea instanceName="RO_BV" title="Braşov"/>
+					<ammap:MapArea instanceName="RO_BR" title="Brăila"/>
+					<ammap:MapArea instanceName="RO_BZ" title="Buzău"/>
+					<ammap:MapArea instanceName="RO_CS" title="Caraş-Severin"/>
+					<ammap:MapArea instanceName="RO_CL" title="Călăraşi"/>
+					<ammap:MapArea instanceName="RO_CJ" title="Cluj"/>
+					<ammap:MapArea instanceName="RO_CT" title="Constanţa"/>
+					<ammap:MapArea instanceName="RO_CV" title="Covasna"/>
+					<ammap:MapArea instanceName="RO_DB" title="Dâmboviţa"/>
+					<ammap:MapArea instanceName="RO_DJ" title="Dolj"/>
+					<ammap:MapArea instanceName="RO_GL" title="Galaţi"/>
+					<ammap:MapArea instanceName="RO_GR" title="Giurgiu"/>
+					<ammap:MapArea instanceName="RO_GJ" title="Gorj"/>
+					<ammap:MapArea instanceName="RO_HR" title="Harghita"/>
+					<ammap:MapArea instanceName="RO_HD" title="Hunedoara"/>
+					<ammap:MapArea instanceName="RO_IL" title="Ialomiţa"/>
+					<ammap:MapArea instanceName="RO_IS" title="Iaşi"/>
+					<ammap:MapArea instanceName="RO_IF" title="Ilfov"/>
+					<ammap:MapArea instanceName="RO_MM" title="Maramureş"/>
+					<ammap:MapArea instanceName="RO_MH" title="Mehedinţi"/>
+					<ammap:MapArea instanceName="RO_MS" title="Mureş"/>
+					<ammap:MapArea instanceName="RO_NT" title="Neamţ"/>
+					<ammap:MapArea instanceName="RO_OT" title="Olt"/>
+					<ammap:MapArea instanceName="RO_PH" title="Prahova"/>
+					<ammap:MapArea instanceName="RO_SM" title="Satu Mare"/>
+					<ammap:MapArea instanceName="RO_SJ" title="Sălaj"/>
+					<ammap:MapArea instanceName="RO_SB" title="Sibiu"/>
+					<ammap:MapArea instanceName="RO_SV" title="Suceava"/>
+					<ammap:MapArea instanceName="RO_TR" title="Teleorman"/>
+					<ammap:MapArea instanceName="RO_TM" title="Timiş"/>
+					<ammap:MapArea instanceName="RO_TL" title="Tulcea"/>
+					<ammap:MapArea instanceName="RO_VS" title="Vaslui"/>
+					<ammap:MapArea instanceName="RO_VL" title="Vâlcea"/>
+					<ammap:MapArea instanceName="RO_VN" title="Vrancea"/>
+					<ammap:MapArea instanceName="RO_B" title="Bucureşti"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Bucharest" lat="44.4342" long="26.102975" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

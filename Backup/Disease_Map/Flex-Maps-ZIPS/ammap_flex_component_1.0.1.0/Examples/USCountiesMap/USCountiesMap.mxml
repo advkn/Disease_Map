@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+	
+	<ammap:MapMovie label="Back to States Map" labelFontSize="15" marginTop="32" marginLeft="100" id="back_btn" labelColor="#FFFFFF" url="{states_data_set}"/> 
+	
+	<mx:Script>
+		<![CDATA[
+			[Bindable]
+			[Embed(source="../assets/maps/usa_mercator.swf")]
+			private var _usa:Class
+			
+			[Bindable]
+			[Embed(source="../assets/maps/ca_county.swf")]
+			private var _ca:Class
+			
+			[Bindable]				
+			[Embed(source="../assets/maps/nv_county.swf")]
+			private var _nv:Class
+			
+			[Bindable]
+			[Embed(source="../assets/maps/or_county.swf")]
+			private var _or:Class										
+		]]>
+	</mx:Script>
+	
+	<mx:DropShadowFilter id="dropShadow"/>
+	
+	<ammap:AmMap id="ammap" width="100%" height="100%">
+		
+		<ammap:zoomControl>
+			<ammap:ZoomControl minZoomLevel="80"/>
+		</ammap:zoomControl>
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverFilter="{dropShadow}" bringForwardOnHover="true" rollOverColor="#CC0000" unlistedAreasColor="#DADADA" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet id="states_data_set" mapClass="{_usa}" leftLongitude="-178.244751" topLatitude="71.455555" rightLongitude="-66.936676" bottomLatitude="18.96519"
+						   zoomLevel="200" zoomLong="-97.098" zoomLat="39.733">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea url="{state_ca_ds}" instanceName="US_CA" title="California"/>
+					<ammap:MapArea url="{state_nv_ds}" instanceName="US_NV" title="Nevada"/>
+					<ammap:MapArea url="{state_or_ds}" instanceName="US_OR" title="Oregon"/>
+				</ammap:areas>
+			</ammap:DataSet>
+			
+			<ammap:DataSet id="state_ca_ds" mapClass="{_ca}" leftLongitude="-124.430107" topLatitude="41.97709" rightLongitude="-114.143202" bottomLatitude="32.552596" zoomLevel="80" movies="{[back_btn]}">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="C06001" title="Alameda"/>
+					<ammap:MapArea instanceName="C06003" title="Alpine"/>
+					<ammap:MapArea instanceName="C06005" title="Amador"/>
+					<ammap:MapArea instanceName="C06007" title="Butte"/>
+					<ammap:MapArea instanceName="C06009" title="Calaveras"/>
+					<ammap:MapArea instanceName="C06011" title="Colusa"/>
+					<ammap:MapArea instanceName="C06013" title="Contra Costa"/>
+					<ammap:MapArea instanceName="C06015" title="Del Norte"/>
+					<ammap:MapArea instanceName="C06017" title="El Dorado"/>
+					<ammap:MapArea instanceName="C06019" title="Fresno"/>
+					<ammap:MapArea instanceName="C06021" title="Glenn"/>
+					<ammap:MapArea instanceName="C06023" title="Humboldt"/>
+					<ammap:MapArea instanceName="C06025" title="Imperial"/>
+					<ammap:MapArea instanceName="C06027" title="Inyo"/>
+					<ammap:MapArea instanceName="C06029" title="Kern"/>
+					<ammap:MapArea instanceName="C06031" title="Kings"/>
+					<ammap:MapArea instanceName="C06033" title="Lake"/>
+					<ammap:MapArea instanceName="C06035" title="Lassen"/>
+					<ammap:MapArea instanceName="C06037" title="Los Angeles"/>
+					<ammap:MapArea instanceName="C06039" title="Madera"/>
+					<ammap:MapArea instanceName="C06041" title="Marin"/>
+					<ammap:MapArea instanceName="C06043" title="Mariposa"/>
+					<ammap:MapArea instanceName="C06045" title="Mendocino"/>
+					<ammap:MapArea instanceName="C06047" title="Merced"/>
+					<ammap:MapArea instanceName="C06049" title="Modoc"/>
+					<ammap:MapArea instanceName="C06051" title="Mono"/>
+					<ammap:MapArea instanceName="C06053" title="Monterey"/>
+					<ammap:MapArea instanceName="C06055" title="Napa"/>
+					<ammap:MapArea instanceName="C06057" title="Nevada"/>
+					<ammap:MapArea instanceName="C06059" title="Orange"/>
+					<ammap:MapArea instanceName="C06061" title="Placer"/>
+					<ammap:MapArea instanceName="C06063" title="Plumas"/>
+					<ammap:MapArea instanceName="C06065" title="Riverside"/>
+					<ammap:MapArea instanceName="C06067" title="Sacramento"/>
+					<ammap:MapArea instanceName="C06069" title="San Benito"/>
+					<ammap:MapArea instanceName="C06071" title="San Bernardino"/>
+					<ammap:MapArea instanceName="C06073" title="San Diego"/>
+					<ammap:MapArea instanceName="C06075" title="San Francisco"/>
+					<ammap:MapArea instanceName="C06077" title="San Joaquin"/>
+					<ammap:MapArea instanceName="C06079" title="San Luis Obispo"/>
+					<ammap:MapArea instanceName="C06081" title="San Mateo"/>
+					<ammap:MapArea instanceName="C06083" title="Santa Barbara"/>
+					<ammap:MapArea instanceName="C06085" title="Santa Clara"/>
+					<ammap:MapArea instanceName="C06087" title="Santa Cruz"/>
+					<ammap:MapArea instanceName="C06089" title="Shasta"/>
+					<ammap:MapArea instanceName="C06091" title="Sierra"/>
+					<ammap:MapArea instanceName="C06093" title="Siskiyou"/>
+					<ammap:MapArea instanceName="C06095" title="Solano"/>
+					<ammap:MapArea instanceName="C06097" title="Sonoma"/>
+					<ammap:MapArea instanceName="C06099" title="Stanislaus"/>
+					<ammap:MapArea instanceName="C06101" title="Sutter"/>
+					<ammap:MapArea instanceName="C06103" title="Tehama"/>
+					<ammap:MapArea instanceName="C06105" title="Trinity"/>
+					<ammap:MapArea instanceName="C06107" title="Tulare"/>
+					<ammap:MapArea instanceName="C06109" title="Tuolumne"/>
+					<ammap:MapArea instanceName="C06111" title="Ventura"/>
+					<ammap:MapArea instanceName="C06113" title="Yolo"/>
+					<ammap:MapArea instanceName="C06115" title="Yuba"/>
+				</ammap:areas>
+			</ammap:DataSet>
+			
+			<ammap:DataSet id="state_nv_ds" mapClass="{_nv}" leftLongitude="-120.009809" topLatitude="41.998202" rightLongitude="-114.031012" bottomLatitude="35.001235" zoomLevel="80" movies="{[back_btn]}">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="C32001" title="Carson City"/>
+					<ammap:MapArea instanceName="C32003" title="Churchill"/>
+					<ammap:MapArea instanceName="C32005" title="Clark"/>
+					<ammap:MapArea instanceName="C32007" title="Douglas"/>
+					<ammap:MapArea instanceName="C32009" title="Elko"/>
+					<ammap:MapArea instanceName="C32011" title="Esmeralda"/>
+					<ammap:MapArea instanceName="C32013" title="Eureka"/>
+					<ammap:MapArea instanceName="C32015" title="Humboldt"/>
+					<ammap:MapArea instanceName="C32017" title="Lander"/>
+					<ammap:MapArea instanceName="C32019" title="Lincoln"/>
+					<ammap:MapArea instanceName="C32021" title="Lyon"/>
+					<ammap:MapArea instanceName="C32023" title="Mineral"/>
+					<ammap:MapArea instanceName="C32027" title="Nye"/>
+					<ammap:MapArea instanceName="C32029" title="Pershing"/>
+					<ammap:MapArea instanceName="C32031" title="Storey"/>
+					<ammap:MapArea instanceName="C32033" title="Washoe"/>
+					<ammap:MapArea instanceName="C32510" title="White Pine"/>
+				</ammap:areas>
+			</ammap:DataSet>
+			
+			<ammap:DataSet id="state_or_ds" mapClass="{_or}" leftLongitude="-124.558669" topLatitude="46.268305" rightLongitude="-116.446159" bottomLatitude="42.004208" zoomLevel="80" movies="{[back_btn]}">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="C41001" title="Baker"/>
+					<ammap:MapArea instanceName="C41003" title="Benton"/>
+					<ammap:MapArea instanceName="C41005" title="Clackamas"/>
+					<ammap:MapArea instanceName="C41007" title="Clatsop"/>
+					<ammap:MapArea instanceName="C41009" title="Columbia"/>
+					<ammap:MapArea instanceName="C41011" title="Coos"/>
+					<ammap:MapArea instanceName="C41013" title="Crook"/>
+					<ammap:MapArea instanceName="C41015" title="Curry"/>
+					<ammap:MapArea instanceName="C41017" title="Deschutes"/>
+					<ammap:MapArea instanceName="C41019" title="Douglas"/>
+					<ammap:MapArea instanceName="C41021" title="Gilliam"/>
+					<ammap:MapArea instanceName="C41023" title="Grant"/>
+					<ammap:MapArea instanceName="C41025" title="Harney"/>
+					<ammap:MapArea instanceName="C41027" title="Hood River"/>
+					<ammap:MapArea instanceName="C41029" title="Jackson"/>
+					<ammap:MapArea instanceName="C41031" title="Jefferson"/>
+					<ammap:MapArea instanceName="C41033" title="Josephine"/>
+					<ammap:MapArea instanceName="C41035" title="Klamath"/>
+					<ammap:MapArea instanceName="C41037" title="Lake"/>
+					<ammap:MapArea instanceName="C41039" title="Lane"/>
+					<ammap:MapArea instanceName="C41041" title="Lincoln"/>
+					<ammap:MapArea instanceName="C41043" title="Linn"/>
+					<ammap:MapArea instanceName="C41045" title="Malheur"/>
+					<ammap:MapArea instanceName="C41047" title="Marion"/>
+					<ammap:MapArea instanceName="C41049" title="Morrow"/>
+					<ammap:MapArea instanceName="C41051" title="Multnomah"/>
+					<ammap:MapArea instanceName="C41053" title="Polk"/>
+					<ammap:MapArea instanceName="C41055" title="Sherman"/>
+					<ammap:MapArea instanceName="C41057" title="Tillamook"/>
+					<ammap:MapArea instanceName="C41059" title="Umatilla"/>
+					<ammap:MapArea instanceName="C41061" title="Union"/>
+					<ammap:MapArea instanceName="C41063" title="Wallowa"/>
+					<ammap:MapArea instanceName="C41065" title="Wasco"/>
+					<ammap:MapArea instanceName="C41067" title="Washington"/>
+					<ammap:MapArea instanceName="C41069" title="Wheeler"/>
+					<ammap:MapArea instanceName="C41071" title="Yamhill"/>
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+	
+</mx:Application>

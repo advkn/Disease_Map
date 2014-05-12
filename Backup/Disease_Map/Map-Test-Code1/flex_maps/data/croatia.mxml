@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/croatia.swf" leftLongitude="13.492706" topLatitude="46.542311" rightLongitude="19.405151" bottomLatitude="42.393522">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="HR_BB" title="Bjelovarska-Bilogorska"/>
+					<ammap:MapArea instanceName="HR_SP" title="Brodsko-Posavska"/>
+					<ammap:MapArea instanceName="HR_DN" title="Dubrovačko-Neretvanska"/>
+					<ammap:MapArea instanceName="HR_GZ" title="Grad Zagreb"/>
+					<ammap:MapArea instanceName="HR_IS" title="Istarska"/>
+					<ammap:MapArea instanceName="HR_KA" title="Karlovačka"/>
+					<ammap:MapArea instanceName="HR_KK" title="Koprivničko-Križevačka"/>
+					<ammap:MapArea instanceName="HR_KZ" title="Krapinsko-Zagorska"/>
+					<ammap:MapArea instanceName="HR_LS" title="Ličko-Senjska"/>
+					<ammap:MapArea instanceName="HR_ME" title="Međimurska"/>
+					<ammap:MapArea instanceName="HR_OB" title="Osječko-Baranjska"/>
+					<ammap:MapArea instanceName="HR_PS" title="Požeško-Slavonska"/>
+					<ammap:MapArea instanceName="HR_PG" title="Primorsko-Goranska"/>
+					<ammap:MapArea instanceName="HR_SB" title="Šibensko-Kninska"/>
+					<ammap:MapArea instanceName="HR_SM" title="Sisačko-Moslavačka"/>
+					<ammap:MapArea instanceName="HR_SD" title="Splitsko-Dalmatinska"/>
+					<ammap:MapArea instanceName="HR_VA" title="Varaždinska"/>
+					<ammap:MapArea instanceName="HR_VP" title="Virovitičko-Podravska"/>
+					<ammap:MapArea instanceName="HR_VS" title="Vukovarsko-Srijemska"/>
+					<ammap:MapArea instanceName="HR_ZD" title="Zadarska"/>
+					<ammap:MapArea instanceName="HR_ZG" title="Zagrebačka"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Zagreb" lat="45.80638" long="15.967" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

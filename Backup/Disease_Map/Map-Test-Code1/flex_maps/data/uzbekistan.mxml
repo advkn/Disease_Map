@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/uzbekistan.swf" leftLongitude="55.998114" topLatitude="45.570623" rightLongitude="73.132610" bottomLatitude="37.176913">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_aral_sea" color="#0066FF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="UZ_AN" title="Andijon"/>
+					<ammap:MapArea instanceName="UZ_BU" title="Buxoro"/>
+					<ammap:MapArea instanceName="UZ_FA" title="Farg`ona"/>
+					<ammap:MapArea instanceName="UZ_JI" title="Jizzax"/>
+					<ammap:MapArea instanceName="UZ_QR" title="Karakalpakstan"/>
+					<ammap:MapArea instanceName="UZ_QA" title="Kashkadarya"/>
+					<ammap:MapArea instanceName="UZ_NG" title="Namangan"/>
+					<ammap:MapArea instanceName="UZ_NW" title="Navoi"/>
+					<ammap:MapArea instanceName="UZ_SA" title="Samarkand"/>
+					<ammap:MapArea instanceName="UZ_SI" title="Sirdaryo"/>
+					<ammap:MapArea instanceName="UZ_SU" title="Surxondaryo"/>
+					<ammap:MapArea instanceName="UZ_TA" title="Tashkent"/>
+					<ammap:MapArea instanceName="UZ_TK" title="Tashkent City"/>
+					<ammap:MapArea instanceName="UZ_KH" title="Xorazm"/>
+					<ammap:MapArea instanceName="TJ_SU" title="Tajikistan enclave"/>
+					<ammap:MapArea instanceName="UZ_ARS" title="Aral Sea" color="#0098FF" mouseEnabled="false"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tashkent City" lat="41.305222" long="69.268959" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

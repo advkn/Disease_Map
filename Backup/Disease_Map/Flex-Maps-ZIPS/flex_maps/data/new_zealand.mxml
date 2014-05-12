@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/new_zealand.swf" leftLongitude="165.882843" topLatitude="-34.1394966" rightLongitude="184.161346" bottomLatitude="-52.599593">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="NZ_NTL" title="Northland"/>
+					<ammap:MapArea instanceName="NZ_AUK" title="Auckland"/>
+					<ammap:MapArea instanceName="NZ_WKO" title="Waikato"/>
+					<ammap:MapArea instanceName="NZ_BOP" title="Bay of Plenty"/>
+					<ammap:MapArea instanceName="NZ_GIS" title="East Cape"/>
+					<ammap:MapArea instanceName="NZ_HKB" title="Hawke's Bay"/>
+					<ammap:MapArea instanceName="NZ_TKI" title="Taranaki"/>
+					<ammap:MapArea instanceName="NZ_MWT" title="Manawatu-Wanganui"/>
+					<ammap:MapArea instanceName="NZ_WGN" title="Wellington"/>
+					<ammap:MapArea instanceName="NZ_TAS" title="Tasman"/>
+					<ammap:MapArea instanceName="NZ_NSN" title="Nelson"/>
+					<ammap:MapArea instanceName="NZ_MBH" title="Marlborough"/>
+					<ammap:MapArea instanceName="NZ_WTC" title="West Coast"/>
+					<ammap:MapArea instanceName="NZ_CAN" title="Canterbury"/>
+					<ammap:MapArea instanceName="NZ_OTA" title="Otago"/>
+					<ammap:MapArea instanceName="NZ_STL" title="Southland"/>
+					<ammap:MapArea instanceName="NZ_CI" title="Chatham Islands"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Wellington. Click to zoom" lat="-41.279209" long="174.773529" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

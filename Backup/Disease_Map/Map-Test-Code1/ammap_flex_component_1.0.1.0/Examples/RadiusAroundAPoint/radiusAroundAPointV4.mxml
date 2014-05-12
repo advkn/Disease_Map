@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This example is made using amMap Flex component. Visit http://flex.ammap.com to see more examples -->
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   xmlns:ammap="http://www.ammap.com/com_internal"
+			   backgroundColor="#FFFFFF"
+			   width="100%" height="100%"
+			   viewSourceURL="srcview/index.html">
+	
+	<fx:Script>
+		<![CDATA[
+			[Bindable][Embed("../assets/maps/world.swf")]
+			private var _world:Class
+			
+		]]>
+	</fx:Script>
+	
+	<!--  You can set the width and height of predefined movies in miles or kilometers. -->
+	<ammap:AmMap id="ammap" width="100%" height="100%" useObjectColorForBalloon="false">
+		
+		<ammap:areasSettings>
+			<ammap:AreasSettings unlistedAreasColor="#888888"/>
+		</ammap:areasSettings>
+		
+		<ammap:moviesSettings>
+			<ammap:MoviesSettings bringForwardOnHover="true" color="#FFFFFF" selectedColor="#000000"/>
+		</ammap:moviesSettings>
+		
+		<ammap:dataSets>
+			<ammap:DataSet mapClass="{_world}" 
+						   leftLongitude="-168.49" topLatitude="83.63" rightLongitude="190.3" bottomLatitude="-55.58"
+						   zoomLevel="793.973" zoomLong="17.1649" zoomLat="45.4894">            
+				<ammap:movies>
+					
+					<!-- fills -->
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="round" widthAndHeightUnits="kilometers" width="590" height="590" alpha="0.2" lat="52.5235" long="13.4115"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="round" widthAndHeightUnits="kilometers" width="200" height="200" alpha="0.2" lat="37.9792" long="23.7166"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="round" widthAndHeightUnits="kilometers" width="750" height="750" alpha="0.2" lat="47.4984" long="19.0408"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="round" widthAndHeightUnits="kilometers" width="420" height="420" alpha="0.2" lat="41.8955" long="12.4823"></ammap:MapMovie>
+					
+					<!-- outlines -->
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="roundOutline" widthAndHeightUnits="kilometers" width="590" height="590" alpha="0.8" lat="52.5235" long="13.4115"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="roundOutline" widthAndHeightUnits="kilometers" width="200" height="200" alpha="0.8" lat="37.9792" long="23.7166"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="roundOutline" widthAndHeightUnits="kilometers" width="750" height="750" alpha="0.8" lat="47.4984" long="19.0408"></ammap:MapMovie>
+					<ammap:MapMovie mouseEnabled="false" color="#FFFFFF" type="roundOutline" widthAndHeightUnits="kilometers" width="420" height="420" alpha="0.8" lat="41.8955" long="12.4823"></ammap:MapMovie>                
+					
+					<!-- points -->
+					<ammap:MapMovie color="#CC0000" type="bubble" title="Berlin" lat="52.5235" long="13.4115"></ammap:MapMovie>
+					<ammap:MapMovie color="#CC0000" type="bubble" title="Athens" lat="37.9792" long="23.7166"></ammap:MapMovie>
+					<ammap:MapMovie color="#CC0000" type="bubble" title="Budapest" lat="47.4984" long="19.0408"></ammap:MapMovie>
+					<ammap:MapMovie color="#CC0000" type="bubble" title="Rome" lat="41.8955" long="12.4823"></ammap:MapMovie>
+				</ammap:movies>
+				
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#333333" mouseEnabled="false"/>
+				</ammap:areas>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+	
+</s:Application>

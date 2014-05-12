@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/tunisia.swf" leftLongitude="7.529808" topLatitude="37.560181" rightLongitude="11.598695" bottomLatitude="30.236344">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="TN_AN" title="Ariana"/>
+					<ammap:MapArea instanceName="TN_BJ" title="Béja"/>
+					<ammap:MapArea instanceName="TN_BA" title="Ben Arous"/>
+					<ammap:MapArea instanceName="TN_BZ" title="Bizerte"/>
+					<ammap:MapArea instanceName="TN_GB" title="Gabès"/>
+					<ammap:MapArea instanceName="TN_GF" title="Gafsa"/>
+					<ammap:MapArea instanceName="TN_JE" title="Jendouba"/>
+					<ammap:MapArea instanceName="TN_KR" title="Kairouan"/>
+					<ammap:MapArea instanceName="TN_KS" title="Kassérine"/>
+					<ammap:MapArea instanceName="TN_KB" title="Kebili"/>
+					<ammap:MapArea instanceName="TN_KF" title="Le Kef"/>
+					<ammap:MapArea instanceName="TN_MH" title="Mahdia"/>
+					<ammap:MapArea instanceName="TN_MN" title="Manouba"/>
+					<ammap:MapArea instanceName="TN_ME" title="Médenine"/>
+					<ammap:MapArea instanceName="TN_MS" title="Monastir"/>
+					<ammap:MapArea instanceName="TN_NB" title="Nabeul"/>
+					<ammap:MapArea instanceName="TN_SF" title="Sfax"/>
+					<ammap:MapArea instanceName="TN_SZ" title="Sidi Bou Zid"/>
+					<ammap:MapArea instanceName="TN_SL" title="Siliana"/>
+					<ammap:MapArea instanceName="TN_SS" title="Sousse"/>
+					<ammap:MapArea instanceName="TN_TA" title="Tataouine"/>
+					<ammap:MapArea instanceName="TN_TO" title="Tozeur"/>
+					<ammap:MapArea instanceName="TN_TU" title="Tunis"/>
+					<ammap:MapArea instanceName="TN_ZA" title="Zaghouan"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tunis" lat="36.798672" long="10.17263" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

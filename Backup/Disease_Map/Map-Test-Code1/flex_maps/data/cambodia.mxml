@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/cambodia.swf" leftLongitude="102.339092" topLatitude="14.690639" rightLongitude="107.63371" bottomLatitude="9.915457">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="KH_OM" title="Bântéay Méanchey"/>
+					<ammap:MapArea instanceName="KH_BA" title="Bătdâmbâng"/>
+					<ammap:MapArea instanceName="KH_KM" title="Kâmpóng Cham"/>
+					<ammap:MapArea instanceName="KH_KG" title="Kâmpóng Chhnăng"/>
+					<ammap:MapArea instanceName="KH_KS" title="Kâmpóng Spœ"/>
+					<ammap:MapArea instanceName="KH_KT" title="Kâmpóng Thum"/>
+					<ammap:MapArea instanceName="KH_KP" title="Kâmpôt"/>
+					<ammap:MapArea instanceName="KH_KN" title="Kândal"/>
+					<ammap:MapArea instanceName="KH_KK" title="Kaôh Kŏng"/>
+					<ammap:MapArea instanceName="KH_KH" title="Krâchéh"/>
+					<ammap:MapArea instanceName="KH_KB" title="Krong Keb"/>
+					<ammap:MapArea instanceName="KH_PL" title="Krong Pailin"/>
+					<ammap:MapArea instanceName="KH_KA" title="Krŏng Preăh Sihanouk"/>
+					<ammap:MapArea instanceName="KH_MK" title="Môndól Kiri"/>
+					<ammap:MapArea instanceName="KH_OC" title="Ŏtdâr Méanchey"/>
+					<ammap:MapArea instanceName="KH_PP" title="Phnom Penh"/>
+					<ammap:MapArea instanceName="KH_PO" title="Poŭthĭsăt"/>
+					<ammap:MapArea instanceName="KH_PH" title="Preăh Vihéar"/>
+					<ammap:MapArea instanceName="KH_PY" title="Prey Vêng"/>
+					<ammap:MapArea instanceName="KH_RO" title="Rôtânôkiri"/>
+					<ammap:MapArea instanceName="KH_SI" title="Siĕmréab"/>
+					<ammap:MapArea instanceName="KH_ST" title="Stœng Trêng"/>
+					<ammap:MapArea instanceName="KH_SR" title="Svay Riĕng"/>
+					<ammap:MapArea instanceName="KH_TA" title="Takêv"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Phnom Penh" lat="11.56474" long="104.913208" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

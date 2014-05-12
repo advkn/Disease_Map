@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/qatar.swf" leftLongitude="50.734055" topLatitude="26.183988" rightLongitude="51.629350" bottomLatitude="24.548398">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="QA_KH" title="Al Khawr"/>
+					<ammap:MapArea instanceName="QA_US" title="Umm Salal"/>
+					<ammap:MapArea instanceName="QA_GH" title="Al Ghuwayriyah"/>
+					<ammap:MapArea instanceName="QA_MS" title="Madinat ach Shamal"/>
+					<ammap:MapArea instanceName="QA_JU" title="Al Jumayliyah"/>
+					<ammap:MapArea instanceName="QA_DA" title="Ad Dawhah"/>
+					<ammap:MapArea instanceName="QA_JB" title="Jariyan al Batnah"/>
+					<ammap:MapArea instanceName="QA_WA" title="Al Wakrah"/>
+					<ammap:MapArea instanceName="QA_RA" title="Ar Rayyan"/>
+					<ammap:MapArea instanceName="QA_ME" title="Mesaieed"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Doha" lat="25.293598" long="51.518735" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

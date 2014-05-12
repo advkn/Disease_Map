@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/switzerland.swf" leftLongitude="5.956597" topLatitude="47.807781" rightLongitude="10.492565" bottomLatitude="45.817196">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="CH_AG" title="Aargau"/>
+					<ammap:MapArea instanceName="CH_AI" title="Appenzell Inner-Rhoden"/>
+					<ammap:MapArea instanceName="CH_AR" title="Appenzell Ausser-Rhoden"/>
+					<ammap:MapArea instanceName="CH_BE" title="Bern"/>
+					<ammap:MapArea instanceName="CH_BL" title="Basel-Landschaft"/>
+					<ammap:MapArea instanceName="CH_BS" title="Basel-Stadt"/>
+					<ammap:MapArea instanceName="CH_FR" title="Fribourg"/>
+					<ammap:MapArea instanceName="CH_GE" title="Genève"/>
+					<ammap:MapArea instanceName="CH_GL" title="Glarus"/>
+					<ammap:MapArea instanceName="CH_GR" title="Graubünden"/>
+					<ammap:MapArea instanceName="CH_JU" title="Jura"/>
+					<ammap:MapArea instanceName="CH_LU" title="Lucerne"/>
+					<ammap:MapArea instanceName="CH_NE" title="Neuchâtel"/>
+					<ammap:MapArea instanceName="CH_NW" title="Nidwalden"/>
+					<ammap:MapArea instanceName="CH_OW" title="Obwalden"/>
+					<ammap:MapArea instanceName="CH_SG" title="Sankt Gallen"/>
+					<ammap:MapArea instanceName="CH_SH" title="Schaffhausen"/>
+					<ammap:MapArea instanceName="CH_SO" title="Solothurn"/>
+					<ammap:MapArea instanceName="CH_SZ" title="Schwyz"/>
+					<ammap:MapArea instanceName="CH_TG" title="Thurgau"/>
+					<ammap:MapArea instanceName="CH_TI" title="Ticino"/>
+					<ammap:MapArea instanceName="CH_UR" title="Uri"/>
+					<ammap:MapArea instanceName="CH_VD" title="Vaud"/>
+					<ammap:MapArea instanceName="CH_VS" title="Valais"/>
+					<ammap:MapArea instanceName="CH_ZH" title="Zürich"/>
+					<ammap:MapArea instanceName="CH_ZG" title="Zug"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Bern" lat="46.948251" long="7.43995" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

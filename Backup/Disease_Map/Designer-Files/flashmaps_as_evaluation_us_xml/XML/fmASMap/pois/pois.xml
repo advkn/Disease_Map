@@ -1,0 +1,31 @@
+<POIs>
+	<POI id='Los Angeles' category='multipoi' label='Los Angeles' lat='34.01326' lon='-118.28288' />
+	<POI id='2' category='eastern' label='Boston Celtics' lat='42.36391' lon='-71.06285' conference='Eastern' division='Atlantic' image='images/boston.jpg'/>
+	<POI id='18' category='eastern' label='New Jersey Nets' lat='40.81896' lon='-74.09265' conference='Eastern' division='Atlantic' image='images/newjersey.jpg'/>
+	<POI id='20' category='eastern' label='New York Knicks' lat='40.74941' lon='-73.99218' conference='Eastern' division='Atlantic' image='images/newyork.jpg'/>
+	<POI id='22' category='eastern' label='Philadelphia 76ers' lat='39.90488' lon='-75.17353' conference='Eastern' division='Atlantic' image='images/philadelphia.jpg'/>
+	<POI id='28' category='eastern' label='Toronto Raptors' lat='43.7' lon='-79.4167' conference='Eastern' division='Atlantic' image='images/toronto.jpg'/>
+	<POI id='4' category='eastern' label='Chicago Bulls' lat='41.88126' lon='-87.67429' conference='Eastern' division='Central' image='images/chicago.jpg'/>
+	<POI id='5' category='eastern' label='Cleveland Cavaliers' lat='41.49644' lon='-81.69035' conference='Eastern' division='Central' image='images/cleveland.jpg'/>
+	<POI id='8' category='eastern' label='Detroit Pistons' lat='42.69605' lon='-83.24192' conference='Eastern' division='Central' image='images/detroit.jpg'/>
+	<POI id='11' category='eastern' label='Indiana Pacers' lat='39.76397' lon='-86.15595' conference='Eastern' division='Central' image='images/indiana.jpg'/>
+	<POI id='16' category='eastern' label='Milwaukee Bucks' lat='43.04306' lon='-87.91602' conference='Eastern' division='Central' image='images/milwaukee.jpg'/>
+	<POI id='1' category='eastern' label='Atlanta Hawks' lat='33.75711' lon='-84.39595' conference='Eastern' division='Southeast' image='images/atlanta.jpg'/>
+	<POI id='3' category='eastern' label='Charlotte Bobcats' lat='35.18857' lon='-80.91354' conference='Eastern' division='Southeast' image='images/charlotte.jpg'/>
+	<POI id='15' category='eastern' label='Miami Heat' lat='25.78005' lon='-80.18901' conference='Eastern' division='Southeast' image='images/miami.jpg'/>
+	<POI id='21' category='eastern' label='Orlando Magic' lat='28.42162' lon='-81.58151' conference='Eastern' division='Southeast' image='images/orlando.jpg'/>
+	<POI id='30' category='eastern' label='Washington Wizards' lat='38.89737' lon='-77.01981' conference='Eastern' division='Southeast' image='images/washington.jpg'/>
+	<POI id='7' category='western' label='Denver Nuggets' lat='39.74549' lon='-105.00982' conference='Western' division='Northwest' image='images/denver.jpg'/>
+	<POI id='17' category='western' label='Minnesota Timberwolves' lat='44.97958' lon='-93.27487' conference='Western' division='Northwest' image='images/minnesota.jpg'/>
+	<POI id='24' category='western' label='Portland Trail Blazers' lat='45.53071' lon='-122.66651' conference='Western' division='Northwest' image='images/portland.jpg'/>
+	<POI id='27' category='western' label='Seattle Supersonics' lat='47.62216' lon='-122.35021' conference='Western' division='Northwest' image='images/seattle.jpg'/>
+	<POI id='29' category='western' label='Utah Jazz' lat='40.76897' lon='-111.89936' conference='Western' division='Northwest' image='images/utah.jpg'/>
+	<POI id='9' category='western' label='Golden State Warriors' lat='37.75464' lon='-122.20529' conference='Western' division='Pacific' image='images/golden.jpg'/>
+	<POI id='23' category='western' label='Phoenix Suns' lat='33.44647' lon='-112.06996' conference='Western' division='Pacific' image='images/phoenix.jpg'/>
+	<POI id='25' category='western' label='Sacramento Kings' lat='38.65132' lon='-121.51435' conference='Western' division='Pacific' image='images/sacramento.jpg'/>
+	<POI id='6' category='western' label='Dallas Mavericks' lat='32.78158' lon='-96.78131' conference='Western' division='Southwest' image='images/dallas.jpg'/>
+	<POI id='10' category='western' label='Houston Rockets' lat='29.75252' lon='-95.36336' conference='Western' division='Southwest' image='images/houston.jpg'/>
+	<POI id='14' category='western' label='Memphis Grizzlies' lat='35.13935' lon='-90.05179' conference='Western' division='Southwest' image='images/memphis.jpg'/>
+	<POI id='19' category='western' label='NO / Oklahoma Hornets' lat='35.4642208735998' lon='-97.5146992714413' conference='Western' division='Southwest' image='images/oklahoma.jpg'/>
+	<POI id='26' category='western' label='San Antonio Spurs' lat='29.42508' lon='-98.44374' conference='Western' division='Southwest' image='images/sanantonio.jpg'/>
+</POIs>

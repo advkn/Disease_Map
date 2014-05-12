@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/jordan.swf" leftLongitude="34.957763" topLatitude="33.368068" rightLongitude="39.302074" bottomLatitude="29.185660">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="JO_BA" title="Balqa"/>
+					<ammap:MapArea instanceName="JO_MA" title="Mafraq"/>
+					<ammap:MapArea instanceName="JO_MD" title="Madaba"/>
+					<ammap:MapArea instanceName="JO_IR" title="Irbid"/>
+					<ammap:MapArea instanceName="JO_AM" title="Amman"/>
+					<ammap:MapArea instanceName="JO_AQ" title="Aqaba"/>
+					<ammap:MapArea instanceName="JO_AJ" title="Ajlun"/>
+					<ammap:MapArea instanceName="JO_JA" title="Jarash"/>
+					<ammap:MapArea instanceName="JO_AZ" title="Zarqa"/>
+					<ammap:MapArea instanceName="JO_KA" title="Karak"/>
+					<ammap:MapArea instanceName="JO_MN" title="Ma`an"/>
+					<ammap:MapArea instanceName="JO_AT" title="Tafilah"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Amman" lat="31.949841" long="35.922371" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

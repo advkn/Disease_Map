@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/japan2.swf" leftLongitude="123.661020" topLatitude="45.5222231" rightLongitude="145.818365" bottomLatitude="24.219790">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="JP_AI" title="Aichi"/>
+					<ammap:MapArea instanceName="JP_AK" title="Akita"/>
+					<ammap:MapArea instanceName="JP_AO" title="Aomori"/>
+					<ammap:MapArea instanceName="JP_CH" title="Chiba"/>
+					<ammap:MapArea instanceName="JP_EH" title="Ehime"/>
+					<ammap:MapArea instanceName="JP_FI" title="Fukui"/>
+					<ammap:MapArea instanceName="JP_FO" title="Fukuoka"/>
+					<ammap:MapArea instanceName="JP_FS" title="Fukushima"/>
+					<ammap:MapArea instanceName="JP_GF" title="Gifu"/>
+					<ammap:MapArea instanceName="JP_GM" title="Gunma"/>
+					<ammap:MapArea instanceName="JP_HS" title="Hiroshima"/>
+					<ammap:MapArea instanceName="JP_HK" title="Hokkaidō"/>
+					<ammap:MapArea instanceName="JP_HG" title="Hyōgo"/>
+					<ammap:MapArea instanceName="JP_IB" title="Ibaraki"/>
+					<ammap:MapArea instanceName="JP_IS" title="Ishikawa"/>
+					<ammap:MapArea instanceName="JP_IW" title="Iwate"/>
+					<ammap:MapArea instanceName="JP_KG" title="Kagawa"/>
+					<ammap:MapArea instanceName="JP_KS" title="Kagoshima"/>
+					<ammap:MapArea instanceName="JP_KN" title="Kanagawa"/>
+					<ammap:MapArea instanceName="JP_KC" title="Kochi"/>
+					<ammap:MapArea instanceName="JP_KM" title="Kumamoto"/>
+					<ammap:MapArea instanceName="JP_KY" title="Kyoto"/>
+					<ammap:MapArea instanceName="JP_ME" title="Mie"/>
+					<ammap:MapArea instanceName="JP_MG" title="Miyagi"/>
+					<ammap:MapArea instanceName="JP_MZ" title="Miyazaki"/>
+					<ammap:MapArea instanceName="JP_NN" title="Nagano"/>
+					<ammap:MapArea instanceName="JP_NS" title="Nagasaki"/>
+					<ammap:MapArea instanceName="JP_NR" title="Nara"/>
+					<ammap:MapArea instanceName="JP_NI" title="Niigata"/>
+					<ammap:MapArea instanceName="JP_OT" title="Oita"/>
+					<ammap:MapArea instanceName="JP_OY" title="Okayama"/>
+					<ammap:MapArea instanceName="JP_ON" title="Okinawa"/>
+					<ammap:MapArea instanceName="JP_OS" title="Osaka"/>
+					<ammap:MapArea instanceName="JP_SG" title="Saga"/>
+					<ammap:MapArea instanceName="JP_ST" title="Saitama"/>
+					<ammap:MapArea instanceName="JP_SH" title="Shiga"/>
+					<ammap:MapArea instanceName="JP_SM" title="Shimane"/>
+					<ammap:MapArea instanceName="JP_SZ" title="Shizuoka"/>
+					<ammap:MapArea instanceName="JP_TC" title="Tochigi"/>
+					<ammap:MapArea instanceName="JP_TS" title="Tokushima"/>
+					<ammap:MapArea instanceName="JP_TK" title="Tokyo"/>
+					<ammap:MapArea instanceName="JP_TT" title="Tottori"/>
+					<ammap:MapArea instanceName="JP_TY" title="Toyama"/>
+					<ammap:MapArea instanceName="JP_WK" title="Wakayama"/>
+					<ammap:MapArea instanceName="JP_YT" title="Yamagata"/>
+					<ammap:MapArea instanceName="JP_YC" title="Yamaguchi"/>
+					<ammap:MapArea instanceName="JP_YN" title="Yamanashi"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tokyo" lat="35.670479" long="139.740921" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

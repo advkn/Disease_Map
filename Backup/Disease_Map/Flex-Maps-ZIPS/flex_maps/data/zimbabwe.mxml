@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/zimbabwe.swf" leftLongitude="25.237216" topLatitude="-15.609016" rightLongitude="33.056383" bottomLatitude="-22.417901">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="ZW_BU" title="Bulawayo"/>
+					<ammap:MapArea instanceName="ZW_HA" title="Harare"/>
+					<ammap:MapArea instanceName="ZW_MA" title="Manicaland"/>
+					<ammap:MapArea instanceName="ZW_MC" title="Mashonaland Central"/>
+					<ammap:MapArea instanceName="ZW_ME" title="Mashonaland East"/>
+					<ammap:MapArea instanceName="ZW_MW" title="Mashonaland West"/>
+					<ammap:MapArea instanceName="ZW_MV" title="Masvingo"/>
+					<ammap:MapArea instanceName="ZW_MN" title="Matabeleland North"/>
+					<ammap:MapArea instanceName="ZW_MS" title="Matabeleland South"/>
+					<ammap:MapArea instanceName="ZW_MI" title="Midlands"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Harare" lat="-17.823351" long="31.05023" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

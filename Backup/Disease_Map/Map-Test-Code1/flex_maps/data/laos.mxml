@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/laos.swf" leftLongitude="100.086965" topLatitude="22.50022" rightLongitude="107.634547" bottomLatitude="13.907324">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="LA_AT" title="Attapu"/>
+					<ammap:MapArea instanceName="LA_BK" title="Bokeo"/>
+					<ammap:MapArea instanceName="LA_BL" title="Bolikhamxai"/>
+					<ammap:MapArea instanceName="LA_CH" title="Champasak"/>
+					<ammap:MapArea instanceName="LA_HO" title="Houaphan"/>
+					<ammap:MapArea instanceName="LA_KH" title="Khammouan"/>
+					<ammap:MapArea instanceName="LA_LM" title="Louang Namtha"/>
+					<ammap:MapArea instanceName="LA_LP" title="Louangphrabang"/>
+					<ammap:MapArea instanceName="LA_OU" title="Oudômxai"/>
+					<ammap:MapArea instanceName="LA_PH" title="Phôngsali"/>
+					<ammap:MapArea instanceName="LA_SL" title="Saravan"/>
+					<ammap:MapArea instanceName="LA_SV" title="Savannakhét"/>
+					<ammap:MapArea instanceName="LA_VI" title="Vientiane"/>
+					<ammap:MapArea instanceName="LA_VT" title="Vientiane prefecture"/>
+					<ammap:MapArea instanceName="LA_XA" title="Xaignabouri"/>
+					<ammap:MapArea instanceName="LA_XE" title="Xékong"/>
+					<ammap:MapArea instanceName="LA_XI" title="Xiangkhoang"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Vientiane" lat="17.965309" long="102.611519" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

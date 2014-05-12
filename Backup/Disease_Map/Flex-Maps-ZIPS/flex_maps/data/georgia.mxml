@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/georgia.swf" leftLongitude="40.011411" topLatitude="43.584328" rightLongitude="46.721590" bottomLatitude="41.064650">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="GE_AB" title="Abkhazia"/>
+					<ammap:MapArea instanceName="GE_AJ" title="Ajaria"/>
+					<ammap:MapArea instanceName="GE_GU" title="Guria"/>
+					<ammap:MapArea instanceName="GE_IM" title="Imereti"/>
+					<ammap:MapArea instanceName="GE_KA" title="Kakheti"/>
+					<ammap:MapArea instanceName="GE_KK" title="Kvemo Kartli"/>
+					<ammap:MapArea instanceName="GE_MM" title="Mtskheta-Mtianeti"/>
+					<ammap:MapArea instanceName="GE_RK" title="Racha-Lochkhumi-Kvemo Svaneti"/>
+					<ammap:MapArea instanceName="GE_SZ" title="Samegrelo-Zemo Svateni"/>
+					<ammap:MapArea instanceName="GE_SJ" title="Samtskhe-Javakheti"/>
+					<ammap:MapArea instanceName="GE_SD" title="Shida Kartli"/>
+					<ammap:MapArea instanceName="GE_TB" title="Tbilisi"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Tbilisi" lat="41.721802" long="44.783131" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

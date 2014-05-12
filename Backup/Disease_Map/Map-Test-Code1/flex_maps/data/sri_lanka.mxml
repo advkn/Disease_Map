@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/sri_lanka.swf" leftLongitude="79.521884" topLatitude="9.836125" rightLongitude="81.879063" bottomLatitude="5.918161">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_inside" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_outside" color="#FFFFFF" mouseEnabled="false" alpha="false"/>
+					<ammap:MapArea instanceName="LK_AP" title="Ampara"/>
+					<ammap:MapArea instanceName="LK_AD" title="Anuradhapura"/>
+					<ammap:MapArea instanceName="LK_BD" title="Badulla"/>
+					<ammap:MapArea instanceName="LK_BC" title="Batticaloa"/>
+					<ammap:MapArea instanceName="LK_CO" title="Colombo"/>
+					<ammap:MapArea instanceName="LK_GL" title="Galle"/>
+					<ammap:MapArea instanceName="LK_GQ" title="Gampaha"/>
+					<ammap:MapArea instanceName="LK_HB" title="Hambantota"/>
+					<ammap:MapArea instanceName="LK_JA" title="Jaffna"/>
+					<ammap:MapArea instanceName="LK_KT" title="Kalutara"/>
+					<ammap:MapArea instanceName="LK_KY" title="Kandy"/>
+					<ammap:MapArea instanceName="LK_KE" title="Kegalle"/>
+					<ammap:MapArea instanceName="LK_KL" title="Kilinochchi"/>
+					<ammap:MapArea instanceName="LK_KG" title="Kurunegala"/>
+					<ammap:MapArea instanceName="LK_MB" title="Mannar"/>
+					<ammap:MapArea instanceName="LK_MT" title="Matale"/>
+					<ammap:MapArea instanceName="LK_MH" title="Matara"/>
+					<ammap:MapArea instanceName="LK_MJ" title="Moneragala"/>
+					<ammap:MapArea instanceName="LK_MP" title="Mullaitivu"/>
+					<ammap:MapArea instanceName="LK_NW" title="Nuwara Eliya"/>
+					<ammap:MapArea instanceName="LK_PR" title="Polonnaruwa"/>
+					<ammap:MapArea instanceName="LK_PX" title="Puttalam"/>
+					<ammap:MapArea instanceName="LK_RN" title="Ratnapura"/>
+					<ammap:MapArea instanceName="LK_TC" title="Trincomalee"/>
+					<ammap:MapArea instanceName="LK_VA" title="Vavuniya"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Colombo" lat="6.933079" long="79.861729" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

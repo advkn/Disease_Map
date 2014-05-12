@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/chile.swf" leftLongitude="-109.446108" topLatitude="-17.508666" rightLongitude="-66.417331" bottomLatitude="-55.903036">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="CL_AI" title="Aisén del General Carlos Ibáñez del Campo"/>
+					<ammap:MapArea instanceName="CL_AN" title="Antofagasta"/>
+					<ammap:MapArea instanceName="CL_AR" title="Araucanía"/>
+					<ammap:MapArea instanceName="CL_AP" title="Arica and Parinacota"/>
+					<ammap:MapArea instanceName="CL_AT" title="Atacama"/>
+					<ammap:MapArea instanceName="CL_BI" title="Bíobío"/>
+					<ammap:MapArea instanceName="CL_CO" title="Coquimbo"/>
+					<ammap:MapArea instanceName="CL_LI" title="Libertador General Bernardo O'Higgins"/>
+					<ammap:MapArea instanceName="CL_LG" title="Los Lagos"/>
+					<ammap:MapArea instanceName="CL_LR" title="Los Ríos"/>
+					<ammap:MapArea instanceName="CL_MA" title="Magallanes y Antártica Chilena"/>
+					<ammap:MapArea instanceName="CL_ML" title="Maule"/>
+					<ammap:MapArea instanceName="CL_RM" title="Región Metropolitana de Santiago"/>
+					<ammap:MapArea instanceName="CL_TP" title="Tarapacá"/>
+					<ammap:MapArea instanceName="CL_VS" title="Valparaíso"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Santiago" lat="-33.463039" long="-70.647942" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

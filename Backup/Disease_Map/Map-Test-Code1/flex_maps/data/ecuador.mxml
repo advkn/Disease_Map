@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/ecuador.swf" leftLongitude="-91.663891" topLatitude="1.437455" rightLongitude="-75.192022" bottomLatitude="-4.988860">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="EC_AZ" title="Azuay"/>
+					<ammap:MapArea instanceName="EC_BO" title="Bolívar"/>
+					<ammap:MapArea instanceName="EC_CN" title="Cañar"/>
+					<ammap:MapArea instanceName="EC_CR" title="Carchi"/>
+					<ammap:MapArea instanceName="EC_CB" title="Chimborazo"/>
+					<ammap:MapArea instanceName="EC_CT" title="Cotopaxi"/>
+					<ammap:MapArea instanceName="EC_EO" title="El Oro"/>
+					<ammap:MapArea instanceName="EC_ES" title="Esmeraldas"/>
+					<ammap:MapArea instanceName="EC_GA" title="Galápagos"/>
+					<ammap:MapArea instanceName="EC_GY" title="Guayas"/>
+					<ammap:MapArea instanceName="EC_IM" title="Imbabura"/>
+					<ammap:MapArea instanceName="EC_LJ" title="Loja"/>
+					<ammap:MapArea instanceName="EC_LR" title="Los Ríos"/>
+					<ammap:MapArea instanceName="EC_MN" title="Manabí"/>
+					<ammap:MapArea instanceName="EC_MS" title="Morona-Santiago"/>
+					<ammap:MapArea instanceName="EC_NA" title="Napo"/>
+					<ammap:MapArea instanceName="EC_OR" title="Orellana"/>
+					<ammap:MapArea instanceName="EC_PA" title="Pastaza"/>
+					<ammap:MapArea instanceName="EC_PC" title="Pichincha"/>
+					<ammap:MapArea instanceName="EC_SE" title="Santa Elena"/>
+					<ammap:MapArea instanceName="EC_SD" title="Santo Domingo de los Tsáchilas"/>
+					<ammap:MapArea instanceName="EC_SU" title="Sucumbios"/>
+					<ammap:MapArea instanceName="EC_TU" title="Tungurahua"/>
+					<ammap:MapArea instanceName="EC_ZC" title="Zamora-Chinchipe"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Quito" lat="-0.229" long="-78.524277" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>

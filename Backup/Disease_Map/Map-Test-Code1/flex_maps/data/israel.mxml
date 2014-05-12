@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ammap="http://www.ammap.com/com_internal" width="100%" height="100%">
+
+	<ammap:AmMap width="100%" height="100%">
+		<ammap:areasSettings>
+			<ammap:AreasSettings autoZoom="true" rollOverColor="#CC0000" rollOverAlpha=".8" selectedColor="#CC0000"/>
+		</ammap:areasSettings>
+
+		<ammap:dataSets>
+			<ammap:DataSet mapURL="../assets/maps/israel.swf" leftLongitude="34.229026" topLatitude="33.43979" rightLongitude="35.935202" bottomLatitude="29.497004">
+				<ammap:areas>
+					<ammap:MapArea instanceName="borders_israel" color="#FFFFFF" mouseEnabled="false"/>
+					<ammap:MapArea instanceName="borders_palestine" color="#999999" mouseEnabled="false"/>
+				<!-- Israel --> 
+					<ammap:MapArea instanceName="IL_GH" title="Golan"/>
+					<ammap:MapArea instanceName="IL_HD" title="HaDarom"/>
+					<ammap:MapArea instanceName="IL_HA" title="Haifa"/>
+					<ammap:MapArea instanceName="IL_HM" title="HaMerkaz"/>
+					<ammap:MapArea instanceName="IL_HZ" title="HaZafon"/>
+					<ammap:MapArea instanceName="IL_JM" title="Jerusalem"/>
+					<ammap:MapArea instanceName="IL_TA" title="Tel Aviv"/>
+				<!-- Palestinian Territories --> 
+					<ammap:MapArea instanceName="PS_WE" title="Palestinian Territories" oid="PS_WE" link_with="PS_WE,PS_GZ" color="#DEDEDE"/>
+					<ammap:MapArea instanceName="PS_GZ" title="Palestinian Territories" oid="PS_GZ" link_with="PS_WE,PS_GZ" color="#DEDEDE"/>
+				</ammap:areas>
+				<ammap:movies>
+					<ammap:MapMovie type="round" color="#CC0000" title="Jerusalem" lat="31.783333" long="35.216667" zoomLevel="500"/>
+				</ammap:movies>
+			</ammap:DataSet>
+		</ammap:dataSets>
+	</ammap:AmMap>
+</mx:Application>
